@@ -140,7 +140,7 @@ run_over_animal(Parrot = #parrot{}) ->
     Parrot#parrot { sentence = "" }.
 
 % Eine Liste ist eins der folgenden:
-% - die leere Liste
+% - die leere Liste - ODER -
 % - eine Cons-Liste aus erstem Element und Rest-Liste
 
 % In Erlang:
@@ -148,3 +148,7 @@ run_over_animal(Parrot = #parrot{}) ->
 % Cons-Liste: [First | Rest]
 % 
 % syntaktischer Zucker: [1,2,3,4,5]
+% 
+list_sum([]) -> 0;
+list_sum([First | Rest]) -> 
+    First  + list_sum(Rest) .
