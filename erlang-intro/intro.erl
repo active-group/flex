@@ -12,7 +12,8 @@
          run_over_animal/1,
          list_sum/1,
          highway/0, 
-         animal_weights/1]).
+         animal_weights/1,
+         list_map/2]).
 
 % . fertig
 % ; "oder"
