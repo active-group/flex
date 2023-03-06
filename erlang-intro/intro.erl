@@ -103,5 +103,5 @@ d2() -> #dillo { liveness = dead, weight = 8}.
 
 % Datenstrukturen sind in Erlang "immutable"
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
-run_over_dillo(#dillo{ liveness = Liveness, weight = Weight})) ->
+run_over_dillo(#dillo{ liveness = Liveness, weight = Weight}) ->
     #dillo { liveness = dead, weight = Weight}.
