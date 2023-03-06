@@ -80,3 +80,4 @@ t1() -> #time{ hour = 11, minute = 34 }.
 t2() -> #time{ hour = 14, minute = 27}.
 
 t_error() -> #time { hour = 14}.
+
