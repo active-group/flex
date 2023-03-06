@@ -113,6 +113,9 @@ d2() -> #dillo { liveness = dead, weight = 8}.
 % - Gewicht
 -record(parrot, { sentence :: string(), weight :: number() }).
 
+% Begrüßungspapagei
+p1() -> #parrot { }
+
 % Datenstrukturen sind in Erlang "immutable"
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
 % run_over_dillo(#dillo{ weight = Weight}) ->
