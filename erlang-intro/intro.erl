@@ -14,7 +14,7 @@
          highway/0, 
          animal_weights/1,
          list_map/2,
-         rev/1]).
+         rev/1, rev/2]).
 
 % . fertig
 % ; "oder"
