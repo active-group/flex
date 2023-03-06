@@ -10,6 +10,17 @@ rebar3:
 
 https://www.rebar3.org/docs/getting-started
 
+rebar3 auf Windows:
+
+
+```
+git clone https://github.com/rebar/rebar
+cd rebar
+bootstrap
+```
+
+Dann `rebar` und `rebar.cmd` in den Pfad kopieren.
+
 Eine IDE Ihrer Wahl, z.B. Visual Studio Code:
 
 https://code.visualstudio.com/download
