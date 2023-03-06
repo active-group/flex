@@ -219,3 +219,12 @@ rev([First | Rest], Acc) ->
 % Prozesse / (heute: "Threads")
 % 
 % spawn startet einen Prozess
+% <0.281.0>: Beispiel für Process Id
+% 
+
+process_demo() ->
+    spawn(fun () ->
+        receive % "wie case"
+            Message -> io:format("Received message: ~w~n")
+        end
+    end)
