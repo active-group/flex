@@ -223,9 +223,16 @@ rev([First | Rest], Acc) ->
 % <0.281.0>: Beispiel für Process Id
 % 
 
-process_demo() ->
-    spawn(fun () ->
-        receive % "wie case"
+process_loop() ->
+    receive % "wie case"
             Message -> io:format("Received message: ~w~n", [Message])
-        end
-    end).
+    end,
+    process_loop().
+
+process_demo() ->
+    spawn(fun procesds_loop/0 end)
+%    spawn(fun () ->
+%        receive % "wie case"
+%            Message -> io:format("Received message: ~w~n", [Message])
+%        end
+%    end).
