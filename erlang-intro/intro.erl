@@ -230,7 +230,7 @@ process_loop() ->
     process_loop().
 
 process_demo() ->
-    spawn(fun process_loop/0)
+    spawn(fun process_loop/0).
 %    spawn(fun () ->
 %        receive % "wie case"
 %            Message -> io:format("Received message: ~w~n", [Message])
