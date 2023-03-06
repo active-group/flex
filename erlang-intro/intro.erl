@@ -242,8 +242,11 @@ process_demo() ->
 % 
 % Prozess implementieren:
 % 1. Datentyp für die Messages - i.d.R. eine Fallunterscheidung aus Records
-% 
-%  . Convenience-Funktionen macht, für jede Art von Message eine
+% 2. endrekursive Funktion schreiben, Zustand ist Parameter
+% 3. Rumpf besteht aus receive ... end, 1 Zweig pro Message-Fall
+%    ggf. endrekursiver Aufruf
+% 4. wenn Antworf erwünscht, Pid in Message einpacken, Antwort zurückschicken
+% 5. Convenience-Funktionen machen, für jede Art von Message eine
 % 
 % Zählerstand inkrementieren
 -record(inc, { increment :: number()}).
@@ -277,7 +280,11 @@ inc_process(Init) ->
     % muß exportiert sein
     % spawn(intro, inc_loop, [Init]).
     % synonym dazu:
-    spawn(?MODULE, inc_loop, [Init]).
+    % wenn ein gelinkter Prozeß stirbt, bekommen wir eine Nachricht
+    process_flag(trap_exit, true),
+    Pid = spawn(?MODULE, inc_loop, [Init]),
+    link(Pid), % "Dein Schicksal ist mein Schicksal"
+    Pid.
 
 % bitte inc_process erweitern um:
 % - multiplizieren
