@@ -170,7 +170,7 @@ list_sum([First | Rest]) ->
 -spec highway() -> list(animal()).
 highway() -> [d1(), d2(), p1(), p2()].
 
-% Gewichte der Gürteltiere feststellen
+% Gewichte der Tiere feststellen
 -spec animal_weights(list(animal)) -> list(number()).
 animal_weights([]) -> [];
 animal_weights([First | Rest]) -> 
