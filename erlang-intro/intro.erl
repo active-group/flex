@@ -67,3 +67,4 @@ dogs_per_legs(Legs) ->
         {error, What} -> {error, non_four_legged_dogs, What};
         {ok, Dogs} -> Dogs
     end.
+
