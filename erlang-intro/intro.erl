@@ -16,7 +16,8 @@
          list_map/2,
          rev/1, rev/2,
          process_demo/0,
-         inc_process/1, inc_loop/1, inc_by/2]).
+         inc_process/1, inc_loop/1,
+         inc_by/2, inc_get/1]).
 
 % . fertig
 % ; "oder"
