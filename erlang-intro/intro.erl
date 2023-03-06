@@ -49,4 +49,4 @@ water_state(Temperature) when Temperature > 100 -> gas;
 water_state(_Temperature) -> liquid.
 
 % Tupel:
-% {}
+% {1,true,"Mike"}
