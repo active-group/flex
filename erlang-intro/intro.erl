@@ -1,7 +1,8 @@
 -module(intro).
 -export([double/1, double/2,
          is_cute/1, water_state/1,
-         safe_divide/2]).
+         safe_divide/2,
+         dogs_per_legs/1]).
 
 % . fertig
 % ; "oder"
