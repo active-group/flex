@@ -10,3 +10,5 @@
 % Stelligkeit gehört zum Funktionsnamen dazu
 -spec double(number()) -> number().
 double(X) -> X * 2.
+
+double(X, Y) -> X * Y * 2.
