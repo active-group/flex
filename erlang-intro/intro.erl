@@ -214,6 +214,8 @@ rev([First | Rest], Acc) ->
     % tail call, endrekursiver Aufruf
     rev(Rest, [First | Acc]). % kein Kontext => keinen Platz auf dem Stack
 
+% Binary
+% 
 % Prozesse / (heute: "Threads")
 % 
 % spawn startet einen Prozess
