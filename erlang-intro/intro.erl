@@ -37,3 +37,9 @@ is_cute(snake) -> false.
 
 % Aggregatzustand von Wasser
 -spec water_state(number()) -> solid | liquid | gas.
+water_stater(Temperature) ->
+    if
+        Temperature < 0 -> solid;
+        Temperature > 100 -> gas;
+        true -> liquid
+    end.
