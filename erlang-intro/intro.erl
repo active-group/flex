@@ -239,8 +239,16 @@ process_demo() ->
 %        end
 %    end).
 % 
-
+% Prozess implementieren:
+% 1. Datentyp für die Messages - i.d.R. eine Fallunterscheidung aus Records
+% 
+%  . Convenience-Funktionen macht, für jede Art von Message eine
+% 
+% Zählerstand inkrementieren
 -record(inc, { increment :: number()}).
+
+% Zählerstand liefern
+-record(get, {}).
 
 % Inkrementier-Prozess
 inc_loop(N) ->
