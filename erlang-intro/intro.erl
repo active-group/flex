@@ -159,6 +159,7 @@ list2a() -> [7, 5].
 % 3elementige Liste: 2 7 5
 list3() -> [2 | list2a()].
 
+% für jeden Fall einer Fallunterscheidung 1 Gleichung
 list_sum([]) -> 0;
 list_sum([First | Rest]) -> 
-    First  + list_sum(Rest) .
+    First  + list_sum(Rest). % rekursiven Aufruf auf dem Selbstbezug
