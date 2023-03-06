@@ -68,3 +68,10 @@ dogs_per_legs(Legs) ->
         {ok, Dogs} -> Dogs
     end.
 
+% Uhrzeit besteht aus:
+% - Stunde
+% - Minute
+-record(time, {hour :: 0..23, minute :: 0..59}).
+
+% Uhrzeit 11:34
+t1() -> #time{ hour = 11, minute = 34 }.
