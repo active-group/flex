@@ -251,6 +251,9 @@ inc_loop(N) ->
                inc_loop(NewN)
     end.
 
+inc_by(Pid, Inc) ->
+    Pid ! #inc{increment = Inc}.
+
 inc_process(Init) ->
     % muß exportiert sein
     % spawn(intro, inc_loop, [Init]).
