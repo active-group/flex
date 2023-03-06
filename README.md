@@ -4,7 +4,7 @@
 
 Erlang:
 
-https://www.erlang-solutions.com/resources/download.html
+https://www.erlang.org/downloads
 
 rebar3:
 
