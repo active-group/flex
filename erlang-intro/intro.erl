@@ -248,7 +248,7 @@ process_demo() ->
 -record(inc, { increment :: number()}).
 
 % Zählerstand liefern
--record(get, {}).
+-record(get, { pid :: pid()}).
 
 % Inkrementier-Prozess
 inc_loop(N) ->
@@ -256,11 +256,20 @@ inc_loop(N) ->
         #inc{increment = Inc} ->
                NewN = N + Inc,
                io:format("New N: ~w~n", [NewN]),
-               inc_loop(NewN)
+               inc_loop(NewN);
+        #get{pid = Pid} ->
+            Pid ! N,
+            inc_loop(N)
     end.
 
 inc_by(Pid, Inc) ->
     Pid ! #inc{increment = Inc}.
+
+inc_get(Pid) ->
+    Pid ! #get{pid = self()}, % Pid von "diesem" Prozess
+    receive
+        Value -> Value
+    end.
 
 inc_process(Init) ->
     % muß exportiert sein
