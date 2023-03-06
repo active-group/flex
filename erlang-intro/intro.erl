@@ -166,3 +166,12 @@ list3() -> [2 | list2a()].
 list_sum([]) -> 0;
 list_sum([First | Rest]) -> 
     First  + list_sum(Rest). % rekursiven Aufruf auf dem Selbstbezug
+
+-spec highway() -> list(animal()).
+highway() -> [d1(), d2(), p1(), p2()].
+
+% Gewichte der Gürteltiere feststellen
+-spec animal_weights(list(animal)) -> list(number()).
+animal_weights([]) -> [];
+animal_weight([First | Rest]) -> 
+    [animal_weight(First) | animal_weights(Rest)].
