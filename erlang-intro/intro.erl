@@ -9,7 +9,8 @@
          run_over_dillo/1,
          p1/0, p2/0,
          animal_weight/1,
-         run_over_animal/1]).
+         run_over_animal/1,
+         list_sum/1]).
 
 % . fertig
 % ; "oder"
