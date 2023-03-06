@@ -146,3 +146,5 @@ run_over_animal(Parrot = #parrot{}) ->
 % In Erlang:
 % leere Liste: []
 % Cons-Liste: [First | Rest]
+% 
+% syntaktischer Zucker: [1,2,3,4,5]
