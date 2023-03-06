@@ -81,3 +81,8 @@ t2() -> #time{ hour = 14, minute = 27}.
 
 t_error() -> #time { hour = 14}.
 
+% Minuten seit Mitternacht
+-spec minutes_since_midnight(#time{}) -> non_neg_integer().
+minutes_since_midnight(Time) ->
+    Time#time.hour * 60 +
+    Time#time.minute.
