@@ -188,3 +188,15 @@ list_map(F, [First | Rest]) ->
 -spec run_over_animals(list(animal())) -> list(animal()).
 run_over_animals(Animals) ->
     list_map(fun intro:run_over_animal/1, Animals).
+
+% Liste umdrehen
+-spec rev(list(A)) -> list(A).
+rev([]) -> [];
+rev(First | Rest) -> 
+    add_element(rev(Rest), First).
+
+% Element an Liste hinten anhängen
+-spec add_element(list(A), A) -> list(A).
+add_element([], A) -> [A];
+add_element([First | Rest], A) ->
+    [First | add_element(Rest, A)].
