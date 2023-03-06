@@ -180,7 +180,7 @@ animal_weights([First | Rest]) ->
     [animal_weight(First) | animal_weights(Rest)].
 
 % Abstraktion über animal_weights & run_over_animals
--spec list_map(fun((A) -> B), list(A)) -> list(B).
+-spec list_map(fun(A -> B), list(A)) -> list(B).
 list_map(_F, []) -> [];
 list_map(F, [First | Rest]) -> 
     [F(First) | list_map(F, Rest)].
