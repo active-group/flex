@@ -96,7 +96,7 @@ minutes_since_midnight(#time { hour = H, minute = M}) ->
 % - Gürteltier - ODER -
 % - Parrot
 % Fallunterscheidung
--type animal() :: #dillo{} | parrot{}.
+-type animal() :: #dillo{} | #parrot{}.
 
 % Ein Gürteltier hat folgende Eigenschaften:
 % - tot oder lebendig - UND -
