@@ -96,7 +96,6 @@ minutes_since_midnight(#time { hour = H, minute = M}) ->
 % - Gürteltier - ODER -
 % - Parrot
 % Fallunterscheidung
--type animal() :: #dillo{} | #parrot{}.
 
 % Ein Gürteltier hat folgende Eigenschaften:
 % - tot oder lebendig - UND -
@@ -124,3 +123,5 @@ p2() -> #parrot { sentence = "Tschüss!", weight = 2}.
 %    #dillo { liveness = dead, weight = Weight}.
 run_over_dillo(Dillo) ->
     Dillo#dillo { liveness = dead }. % functional update
+
+-type animal() :: #dillo{} | #parrot{}.
