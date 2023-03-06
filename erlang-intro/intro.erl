@@ -8,7 +8,8 @@
          d1/0, d2/0, 
          run_over_dillo/1,
          p1/0, p2/0,
-         animal_weight/1]).
+         animal_weight/1,
+         run_over_animal/1]).
 
 % . fertig
 % ; "oder"
