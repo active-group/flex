@@ -138,3 +138,11 @@ run_over_animal(#dillo{ weight = Weight }) ->
     #dillo { liveness = dead, weight = Weight};
 run_over_animal(Parrot = #parrot{}) ->
     Parrot#parrot { sentence = "" }.
+
+% Eine Liste ist eins der folgenden:
+% - die leere Liste
+% - eine Cons-Liste aus erstem Element und Rest-Liste
+
+% In Erlang:
+% leere Liste: []
+% Cons-Liste: [First | Rest]
