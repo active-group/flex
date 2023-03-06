@@ -162,6 +162,7 @@ list3() -> [2 | list2a()].
 
 % für jeden Fall einer Fallunterscheidung 1 Gleichung
 -spec list_sum(list(number())) -> number().
+% -spec list_sum([number()]) -> number().
 list_sum([]) -> 0;
 list_sum([First | Rest]) -> 
     First  + list_sum(Rest). % rekursiven Aufruf auf dem Selbstbezug
