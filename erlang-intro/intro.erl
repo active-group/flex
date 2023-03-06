@@ -127,5 +127,5 @@ run_over_dillo(Dillo) ->
 -type animal() :: #dillo{} | #parrot{}.
 
 -spec animal_weight(animal()) -> number().
-animal_weight(#dillo{ weight = Weight}) = Weight;
-animal_weight(#parrot{ weight = Weight}) = Weight.
+animal_weight(#dillo{ weight = Weight}) -> Weight;
+animal_weight(#parrot{ weight = Weight}) -> Weight.
