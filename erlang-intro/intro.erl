@@ -237,3 +237,12 @@ process_demo() ->
 %            Message -> io:format("Received message: ~w~n", [Message])
 %        end
 %    end).
+% 
+
+% Inkrementier-Prozess
+inc_loop(N) ->
+    receive
+        Inc -> NewN = N + Inc,
+               io:format("New N: ~w~n", [NewN]),
+               inc_loop(NewN)
+end.
