@@ -15,3 +15,10 @@ double(X, Y) -> X * Y * 2.
 
 % Atome: fangen auch mit Kleinbuchstaben an
 % "Namen"
+
+% Ist ein Haustier niedlich?
+% Ein Haustier ist eins der folgenden:
+% - Hund
+% - Katze
+% - Schlange
+is_cute(Pet) ->
