@@ -245,4 +245,7 @@ inc_loop(N) ->
         Inc -> NewN = N + Inc,
                io:format("New N: ~w~n", [NewN]),
                inc_loop(NewN)
-end.
+    end.
+
+inc_process(Init) ->
+    spawn(intro, inc_loop, [Init]).
