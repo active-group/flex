@@ -211,4 +211,5 @@ add_element([First | Rest], A) ->
 % enthält die bisher gesehenen Element, umgedreht
 rev([], Acc) -> Acc;
 rev([First | Rest], Acc) ->
+    % tail call, endrekursiver Aufruf
     rev(Rest, [First | Acc]). % kein Kontext => keinen Platz auf dem Stack
