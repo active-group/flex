@@ -22,7 +22,8 @@ double(X, Y) -> X * Y * 2.
 % - Hund
 % - Katze
 % - Schlange
--spec is_cute(dog | cat | snake) -> boolean().
+-type pet() :: dog | cat | snake. 
+-spec is_cute(pet()) -> boolean().
 % is_cute(Pet) ->
 %    case Pet of
 %        dog -> true;
