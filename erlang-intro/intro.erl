@@ -125,3 +125,7 @@ run_over_dillo(Dillo) ->
     Dillo#dillo { liveness = dead }. % functional update
 
 -type animal() :: #dillo{} | #parrot{}.
+
+-spec animal_weight(animal()) -> number().
+animal_weight(#dillo{ weight = Weight}) = Weight;
+animal_weight(#parrot{ weight = Weight}) = Weight.
