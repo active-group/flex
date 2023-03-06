@@ -58,3 +58,8 @@ safe_divide(X, Y) ->
         Y == 0 -> {error, divide_by_zero};
         true -> {ok, X/Y} % Erlang-Konvention
     end.
+
+% Hunde pro Beine
+dogs_per_legs(Legs) ->
+    {ok, Dogs} = safe_divide(Legs, 4),
+    Dogs.
