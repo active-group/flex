@@ -269,7 +269,8 @@ inc_by(Pid, Inc) ->
 inc_get(Pid) ->
     Pid ! #get{pid = self()}, % Pid von "diesem" Prozess
     receive
-        Value -> Value
+        Value -> Value;
+        after 5000 -> timeout
     end.
 
 inc_process(Init) ->
