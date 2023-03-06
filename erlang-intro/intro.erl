@@ -23,9 +23,13 @@ double(X, Y) -> X * Y * 2.
 % - Katze
 % - Schlange
 -spec is_cute(dog | cat | snake) -> boolean().
-is_cute(Pet) ->
-    case Pet of
-        dog -> true;
-        cat -> true;
-        snake -> false
-    end.
+% is_cute(Pet) ->
+%    case Pet of
+%        dog -> true;
+%        cat -> true;
+%        snake -> false
+%    end.
+% 
+is_cute(dog) -> true;
+is_cute(cat) -> true;
+is_cute(snake) -> false.
