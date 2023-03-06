@@ -1,5 +1,26 @@
 # FLEX März 2023
 
+## Benötigte Software
+
+Erlang:
+
+https://www.erlang-solutions.com/resources/download.html
+
+rebar3:
+
+https://www.rebar3.org/docs/getting-started
+
+Eine IDE Ihrer Wahl, z.B. Visual Studio Code:
+
+https://code.visualstudio.com/download
+
+Dort gern schonmal die Erlang-Extension installieren.
+
+Außerdem werden wir Docker und Docker Compose brauchen:
+
+https://docs.docker.com/get-docker/
+https://docs.docker.com/compose/install/
+
 ## Quellen zu Erlang
 
 - [learn you some Erlang](https://learnyousomeerlang.com/)
