@@ -91,11 +91,16 @@ t_error() -> #time { hour = 14}.
 minutes_since_midnight(#time { hour = H, minute = M}) ->
     H * 60 + M.
 
-% Tiere auf dem texanischen Highway
+% Ein Tier auf dem texanischen Highway
+% ist eins der folgenden:
+% - Gürteltier - ODER -
+% - Parrot
+% Fallunterscheidung
 
 % Ein Gürteltier hat folgende Eigenschaften:
 % - tot oder lebendig - UND -
 % - Gewicht
+% zusammengesetzte Daten
 -record(dillo, { liveness :: dead | alive, weight :: number()}).
 
 % lebendiges Gürteltier, 10kg
@@ -103,9 +108,14 @@ d1() -> #dillo { liveness = alive, weight = 10}.
 % totes Gürteltier, 8kg
 d2() -> #dillo { liveness = dead, weight = 8}.
 
+% Ein Papagei hat folgende Eigenschaften:
+% - Satz
+% - Gewicht
+-record(parrot, { sentence :: string(), weight :: number() }).
+
 % Datenstrukturen sind in Erlang "immutable"
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
 % run_over_dillo(#dillo{ weight = Weight}) ->
 %    #dillo { liveness = dead, weight = Weight}.
 run_over_dillo(Dillo) ->
-    Dillo#dillo { liveness = dead}. % functional upadte
+    Dillo#dillo { liveness = dead }. % functional update
