@@ -190,6 +190,10 @@ list_map(F, [First | Rest]) ->
 run_over_animals(Animals) ->
     list_map(fun intro:run_over_animal/1, Animals).
 
+% Laufzeit für Liste der Länge n:
+% 1 + 2 + 3 +... + (n-2) + (n-1) + n
+% = (n * (n+1)) / 2 = 1/2 n^2 + ...  = O(n^2)
+
 % Liste umdrehen
 -spec rev(list(A)) -> list(A).
 rev([]) -> [];
@@ -201,3 +205,9 @@ rev([First | Rest]) ->
 add_element([], A) -> [A];
 add_element([First | Rest], A) ->
     [First | add_element(Rest, A)].
+
+% mit Akkumulator / Zwischenergebnis
+% enthält die bisher gesehenen Element, umgedreht
+rev([], Acc) -> Acc;
+rev([First | Rest], Acc) ->
+    rev(Rest, [First | Acc]).
