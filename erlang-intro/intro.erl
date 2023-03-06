@@ -227,4 +227,4 @@ process_demo() ->
         receive % "wie case"
             Message -> io:format("Received message: ~w~n")
         end
-    end)
+    end).
