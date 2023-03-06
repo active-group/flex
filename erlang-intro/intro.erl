@@ -226,6 +226,6 @@ rev([First | Rest], Acc) ->
 process_demo() ->
     spawn(fun () ->
         receive % "wie case"
-            Message -> io:format("Received message: ~w~n")
+            Message -> io:format("Received message: ~w~n", [Message])
         end
     end).
