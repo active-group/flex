@@ -143,6 +143,7 @@ run_over_animal(Parrot = #parrot{}) ->
 % Eine Liste ist eins der folgenden:
 % - die leere Liste - ODER -
 % - eine Cons-Liste aus erstem Element und Rest-Liste
+%                                               ^^^^^
 
 % In Erlang:
 % leere Liste: []
