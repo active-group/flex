@@ -250,4 +250,11 @@ inc_loop(N) ->
 
 inc_process(Init) ->
     % muß exportiert sein
-    spawn(intro, inc_loop, [Init]).
+    % spawn(intro, inc_loop, [Init]).
+    % synonym dazu:
+    spawn(?MODULE, inc_loop, [Init]).
+
+% bitte inc_process erweitern um:
+% - multiplizieren
+% - addieren
+% - reset auf 0
