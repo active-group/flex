@@ -22,3 +22,4 @@ double(X, Y) -> X * Y * 2.
 % - Katze
 % - Schlange
 is_cute(Pet) ->
+    
