@@ -215,3 +215,5 @@ rev([First | Rest], Acc) ->
     rev(Rest, [First | Acc]). % kein Kontext => keinen Platz auf dem Stack
 
 % Prozesse / (heute: "Threads")
+% 
+% spawn startet einen Prozess
