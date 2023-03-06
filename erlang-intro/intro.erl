@@ -149,7 +149,16 @@ run_over_animal(Parrot = #parrot{}) ->
 % Cons-Liste: [First | Rest]
 % 
 % syntaktischer Zucker: [1,2,3,4,5]
-% 
+
+% 1elementige Liste: 5
+list1() -> [5 | []].
+% 2elementige Liste: 7 5
+list2() -> [7 | [5 | []]].
+% gleiche Liste:
+list2a() -> [7, 5].
+% 3elementige Liste: 2 7 5
+list3() -> [2 | list2a()].
+
 list_sum([]) -> 0;
 list_sum([First | Rest]) -> 
     First  + list_sum(Rest) .
