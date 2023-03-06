@@ -256,5 +256,5 @@ inc_process(Init) ->
 
 % bitte inc_process erweitern um:
 % - multiplizieren
-% - addieren
+% - subtrahieren
 % - reset auf 0
