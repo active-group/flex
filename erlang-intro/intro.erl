@@ -183,3 +183,6 @@ animal_weights([First | Rest]) ->
 list_map(_F, []) -> [];
 list_map(F, [First | Rest]) -> 
     [F(First) | list_map(F, Rest)].
+
+run_over_animals(Animals) ->
+    list_map(fun intro:run_over_animal/1, Animals).
