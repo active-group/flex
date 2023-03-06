@@ -22,4 +22,8 @@ double(X, Y) -> X * Y * 2.
 % - Katze
 % - Schlange
 is_cute(Pet) ->
-    
+    case Pet of
+        dog -> true;
+        cat -> true;
+        snake -> false;
+    end.
