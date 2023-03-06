@@ -78,3 +78,5 @@ dogs_per_legs(Legs) ->
 t1() -> #time{ hour = 11, minute = 34 }.
 % 14:27
 t2() -> #time{ hour = 14, minute = 27}.
+
+t_error() -> #time { hour = 14}.
