@@ -192,7 +192,7 @@ run_over_animals(Animals) ->
 % Liste umdrehen
 -spec rev(list(A)) -> list(A).
 rev([]) -> [];
-rev(First | Rest) -> 
+rev([First | Rest]) -> 
     add_element(rev(Rest), First).
 
 % Element an Liste hinten anhängen
