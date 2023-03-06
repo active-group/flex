@@ -204,10 +204,11 @@ rev([First | Rest]) ->
 -spec add_element(list(A), A) -> list(A).
 add_element([], A) -> [A];
 add_element([First | Rest], A) ->
-    [First | add_element(Rest, A)].
+    % erst rekursiver Aufruf, dann First vorne dran consen
+    [First | add_element(Rest, A)]. % Kontext
 
 % mit Akkumulator / Zwischenergebnis
 % enthält die bisher gesehenen Element, umgedreht
 rev([], Acc) -> Acc;
 rev([First | Rest], Acc) ->
-    rev(Rest, [First | Acc]).
+    rev(Rest, [First | Acc]). % kein Kontext => keinen Platz auf dem Stack
