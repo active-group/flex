@@ -76,4 +76,4 @@ dogs_per_legs(Legs) ->
 % Uhrzeit 11:34
 t1() -> #time{ hour = 11, minute = 34 }.
 % 14:27
-t2() -> #time{ hour 14, minute 27}.
+t2() -> #time{ hour = 14, minute = 27}.
