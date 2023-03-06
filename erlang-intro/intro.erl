@@ -4,4 +4,6 @@
 % ; "oder"
 % , "und"
 
+% Variablen: Großbuchstaben
+% 
 double(X) -> X * 2.
