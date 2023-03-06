@@ -240,10 +240,13 @@ process_demo() ->
 %    end).
 % 
 
+-record(inc, { increment :: number()}).
+
 % Inkrementier-Prozess
 inc_loop(N) ->
     receive
-        Inc -> NewN = N + Inc,
+        #inc{increment = Inc} ->
+               NewN = N + Inc,
                io:format("New N: ~w~n", [NewN]),
                inc_loop(NewN)
     end.
