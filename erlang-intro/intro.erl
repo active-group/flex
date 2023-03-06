@@ -62,5 +62,8 @@ safe_divide(X, Y) ->
 
 % Hunde pro Beine
 dogs_per_legs(Legs) ->
-    {ok, Dogs} = safe_divide(Legs, 4),
-    Dogs.
+    % {ok, Dogs} = safe_divide(Legs, 4),
+    case safe_divide(Legs, 4) of
+        {error, What} -> {error, non_four_legged_dogs};
+        {ok, Dogs} -> Dogs
+    end.
