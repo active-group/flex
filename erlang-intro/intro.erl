@@ -225,9 +225,10 @@ rev([First | Rest], Acc) ->
 
 process_loop() ->
     receive % "wie case"
-            Message -> io:format("Received message: ~w~n", [Message])
-    end,
-    process_loop().
+        shutdown -> io:format("Goodbye!");
+        Message -> io:format("Received message: ~w~n", [Message]),
+                   process_loop()
+    end.
 
 process_demo() ->
     spawn(fun process_loop/0).
