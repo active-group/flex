@@ -174,6 +174,6 @@ highway() -> [d1(), d2(), p1(), p2()].
 
 % Gewichte der Tiere feststellen
 % -spec animal_weight(list(animal())) -> list(number()).
-animal_weight([]) -> [];
-animal_weight([First | Rest]) -> 
+animal_weights([]) -> [];
+animal_weights([First | Rest]) -> 
     [animal_weight(First) | animal_weights(Rest)].
