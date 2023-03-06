@@ -270,7 +270,7 @@ inc_get(Pid) ->
     Pid ! #get{pid = self()}, % Pid von "diesem" Prozess
     receive
         Value -> Value % kein Semikolon
-        after 5000 -> timeout % millisekunden
+    after 5000 -> timeout % milliseconds
     end.
 
 inc_process(Init) ->
