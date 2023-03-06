@@ -15,7 +15,8 @@
          animal_weights/1,
          list_map/2,
          rev/1, rev/2,
-         process_demo/0]).
+         process_demo/0,
+         inc_process/1]).
 
 % . fertig
 % ; "oder"
