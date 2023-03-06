@@ -25,5 +25,5 @@ is_cute(Pet) ->
     case Pet of
         dog -> true;
         cat -> true;
-        snake -> false;
+        snake -> false
     end.
