@@ -3,7 +3,7 @@
          is_cute/1, water_state/1,
          safe_divide/2,
          dogs_per_legs/1,
-         t1/0, t2/0]).
+         t1/0, t2/0, t_error/0]).
 
 % . fertig
 % ; "oder"
