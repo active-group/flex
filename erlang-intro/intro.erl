@@ -95,3 +95,13 @@ minutes_since_midnight(#time { hour = H, minute = M}) ->
 % - tot oder lebendig - UND -
 % - Gewicht
 -record(dillo, { liveness :: dead | alive, weight :: number()}).
+
+% lebendiges Gürteltier, 10kg
+d1() -> #dillo { liveness = alive, weight = 10}.
+% totes Gürteltier, 8kg
+d2() -> #dillo { liveness = dead, weight = 8}.
+
+% Datenstrukturen sind in Erlang "immutable"
+-spec run_over_dillo(#dillo{}) -> #dillo{}.
+run_over_dillo(#dillo{ liveness = Liveness, weight = Weight})) ->
+    #dillo { liveness = dead, weight = Weight}.
