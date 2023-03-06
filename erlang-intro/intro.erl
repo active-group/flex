@@ -108,4 +108,4 @@ d2() -> #dillo { liveness = dead, weight = 8}.
 % run_over_dillo(#dillo{ weight = Weight}) ->
 %    #dillo { liveness = dead, weight = Weight}.
 run_over_dillo(Dillo) ->
-    D#dillo { liveness = dead}. % functional upadte
+    Dillo#dillo { liveness = dead}. % functional upadte
