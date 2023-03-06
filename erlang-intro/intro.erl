@@ -249,4 +249,5 @@ inc_loop(N) ->
     end.
 
 inc_process(Init) ->
+    % muß exportiert sein
     spawn(intro, inc_loop, [Init]).
