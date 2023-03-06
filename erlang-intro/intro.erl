@@ -10,7 +10,9 @@
          p1/0, p2/0,
          animal_weight/1,
          run_over_animal/1,
-         list_sum/1]).
+         list_sum/1,
+         highway/0, 
+         animal_weights/1]).
 
 % . fertig
 % ; "oder"
