@@ -34,3 +34,6 @@ double(X, Y) -> X * Y * 2.
 is_cute(dog) -> true;
 is_cute(cat) -> true;
 is_cute(snake) -> false.
+
+% Aggregatzustand von Wasser
+-spec water_state(number()) -> solid | liquid | gas.
