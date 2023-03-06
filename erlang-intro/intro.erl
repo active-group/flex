@@ -88,3 +88,10 @@ t_error() -> #time { hour = 14}.
 %    Time#time.minute.
 minutes_since_midnight(#time { hour = H, minute = M}) ->
     H * 60 + M.
+
+% Tiere auf dem texanischen Highway
+
+% Ein Gürteltier hat folgende Eigenschaften:
+% - tot oder lebendig - UND -
+% - Gewicht
+-record(dillo, { liveness :: dead | alive, weight :: number()}).
