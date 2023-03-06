@@ -4,7 +4,9 @@
          safe_divide/2,
          dogs_per_legs/1,
          t1/0, t2/0, t_error/0,
-         minutes_since_midnight/1]).
+         minutes_since_midnight/1,
+         d1/0, d2/0, 
+         run_over_dillo/1]).
 
 % . fertig
 % ; "oder"
