@@ -315,3 +315,8 @@ inc_process(Init) ->
 % - multiplizieren
 % - subtrahieren
 % - reset auf 0
+
+% Frequency server
+% - Gibt eine Liste von zu vergebenden Frequenzen
+% - man kann sich eine freie Frequenz geben lassen
+% - man kann eine Frequenz zurückgeben
