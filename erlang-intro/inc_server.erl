@@ -15,6 +15,7 @@
 % Zählerstand liefern -> call
 -record(get, { }).
 
+-spec start(number()) -> {ok, pid()}.
 start(Init) ->
     gen_server:start(inc_server, Init, []).
 
