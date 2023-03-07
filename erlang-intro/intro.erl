@@ -278,17 +278,23 @@ inc_get(Pid) ->
     after 5000 -> timeout % milliseconds
     end.
 
+inc_supervisor(Init) ->
+    process_flag(trap_exit, true),
+    Pid = spawn(?MODULE, inc_loop, [Init]),
+    link(Pid), % "Dein Schicksal ist mein Schicksal"
+    Pid.
+
 inc_process(Init) ->
     % muß exportiert sein
     % spawn(intro, inc_loop, [Init]).
     % synonym dazu:
     % wenn ein gelinkter Prozeß stirbt, bekommen wir eine Nachricht
+    Self = self(), % Pid der Shell
     spawn(fun () ->
-            process_flag(trap_exit, true),
-            Pid = spawn(?MODULE, inc_loop, [Init]),
-            link(Pid) % "Dein Schicksal ist mein Schicksal"
-    end),
-    Pid.
+            Pid = inc_supervisor(Init),
+            Self ! Pid
+          end),
+    receive Pid -> Pid end.
 
 % bitte inc_process erweitern um:
 % - multiplizieren
