@@ -256,7 +256,8 @@ process_demo() ->
 
 % Inkrementier-Prozess
 inc_loop(N) ->
-    receive
+    receive % wie case ... of
+        % i.d.R.: irgendwas paßt immer
         #inc{increment = Inc} ->
                NewN = N + Inc,
                io:format("New N: ~w~n", [NewN]),
