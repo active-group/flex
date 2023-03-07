@@ -20,3 +20,5 @@ init(Init) ->
 
 handle_cast(#inc{increment = Inc}, N) ->
     {noreply, N + Inc}.
+
+handle_call()
