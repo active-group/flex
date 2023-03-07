@@ -21,4 +21,7 @@ init(Init) ->
 handle_cast(#inc{increment = Inc}, N) ->
     {noreply, N + Inc}.
 
-handle_call()
+handle_call(Request, From, N) ->
+    {reply, 
+     N, % reply 
+     N}. % new state
