@@ -5,4 +5,5 @@
 
 % Callback
 init(Init) ->
-    {ok, }
+    {ok, Init}.
+
