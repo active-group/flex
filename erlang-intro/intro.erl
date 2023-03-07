@@ -283,7 +283,7 @@ inc_process(Init) ->
     % spawn(intro, inc_loop, [Init]).
     % synonym dazu:
     % wenn ein gelinkter Prozeß stirbt, bekommen wir eine Nachricht
-    % process_flag(trap_exit, true),
+    process_flag(trap_exit, true),
     Pid = spawn(?MODULE, inc_loop, [Init]),
     link(Pid), % "Dein Schicksal ist mein Schicksal"
     Pid.
