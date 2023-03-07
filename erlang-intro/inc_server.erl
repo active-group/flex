@@ -4,6 +4,12 @@
 % "Wir implementieren ein Interface"
 -behavior(gen_server).
 
+% Zählerstand inkrementieren
+-record(inc, { increment :: number()}).
+
+% Zählerstand liefern
+-record(get, { pid :: pid()}).
+
 % Callback
 init(Init) ->
     {ok, Init}.
