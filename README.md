@@ -14,7 +14,7 @@ rebar3 auf Windows:
 
 
 ```
-git clone https://github.com/rebar/rebar
+git clone https://github.com/rebar/rebar3
 cd rebar
 bootstrap
 ```
