@@ -290,7 +290,7 @@ inc_supervisor(Init) ->
     register(inc_service, Pid),
     receive
         {'EXIT', _Pid, _Reason} ->
-            inc_supervisor(Init)
+            inc_supervisor(Init);
         Msg ->
             io:format("not an exit message: ~p~n", [Msg])
     end.
