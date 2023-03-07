@@ -265,8 +265,8 @@ inc_loop(N) ->
         #get{pid = Pid} ->
             Pid ! N,
             inc_loop(N)
-        _ -> 
-    end.
+    end,
+    inc_loop(N).
 
 inc_by(Pid, Inc) ->
     Pid ! #inc{increment = Inc}.
