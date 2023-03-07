@@ -8,3 +8,5 @@
 init(Init) ->
     {ok, Init}.
 
+% cast: asynchrone Nachricht an den Server, ohne Antwort
+% call: Nachricht mit Antwort
