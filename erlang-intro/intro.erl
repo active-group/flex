@@ -283,7 +283,10 @@ inc_supervisor(Init) ->
     Pid = spawn(?MODULE, inc_loop, [Init]),
     link(Pid), % "Dein Schicksal ist mein Schicksal"
     receive
-        
+        {'EXIT', _Pid, _Reason} ->
+            inc_supervisor(Init)
+    end.
+
 
 inc_process(Init) ->
     % muß exportiert sein
