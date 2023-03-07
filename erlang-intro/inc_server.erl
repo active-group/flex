@@ -4,4 +4,5 @@
 -behavior(gen_server).
 
 % Callback
-init()
+init(Init) ->
+    {ok, }
