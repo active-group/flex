@@ -291,6 +291,8 @@ inc_supervisor(Init) ->
     receive
         {'EXIT', _Pid, _Reason} ->
             inc_supervisor(Init)
+        Msg ->
+            io:format("not an exit message: ~p~n", [Msg])
     end.
 
 
