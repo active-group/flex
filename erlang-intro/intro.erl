@@ -292,7 +292,7 @@ inc_supervisor(Init) ->
         {'EXIT', _Pid, _Reason} -> % Nachricht von link
             inc_supervisor(Init);
         {'DOWN', _, process , _Pid, _Reason} ->
-            inc_supervisor(Init);
+            inc_supervisor(Init)
         % Msg when erlang:is_tuple(Msg) ->
     end.
 
