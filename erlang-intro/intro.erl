@@ -280,8 +280,10 @@ inc_get(Pid) ->
 
 inc_supervisor(Init) ->
     process_flag(trap_exit, true),
-    Pid = spawn(?MODULE, inc_loop, [Init]),
-    link(Pid), % "Dein Schicksal ist mein Schicksal"
+    % Pid = spawn(?MODULE, inc_loop, [Init]),
+    % race
+    % link(Pid), % "Dein Schicksal ist mein Schicksal"
+    Pid = spawn_link(?MODULE, inc_loop, [Init]),
     register(inc_service, Pid),
     receive
         {'EXIT', _Pid, _Reason} ->
