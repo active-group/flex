@@ -282,6 +282,7 @@ inc_supervisor(Init) ->
     process_flag(trap_exit, true),
     Pid = spawn(?MODULE, inc_loop, [Init]),
     link(Pid), % "Dein Schicksal ist mein Schicksal"
+    register(inc_service, Pid),
     receive
         {'EXIT', _Pid, _Reason} ->
             inc_supervisor(Init)
