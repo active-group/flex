@@ -11,7 +11,7 @@
 -record(inc, { increment :: number()}).
 
 % Zählerstand liefern -> call
--record(get, { pid :: pid()}).
+-record(get, { }).
 
 % Callback
 init(Init) ->
