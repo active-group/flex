@@ -30,3 +30,6 @@ handle_call(#get {}, _From, N) ->
 
 inc_by(Pid, Inc) ->
     gen_server:cast(Pid, #inc{increment = Inc}).
+
+inc_get(Pid) ->
+    gen_server:call(Pid, #get{}).
