@@ -294,7 +294,7 @@ inc_process(Init) ->
     % spawn(intro, inc_loop, [Init]).
     % synonym dazu:
     % wenn ein gelinkter Prozeß stirbt, bekommen wir eine Nachricht
-    Self = self(), % Pid der Shell
+    % Self = self(), % Pid der Shell
     spawn(fun () ->
             Pid = inc_supervisor(Init) % terminiert nicht (mehr)
             % Self ! Pid
