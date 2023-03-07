@@ -286,6 +286,7 @@ inc_supervisor(Init) ->
     % atomar spawn + link
     % Pid = spawn_link(?MODULE, inc_loop, [Init]),
     Pid = spawn(?MODULE, inc_loop, [Init]),
+    % schickt auch eine Nachricht, wenn Pid schon gestorben ist.
     erlang:monitor(process, Pid),
     register(inc_service, Pid),
     receive
