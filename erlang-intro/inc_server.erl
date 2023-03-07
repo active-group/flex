@@ -17,7 +17,7 @@
 
 -spec start(number()) -> {ok, pid()}.
 start(Init) ->
-    gen_server:start(inc_server, Init, []).
+    gen_server:start(inc_server, Init, [{debug, [trace]}]).
 
 % Callback
 init(Init) ->
