@@ -1,7 +1,8 @@
 -module(inc_server).
 -export([init/1,
          handle_cast/2,
-         handle_call/3]).
+         handle_call/3,
+         inc_by/2, inc_get/1]).
 
 % "Wir implementieren ein Interface"
 -behavior(gen_server).
