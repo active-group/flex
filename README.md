@@ -15,7 +15,7 @@ rebar3 auf Windows:
 
 ```
 git clone https://github.com/erlang/rebar3
-cd rebar
+cd rebar3
 bootstrap
 ```
 
