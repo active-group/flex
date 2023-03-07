@@ -291,8 +291,8 @@ inc_supervisor(Init) ->
     receive
         {'EXIT', _Pid, _Reason} -> % Nachricht von link
             inc_supervisor(Init);
-        {'DOWN', _, _ , _, _Reason} ->
-            io:format("not an exit message: ~p~n", [Msg])
+        {'DOWN', _, process , Pid_, _Reason} ->
+            inc_supervisor(Init)
     end.
 
 
