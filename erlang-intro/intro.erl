@@ -320,3 +320,10 @@ inc_process(Init) ->
 % - Gibt eine Liste von zu vergebenden Frequenzen
 % - man kann sich eine freie Frequenz geben lassen
 % - man kann eine Frequenz zurückgeben
+% 
+
+is_process_registered(Name) ->
+    case erlang:whereis(Name) of
+        undefined -> false;
+        _ -> true
+    end.
