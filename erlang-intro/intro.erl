@@ -286,7 +286,7 @@ inc_supervisor(Init) ->
     % atomar spawn + link
     % Pid = spawn_link(?MODULE, inc_loop, [Init]),
     Pid = spawn(?MODULE, inc_loop, [Init]),
-    erlang:monitor(self(), Pid),
+    erlang:monitor(process, Pid),
     register(inc_service, Pid),
     receive
         {'EXIT', _Pid, _Reason} ->
