@@ -27,3 +27,6 @@ handle_call(#get {}, _From, N) ->
     {reply, 
      N, % reply 
      N}. % new state
+
+inc_by(Pid, Inc) ->
+    
