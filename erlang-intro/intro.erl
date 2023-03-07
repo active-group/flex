@@ -291,7 +291,7 @@ inc_supervisor(Init) ->
     receive
         {'EXIT', _Pid, _Reason} -> % Nachricht von link
             inc_supervisor(Init);
-        {'DOWN', _, process , Pid_, _Reason} ->
+        {'DOWN', _, process , _Pid, _Reason} ->
             inc_supervisor(Init)
     end.
 
