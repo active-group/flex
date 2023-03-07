@@ -283,7 +283,10 @@ inc_supervisor(Init) ->
     % Pid = spawn(?MODULE, inc_loop, [Init]),
     % race
     % link(Pid), % "Dein Schicksal ist mein Schicksal"
-    Pid = spawn_link(?MODULE, inc_loop, [Init]),
+    % atomar spawn + link
+    % Pid = spawn_link(?MODULE, inc_loop, [Init]),
+    Pid = spawn(?MODULE, inc_loop, [Init]),
+    erlang:monitor(self(), Pid),
     register(inc_service, Pid),
     receive
         {'EXIT', _Pid, _Reason} ->
