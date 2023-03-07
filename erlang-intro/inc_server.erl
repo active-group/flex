@@ -18,5 +18,5 @@ init(Init) ->
 % cast: asynchrone Nachricht an den Server, ohne Antwort
 % call: Nachricht mit Antwort
 
-handle_cast(#inc{inc = Inc}, N) ->
+handle_cast(#inc{increment = Inc}, N) ->
     {noreply, N + Inc}.
