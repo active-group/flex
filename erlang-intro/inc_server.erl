@@ -14,6 +14,9 @@
 % Zählerstand liefern -> call
 -record(get, { }).
 
+start(Init) ->
+    gen_server:start(inc_server, Init, []).
+
 % Callback
 init(Init) ->
     {ok, Init}.
