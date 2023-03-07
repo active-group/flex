@@ -18,3 +18,5 @@ init(Init) ->
 % cast: asynchrone Nachricht an den Server, ohne Antwort
 % call: Nachricht mit Antwort
 
+handle_cast(Request, N) ->
+    {noreply, }
