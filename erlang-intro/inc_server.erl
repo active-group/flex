@@ -29,4 +29,4 @@ handle_call(#get {}, _From, N) ->
      N}. % new state
 
 inc_by(Pid, Inc) ->
-    
+    gen_server:cast(Pid, #inc{increment = Inc}).
