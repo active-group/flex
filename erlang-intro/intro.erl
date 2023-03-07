@@ -293,7 +293,7 @@ inc_supervisor(Init) ->
             inc_supervisor(Init);
         {'DOWN', _, process , _Pid, _Reason} ->
             inc_supervisor(Init);
-        Msg when erlang:is_tuple(Msg)
+        % Msg when erlang:is_tuple(Msg) ->
     end.
 
 
