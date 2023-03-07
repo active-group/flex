@@ -14,12 +14,12 @@ rebar3 auf Windows:
 
 
 ```
-git clone https://github.com/rebar/rebar3
+git clone https://github.com/erlang/rebar3
 cd rebar
 bootstrap
 ```
 
-Dann `rebar` und `rebar.cmd` in den Pfad kopieren.
+Dann `rebar3` und `rebar3.cmd` in den Pfad kopieren.
 
 Eine IDE Ihrer Wahl, z.B. Visual Studio Code:
 
