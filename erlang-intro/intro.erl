@@ -289,9 +289,9 @@ inc_supervisor(Init) ->
     erlang:monitor(process, Pid),
     register(inc_service, Pid),
     receive
-        {'EXIT', _Pid, _Reason} ->
+        {'EXIT', _Pid, _Reason} -> % Nachricht von link
             inc_supervisor(Init);
-        Msg ->
+        {'DOWN', _, _ , _, _Reason} ->
             io:format("not an exit message: ~p~n", [Msg])
     end.
 
