@@ -4,10 +4,11 @@
 % "Wir implementieren ein Interface"
 -behavior(gen_server).
 
-% Zählerstand inkrementieren
+
+% Zählerstand inkrementieren -> cast
 -record(inc, { increment :: number()}).
 
-% Zählerstand liefern
+% Zählerstand liefern -> call
 -record(get, { pid :: pid()}).
 
 % Callback
@@ -16,3 +17,4 @@ init(Init) ->
 
 % cast: asynchrone Nachricht an den Server, ohne Antwort
 % call: Nachricht mit Antwort
+
