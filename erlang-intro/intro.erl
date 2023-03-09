@@ -204,7 +204,7 @@ rev([First | Rest]) ->
     add_element(rev(Rest), First).
 
 -spec compose(fun((B) -> C), fun((A) -> B)) -> fun((A) -> C).
-compose(F, G) -> fun (A) -> F(G(A)).
+compose(F, G) -> fun (A) -> F(G(A)) end.
  
 % Element an Liste hinten anhängen
 -spec add_element(list(A), A) -> list(A).
