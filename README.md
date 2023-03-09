@@ -1,5 +1,34 @@
 # FLEX März 2023
 
+## Bei Fragen
+
+Mail an Mike Sperber
+
+## Start der Erlbank
+
+```
+git submodule init
+git submodule update
+```
+
+Dann müßten in `erlbank` Unterverzeichnisse `accounts`, `transfers`
+und `bank_statements` auftauchen.
+
+Zum Start der Applikation:
+
+```
+cd erlbank/deployment
+docker-compose up --build
+```
+
+Die UI ist dann hier:
+
+http://localhost:8080/
+
+Das Kibana ist dann hier:
+
+http://localhost:5601/
+
 ## Benötigte Software
 
 Erlang:
