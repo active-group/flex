@@ -203,7 +203,7 @@ rev([]) -> [];
 rev([First | Rest]) -> 
     add_element(rev(Rest), First).
 
--spec compose((B) -> C, (A) -> B) -> (A) -> C.
+-spec compose((B) -> C, (A) -> B) -> ((A) -> C).
  
 % Element an Liste hinten anhängen
 -spec add_element(list(A), A) -> list(A).
