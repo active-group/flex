@@ -44,6 +44,6 @@ water_state(_Temperature) -> liquid.
 
 safe_divide(X, Y) ->
     if 
-        Y == 0 -> ...;
-        true -> X / Y
+        Y == 0 -> {error, divide_by_zero};
+        true -> {ok, X / Y}
     end.
