@@ -49,3 +49,5 @@ safe_divide(X, Y) ->
         true -> {ok, X / Y}
     end.
 
+% Steigung eine Geraden berechnen
+-spec slope({number(), number()}, {number(), number()}) -> number().
