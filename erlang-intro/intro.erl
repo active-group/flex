@@ -7,7 +7,8 @@
          run_over_dillo/1, feed_dillo/1,
          p1/0, p2/0, run_over_animal/1,
          list0/0, list1/0, list2/0, list3/0, list4/0,
-         list_sum/1, list_nth/2]).
+         list_sum/1, list_nth/2,
+         highway/0, run_over_animals/1]).
 % . fertig
 % ; "oder"
 % , "und"
@@ -192,3 +193,6 @@ highway() -> [d1(), d2(), p1(), p2()].
 run_over_animals([]) -> [];
 run_over_animals([First|Rest]) -> 
     [run_over_animal(First) | run_over_animals(Rest)].
+
+% Strings: Listen von Zahlen (Unicode scalar values)
+% Binary:
