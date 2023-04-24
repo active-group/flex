@@ -206,3 +206,7 @@ inc_list([First|Rest]) ->
     [inc(First) | inc_list(Rest)].
 
 inc(X) -> X+1.
+
+list_map([]) -> [];
+inc_list([First|Rest]) ->
+    [inc(First) | inc_list(Rest)].
