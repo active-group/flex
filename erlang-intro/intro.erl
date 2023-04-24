@@ -63,7 +63,7 @@ slope({X1, Y1}, {X2, Y2}) ->
 % Records
 
 % Eine Uhrzeit besteht aus:
-% - Stunde
+% - Stunde - UND -
 % - Minute
 -record(time, {hour :: 0..23, minute :: 0..59}).
 
