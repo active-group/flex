@@ -67,4 +67,9 @@ slope({X1, Y1}, {X2, Y2}) ->
 -record(time, {hour :: 0..23, minute :: 0..59}).
 
 % 5 nach 12
-t1() -> #time { hour = 12, minute = 5}.
+t1() -> #time{ hour = 12, minute = 5}.
+% 14:27 Uhr
+t2() -> #time{ hour = 14, minute = 27}.
+
+% Minuten seit Mitternacht
+-spec minutes_since_midnight(#time{}) -> integer().
