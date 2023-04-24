@@ -65,7 +65,7 @@ slope({X1, Y1}, {X2, Y2}) ->
 % Eine Uhrzeit besteht aus:
 % - Stunde - UND -
 % - Minute
--record(time, {hour :: 0..23, second :: 0..59 = 0, minute :: 0..59}).
+-record(time, {hour :: 0..23, second = 0 :: 0..59, minute :: 0..59}).
 
 % 5 nach 12
 t1() -> #time{ hour = 12, minute = 5}.
@@ -78,3 +78,10 @@ t2() -> #time{ hour = 14, minute = 27}.
 %    Time#time.hour * 60 + Time#time.minute.
 minutes_since_midnight(#time{ hour = H, minute = M}) ->
     H * 60 + M.
+
+% Tiere auf dem texanischen Highway
+
+% Ein Gürteltier hat folgende Eigenschaften:
+% - tot oder lebendig - UND -
+% - Gewicht
+-record(dillo, { liveness :: dead | alive, weight :: number()}).
