@@ -1,7 +1,8 @@
 -module(intro).
 -export([double/1, is_cute/1, % /1 Anzahl der Parameter
          water_state/1, safe_divide/2, slope/2,
-         t1/0]).
+         t1/0, t2/0,
+         minutes_since_midnight/1]).
 % . fertig
 % ; "oder"
 % , "und"
