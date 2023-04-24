@@ -209,4 +209,4 @@ inc(X) -> X+1.
 
 list_map(F, []) -> [];
 list_map(F, [First|Rest]) ->
-    [F(First) | list_map(Rest)].
+    [F(First) | list_map(F, Rest)].
