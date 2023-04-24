@@ -4,7 +4,7 @@
          t1/0, t2/0,
          minutes_since_midnight/1,
          d1/0, d2/0,
-         run_over_dillo/1]).
+         run_over_dillo/1, feed_dillo/1]).
 % . fertig
 % ; "oder"
 % , "und"
