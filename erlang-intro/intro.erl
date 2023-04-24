@@ -18,10 +18,21 @@ double(X) -> X * 2.
 
 % Ist ein Haustier niedlich?
 -spec is_cute(dog | cat | snake) -> boolean().
-is_cute(Pet) ->
-    case Pet of
-        dog -> true;
-        cat -> true;
-        snake -> false
-    end.
+% is_cute(Pet) ->
+%    case Pet of
+%        dog -> true;
+%        cat -> true;
+%        snake -> false
+%    end.
+is_cute(dog) -> true;
+is_cute(cat) -> true;
+is_cute(snake) -> false.
 
+% Aggregatzustand von Wasser
+-spec water_state(number()) -> liquid | solid | gas.
+water_state(Temperature) ->
+    if
+        Temperature < 0 -> solid;
+        Temperature > 100 -> gas;
+        true -> liquid
+    end.
