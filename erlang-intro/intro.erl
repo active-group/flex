@@ -188,3 +188,4 @@ list_nth([_First | Rest], N) when N > 0 ->
 highway() -> [d1(), d2(), p1(), p2()].
 
 % Aufgabe: Eine Liste von Tieren überfahren.
+-spec run_over_animals(list(animal())) -> list(animal()).
