@@ -10,7 +10,8 @@
          list_sum/1, list_nth/2,
          highway/0, run_over_animals/1,
          inc_list/1, inc_list2/1,
-         run_over_animals2/1]).
+         run_over_animals2/1,
+         process_code/0]).
 % . fertig
 % ; "oder"
 % , "und"
