@@ -175,3 +175,5 @@ list4() -> [2 | list3()].
 list_sum([]) -> 0;
 list_sum([First | Rest]) -> 
     First + list_sum(Rest).
+
+% ntes Element einer Liste extrahieren
