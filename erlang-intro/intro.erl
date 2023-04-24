@@ -145,7 +145,7 @@ p1() -> #parrot{sentence = "Hallo!", weight = 1}.
 p2() -> #parrot{sentence = "Tschüss!", weight = 2}.
 
 -spec run_over_parrot(#parrot{}) -> #parrot{}.
-run_over_parrot(#parrot{ sentence = S, weight = W}) ->
+run_over_parrot(#parrot{ sentence = _S, weight = W}) ->
     #parrot{ sentence = "", weight = W}.
 
 % Ein Tier ist eins der folgenden:
