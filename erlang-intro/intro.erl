@@ -64,3 +64,6 @@ slope({X1, Y1}, {X2, Y2}) ->
 % - Stunde
 % - Minute
 -record(time, {hour :: 0..23, minute :: 0..59}).
+
+% 5 nach 12
+t1() -> #time { hour = 12, minute = 5}.
