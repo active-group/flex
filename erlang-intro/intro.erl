@@ -129,3 +129,8 @@ feed_dillo(D) ->
         true -> D#dillo{weight = W + 1}; % #dillo{ liveness = L, weight = W + 1};
         false -> D
     end.
+
+% Ein Papagei hat folgende Eigenschaften:
+% - ein Satz - UND -
+% - ein Gewicht
+-record
