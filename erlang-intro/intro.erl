@@ -48,3 +48,4 @@ safe_divide(X, Y) ->
         Y == 0 -> {error, divide_by_zero};
         true -> {ok, X / Y}
     end.
+
