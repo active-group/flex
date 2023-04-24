@@ -202,4 +202,7 @@ run_over_animals([First|Rest]) ->
 % Alle Elemente einer Liste um 1 erhöhen
 -spec inc_list(list(number())) -> list(number()).
 inc_list([]) -> [];
-inc_list([First|Rest]) -> [First+1 | inc_list(Rest)].
+inc_list([First|Rest]) ->
+    [inc(First) | inc_list(Rest)].
+
+inc(X) -> X+1.
