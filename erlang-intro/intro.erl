@@ -178,8 +178,9 @@ list_sum([First | Rest]) ->
 
 % ntes Element einer Liste extrahieren
 -spec list_nth(list(A), non_neg_integer()) -> {ok, A} | {error, list_too_short}. 
-list_nth([], 0) -> {error, list_too_short};
+list_nth([], _)            -> {error, list_too_short};
+% list_nth([], 0)            -> {error, list_too_short};
+% list_nth([], N) when N > 0 -> {error, list_too_short};
 list_nth([First | _Rest], 0) -> {ok, First};
-list_nth([], N) when N > 0 -> {errot, list_too_short};
 list_nth([_First | Rest], N) when N > 0 ->
     list_nth(Rest, N-1).
