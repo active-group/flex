@@ -94,5 +94,9 @@ d1() -> #dillo{liveness = alive, weight = 10}.
 d2() -> #dillo{liveness = dead, weight = 8}.
 % Gürteltier überfahren
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
-run_over_dillo(#dillo{ weight = W}) ->
-    #dillo{ liveness = dead, weight = W}.
+% run_over_dillo(#dillo{ weight = W}) ->
+%    #dillo{ liveness = dead, weight = W}.
+
+% "functional update"
+run_over_dillo(D) ->
+    D#dillo{ liveness = dead }.
