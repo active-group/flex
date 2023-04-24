@@ -163,3 +163,7 @@ list0() -> [].
 list1() -> [5 | []].
 % 2elementige Liste: 5 8
 list2() -> [5 | [8 | []]].
+% 3elementige Liste
+list3() -> [5, 8, 7].
+% 4elementige Liste: 2 5 8 7
+list4() -> [2 | list3()].
