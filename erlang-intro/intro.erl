@@ -223,6 +223,6 @@ inc_list2(List) ->
 
 process_code() ->
     receive % Syntax wie case
-      "Mike" -> io:format("super~n");
+      "Mike" -> io:format("super~n"); % ~n: Zeilenumbruch
       "Sperber" -> io:format("doof~n")
     end.
