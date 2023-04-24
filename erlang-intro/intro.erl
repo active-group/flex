@@ -157,7 +157,7 @@ run_over_animal(A) -> A.
 % Eine Liste ist eins der folgenden:
 % - die leere Liste  [] - ODER - 
 % - eine Cons-Liste aus erstem Element und Rest-Liste   [F | R]
-%                                               ^^^^^
+%                                   Selbstbezug ^^^^^
 list0() -> [].
 % 1elementige Liste: 5
 list1() -> [5 | []].
