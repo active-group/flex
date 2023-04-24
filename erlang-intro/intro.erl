@@ -124,7 +124,7 @@ should_feed(#dillo{liveness = L}) ->
 %     end.
 
 feed_dillo(D) ->
-    #dillo{liveness = L, weight = W} = D,
+    #dillo{weight = W} = D,
     case should_feed(D) of
         true -> D#dillo{weight = W + 1}; % #dillo{ liveness = L, weight = W + 1};
         false -> D
