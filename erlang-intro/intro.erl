@@ -212,4 +212,4 @@ list_map(F, [First|Rest]) ->
     [F(First) | list_map(F, Rest)].
 
 run_over_animals2(Animals) ->
-    list_map(fun run_over_animal/1, Animals)
+    list_map(fun intro:run_over_animal/1, Animals)
