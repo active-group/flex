@@ -167,3 +167,6 @@ list2() -> [5 | [8 | []]].
 list3() -> [5 | [8 | [7 | []]]]. % [5, 8, 7].
 % 4elementige Liste: 2 5 8 7
 list4() -> [2 | list3()].
+
+% Summe der Listenelemente berechnen
+-spec list_sum(list(number())) -> number().
