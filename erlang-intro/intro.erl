@@ -117,8 +117,8 @@ should_feed(#dillo{liveness = L}) ->
     end.
 
 -spec feed_dillo(#dillo{}) -> #dillo{}.
-feed_dillo(D) ->
+feed_dillo(#dillo{liveness = L, weight = W}) ->
     case should_feed(D) of
-        true -> #dillo{ liveness = D#dillo.liveness, weight = D#dillo.weight + 1};
+        true -> #dillo{ liveness = L, weight = W + 1};
         false -> D
     end.
