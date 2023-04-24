@@ -162,4 +162,4 @@ list0() -> [].
 % 1elementige Liste: 5
 list1() -> [5 | []].
 % 2elementige Liste: 5 8
-list2() -> [5 | 8 | []].
+list2() -> [5 | [8 | []]].
