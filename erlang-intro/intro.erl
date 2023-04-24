@@ -42,6 +42,7 @@ water_state(_Temperature) -> liquid.
 
 % Tupel: {1, true, "Mike"}
 
+-spec safe_divide(number(), number()) -> {error, divide_by_zero} | {ok, number()}.
 safe_divide(X, Y) ->
     if 
         Y == 0 -> {error, divide_by_zero};
