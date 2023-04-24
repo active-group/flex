@@ -56,3 +56,11 @@ slope({X1, Y1}, {X2, Y2}) ->
         {error, divide_by_zero} -> vertical;
         {ok, S} -> S
     end.
+
+% Zusammengesetzte Daten
+% Records
+
+% Eine Uhrzeit besteht aus:
+% - Stunde
+% - Minute
+-record(time, {hour :: 0..23, minute :: 0..59}).
