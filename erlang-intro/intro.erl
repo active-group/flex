@@ -103,3 +103,11 @@ run_over_dillo(D) ->
 
 % Gürteltier füttern
 % lebendige Gürteltiere nehmen zu, tote Gürteltiere nicht
+%
+
+-spec should_feed(#dillo{}) -> boolean().
+should_feed(D) ->
+    if
+        D#dillo.liveness == alive -> true;
+        D#dillo.liveness == dead -> false
+    end.
