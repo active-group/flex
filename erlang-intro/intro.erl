@@ -9,3 +9,9 @@
 double(X) -> X * 2.
 
 % Atom: "konstante Zeichenkette" / Name
+% 
+
+% Haustier ist eins der folgenden:
+% - Hund - ODER -
+% - Katze - ODER -
+% - Schlange
