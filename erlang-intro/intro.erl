@@ -5,4 +5,5 @@
 % ; "oder"
 % , "und"
 
+-spec double(number()) -> number().
 double(X) -> X * 2.
