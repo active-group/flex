@@ -100,3 +100,6 @@ d2() -> #dillo{liveness = dead, weight = 8}.
 % "functional update"
 run_over_dillo(D) ->
     D#dillo{ liveness = dead }. % D kopieren bis auf Feld "liveness"
+
+% Gürteltier füttern
+% lebendige Gürteltiere nehmen zu, tote Gürteltiere nicht
