@@ -74,6 +74,7 @@ slope({X1, Y1}, {X2, Y2}) ->
 % - Stunde - UND -
 % - Minute
 -record(time, {hour :: 0..23, 
+               % 
                % second = 0 :: 0..59,
                minute :: 0..59}).
 
@@ -219,3 +220,9 @@ run_over_animals2(Animals) ->
     list_map(fun run_over_animal/1, Animals).
 inc_list2(List) ->
     list_map(fun (X) -> X+1 end, List).
+
+process_code() ->
+    receive % Syntax wie case
+      "Mike" -> super;
+      "Sperber" -> doof
+    end.
