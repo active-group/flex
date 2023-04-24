@@ -2,7 +2,9 @@
 -export([double/1, is_cute/1, % /1 Anzahl der Parameter
          water_state/1, safe_divide/2, slope/2,
          t1/0, t2/0,
-         minutes_since_midnight/1]).
+         minutes_since_midnight/1,
+         d1/0, d2/0,
+         run_over_dillo/1]).
 % . fertig
 % ; "oder"
 % , "und"
