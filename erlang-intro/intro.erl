@@ -186,3 +186,5 @@ list_nth([_First | Rest], N) when N > 0 ->
     list_nth(Rest, N-1).
 
 highway() -> [d1(), d2(), p1(), p2()].
+
+% Aufgabe: Eine Liste von Tieren überfahren.
