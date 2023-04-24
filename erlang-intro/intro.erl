@@ -86,6 +86,10 @@ minutes_since_midnight(#time{ hour = H, minute = M}) ->
 % - Gewicht
 -record(dillo, { liveness :: dead | alive, weight :: number()}).
 
+% Gürteltier, lebendig, 10kg
+d1() -> #dillo{liveness = alive, weight = 10}.
+% totes Gürteltier, 8kg
+d2() -> #dillo{liveness = dead, weight = 8}.
 % Gürteltier überfahren
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
 run_over_dillo(#dillo{ liveness = L, weight = W}) ->
