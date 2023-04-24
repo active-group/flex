@@ -181,4 +181,5 @@ list_sum([First | Rest]) ->
 list_nth([], 0) -> {error, list_too_short};
 list_nth([First | Rest], 0) -> First;
 list_nth([], N) -> {errot, list_too_short};
-list_nth([First | Rest], N) -> undefined.
+list_nth([First | Rest], N) ->
+    list_nth(Rest, N-1).
