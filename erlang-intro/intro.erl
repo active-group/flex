@@ -197,4 +197,4 @@ run_over_animals([First|Rest]) ->
 % Strings: Listen von Zahlen (Unicode scalar values)
 % Binary: Array aus Bytes
 % <<5,6,7>>: Array aus den Bytes 5,6,7
-% <<"ABC">>: Array aus den Bytes 65, 66, 67
+% <<"ABC">>: Array aus den Bytes 65, 66, 67 (UTF-8)
