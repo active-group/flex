@@ -170,3 +170,4 @@ list4() -> [2 | list3()].
 
 % Summe der Listenelemente berechnen
 -spec list_sum(list(number())) -> number().
+list_sum()
