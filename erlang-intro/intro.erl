@@ -89,4 +89,4 @@ minutes_since_midnight(#time{ hour = H, minute = M}) ->
 % Gürteltier überfahren
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
 run_over_dillo(#dillo{ liveness = L, weight = W}) ->
-    
+    #dillo{ liveness = dead, weight = W}.
