@@ -146,3 +146,8 @@ run_over_parrot(#parrot{ sentence = S, weight = W}) ->
 % - ein Gürteltier - ODER -
 % - ein Papagei
 -type animal() :: #dillo{} | #parrot{}.
+
+% Ein Tier überfahren
+-spec run_over_animal(animal()) -> animal().
+run_over_animal(#dillo{} = D) -> run_over_dillo(D);
+run_over_animal(#parrot{} = P) -> run_over_parrot(P).
