@@ -213,3 +213,5 @@ list_map(F, [First|Rest]) ->
 
 run_over_animals2(Animals) ->
     list_map(fun run_over_animal/1, Animals).
+inc_list2(List) ->
+    list_map(fun (X) -> X+1 end, List).
