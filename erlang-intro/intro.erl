@@ -198,3 +198,8 @@ run_over_animals([First|Rest]) ->
 % Binary: Array aus Bytes
 % <<5,6,7>>: Array aus den Bytes 5,6,7
 % <<"ABC">>: Array aus den Bytes 65, 66, 67 (UTF-8)
+
+% Alle Elemente einer Liste um 1 erhöhen
+-spec inc_list(list(number())) -> list(number()).
+inc_list([]) -> [];
+inc_list([First|Rest]) -> [First+1 | inc_list(Rest)].
