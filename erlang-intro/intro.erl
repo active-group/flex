@@ -222,11 +222,11 @@ run_over_animals2(Animals) ->
 inc_list2(List) ->
     list_map(fun (X) -> X+1 end, List).
 
-process_code() ->
+process_code(N) ->
     receive % Syntax wie case
       "Mike" -> 
-        io:format("super~n"), % ~n: Zeilenumbruch
-        process_code();
+        io:format("super ~w~n", [N]), % ~n: Zeilenumbruch
+        process_code(N+1);
       "Sperber" -> io:format("doof~n")
     end.
 
