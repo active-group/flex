@@ -223,6 +223,6 @@ inc_list2(List) ->
 
 process_code() ->
     receive % Syntax wie case
-      "Mike" -> io:format("super");
-      "Sperber" -> io:format("doof")
+      "Mike" -> io:format("super~n");
+      "Sperber" -> io:format("doof~n")
     end.
