@@ -7,3 +7,5 @@
 
 -spec double(number()) -> number().
 double(X) -> X * 2.
+
+% Atom: "konstante Zeichenkette" / Name
