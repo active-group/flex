@@ -29,8 +29,8 @@ double(X) -> X * 2.
 %        cat -> true;
 %        snake -> false
 %    end.
-is_cute(dog) -> true.
-is_cute(cat) -> true.
+is_cute(dog) -> true;
+is_cute(cat) -> true;
 is_cute(snake) -> false.
 
 % Aggregatzustand von Wasser
