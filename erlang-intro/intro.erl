@@ -106,7 +106,7 @@ run_over_dillo(D) ->
 %
 
 -spec should_feed(#dillo{}) -> boolean().
-should_feed(#dillo{liveness = L, weight = W}) ->
+should_feed(#dillo{liveness = L}) ->
 %    if
 %        L == alive -> true;
 %        L == dead -> false
@@ -114,4 +114,11 @@ should_feed(#dillo{liveness = L, weight = W}) ->
     case L of
         alive -> true;
         dead -> false
+    end.
+
+-spec feed_dillo(#dillo{}) -> #dillo{}.
+feed_dillo(D) ->
+    case should_feed(D) of
+        true -> #dillo{ liveness = D#dillo.liveness, weight = D#dillo.weight + 1};
+        false -> D
     end.
