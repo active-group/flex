@@ -11,7 +11,7 @@
          highway/0, run_over_animals/1,
          inc_list/1, inc_list2/1,
          run_over_animals2/1,
-         process_code/0]).
+         process_code/1]).
 % . fertig
 % ; "oder"
 % , "und"
