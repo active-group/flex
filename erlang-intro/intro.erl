@@ -155,7 +155,7 @@ run_over_animal(#parrot{} = P) -> run_over_parrot(P);
 run_over_animal(A) -> A.
 
 % Eine Liste ist eins der folgenden:
-% - die leere Liste  []
+% - die leere Liste  [] - ODER - 
 % - eine Cons-Liste aus erstem Element und Rest-Liste   [F | R]
 %                                               ^^^^^
 list0() -> [].
