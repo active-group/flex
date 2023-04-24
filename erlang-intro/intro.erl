@@ -177,3 +177,4 @@ list_sum([First | Rest]) ->
     First + list_sum(Rest).
 
 % ntes Element einer Liste extrahieren
+-spec list_nth(list(A), non_neg_integer()) -> A. 
