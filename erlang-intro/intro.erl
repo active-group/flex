@@ -133,4 +133,7 @@ feed_dillo(D) ->
 % Ein Papagei hat folgende Eigenschaften:
 % - ein Satz - UND -
 % - ein Gewicht
--record(parrot, { sentence :: string(), weight :: number() })
+-record(parrot, { sentence :: string(), weight :: number() }).
+
+p1() -> #parrot{sentence = "Hallo!", weight = 1}.
+p2() -> #parrot{sentence = "Tschüss!", weight = 2}.
