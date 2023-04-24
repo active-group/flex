@@ -175,7 +175,7 @@ list4() -> [2 | list3()].
 -spec list_sum(list(number())) -> number().
 list_sum([]) -> 0;
 list_sum([First | Rest]) -> 
-    First + list_sum(Rest).
+    First + list_sum(Rest). % Kontext: First + []  // "Loch"
 
 % ntes Element einer Liste extrahieren
 -spec list_nth(list(A), non_neg_integer()) -> {ok, A} | {error, list_too_short}. 
@@ -184,7 +184,7 @@ list_nth([], _)            -> {error, list_too_short};
 % list_nth([], N) when N > 0 -> {error, list_too_short};
 list_nth([First | _Rest], 0) -> {ok, First};
 list_nth([_First | Rest], N) when N > 0 ->
-    list_nth(Rest, N-1).
+    list_nth(Rest, N-1). % kein Kontext, tail call, endrekursiver Aufruf
 
 highway() -> [d1(), d2(), p1(), p2()].
 
