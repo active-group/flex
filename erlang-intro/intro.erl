@@ -184,7 +184,7 @@ list_nth([], _)            -> {error, list_too_short};
 % list_nth([], N) when N > 0 -> {error, list_too_short};
 list_nth([First | _Rest], 0) -> {ok, First};
 list_nth([_First | Rest], N) when N > 0 ->
-    list_nth(Rest, N-1). % kein Kontext, tail call, endrekursiver Aufruf
+    list_nth(Rest, N-1). % kein Kontext, tail call, endrekursiver Aufruf, verbraucht keinen Stack
 
 highway() -> [d1(), d2(), p1(), p2()].
 
