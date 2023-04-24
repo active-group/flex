@@ -5,5 +5,5 @@
 % ; "oder"
 % , "und"
 
--spec double(string()) -> number().
+-spec double(number()) -> number().
 double(X) -> X * 2.
