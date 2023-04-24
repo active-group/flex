@@ -141,3 +141,8 @@ p2() -> #parrot{sentence = "Tschüss!", weight = 2}.
 -spec run_over_parrot(#parrot{}) -> #parrot{}.
 run_over_parrot(#parrot{ sentence = S, weight = W}) ->
     #parrot{ sentence = "", weight = W}.
+
+% Ein Tier ist eins der folgenden:
+% - ein Gürteltier - ODER -
+% - ein Papagei
+-type animal() :: #dillo{} | #parrot{}.
