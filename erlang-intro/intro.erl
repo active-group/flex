@@ -1,6 +1,6 @@
 -module(intro).
 -export([double/1, is_cute/1, % /1 Anzahl der Parameter
-         water_state/1]).
+         water_state/1, safe_divide/2]).
 % . fertig
 % ; "oder"
 % , "und"
@@ -43,4 +43,7 @@ water_state(_Temperature) -> liquid.
 % Tupel: {1, true, "Mike"}
 
 safe_divide(X, Y) ->
-    X / Y.
+    if 
+        Y == 0 -> ...;
+        true -> X / Y
+    end.
