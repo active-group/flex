@@ -66,7 +66,8 @@ start_counter(N) ->
     % link(Pid),
     io:format("pid: ~w~n", [Pid]),
     receive
-        
+        {'EXIT', Pid, Reason} ->
+            start_counter(N);
         Msg -> io:format("received message: ~w~n", [Msg])
     end,    
     Pid.
