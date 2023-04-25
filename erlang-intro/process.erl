@@ -9,7 +9,7 @@
 -record(inc_by, {increment :: integer() }).
 -record(get, {requester :: pid()}).
 
--type message() :: inc | #inc_by{}.
+-type message() :: inc | #inc_by{} | #get{}.
 
 % Zähler-Prozess
 counter_code(N) ->
