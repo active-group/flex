@@ -57,4 +57,6 @@ counter_get(Pid) ->
 % self(): Pid des laufenden Prozesses
 % 
 start_counter(N) ->
-    spawn(process, counter_code, [N]).
+    Pid = spawn(process, counter_code, [N]),
+    link(Pid),
+    Pid.
