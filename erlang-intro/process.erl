@@ -21,3 +21,6 @@ counter_code(N) ->
     end.
 
 counter_inc(Pid) -> Pid ! inc.
+
+counter_inc(Pid, Inc) ->
+    Pid ! #inc_by{increment = Inc}.
