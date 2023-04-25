@@ -15,3 +15,6 @@
 init(InitialState) ->
     {ok, InitialState}.
 
+-spec handle_cast(message(), state()) -> {noreply, state()}.
+handle_cast(inc, N) -> ...;
+handle_cast(#)
