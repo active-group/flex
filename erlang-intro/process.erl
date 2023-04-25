@@ -19,7 +19,10 @@ counter_code(N) ->
             counter_code(N+1);
         #inc_by{ increment = Inc } ->
             io:format("counter: ~w~n", [N]),
-            counter_code(N+Inc)
+            counter_code(N+Inc);
+        #get{requester = Req } ->
+            Req ! N,
+            counter_node(N)
     end.
 
 counter_inc(Pid) -> Pid ! inc.
