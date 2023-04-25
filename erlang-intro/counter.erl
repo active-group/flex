@@ -18,4 +18,4 @@ init(InitialState) ->
 -spec handle_cast(message(), state()) -> {noreply, state()}.
 handle_cast(inc, N) -> {noreply, N+1};
 handle_cast(#inc_by{ increment = Inc }, N) ->
-     {noreply, }.
+     {noreply, N+Inc}.
