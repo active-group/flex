@@ -67,6 +67,7 @@ start_counter(N) ->
     io:format("pid: ~w~n", [Pid]),
     receive
         {'EXIT', _Pid, _Reason} ->
+            io:format("restarting counter~n"),
             start_counter(N);
         Msg -> io:format("received message: ~w~n", [Msg])
     end,    
