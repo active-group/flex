@@ -7,6 +7,8 @@
 
 -record(inc_by, {increment :: integer() }).
 
+-type message() :: inc | #inc_by{}.
+
 % Zähler-Prozess
 counter_code(N) ->
     receive
