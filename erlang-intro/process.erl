@@ -29,3 +29,6 @@ counter_inc(Pid) -> Pid ! inc.
 
 counter_inc(Pid, Inc) ->
     Pid ! #inc_by{increment = Inc}.
+
+counter_get(Pid) ->
+    Pid ! #get{Requester = self() }.
