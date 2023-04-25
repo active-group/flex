@@ -8,3 +8,5 @@ counter_code(N) ->
             io:format("counter: ~w~n", [N]),
             counter_code(N+1)
     end.
+
+counter_inc(Pid) -> Pid ! inc.
