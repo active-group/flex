@@ -54,3 +54,6 @@ counter_get(Pid) ->
     end.
 
 % self(): Pid des laufenden Prozesses
+% 
+start_counter(N) ->
+    spawn(process, counter_code, [N]).
