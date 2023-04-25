@@ -11,6 +11,7 @@
 % State of our counter server
 -type state() :: integer().
 
+-spec init(state()) -> {ok, state()}.
 init(InitialState) ->
     {ok, InitialState}.
 
