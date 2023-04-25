@@ -58,5 +58,7 @@ counter_get(Pid) ->
 % 
 start_counter(N) ->
     Pid = spawn(process, counter_code, [N]),
+    % sorgt dafür, daß, wenn Pid stirbt, auch dieser Prozess stirbt
+    % und umgekehrt
     link(Pid),
     Pid.
