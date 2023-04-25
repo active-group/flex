@@ -12,7 +12,7 @@
 -type state() :: integer().
 
 start(InitialN) ->
-    gen_server:start(counter, InitialN, 
+    gen_server:start(?MODULE, InitialN, 
        [{debug, [trace]}]).
 
 -spec init(state()) -> {ok, state()}.
