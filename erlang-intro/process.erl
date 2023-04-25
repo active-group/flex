@@ -33,10 +33,12 @@ counter_code(N) ->
 -spec counter_next(integer(), message()) -> integer().
 counter_next(N, Message) ->
     case Message of
+        % casts:
         inc ->
             N+1;
         #inc_by{ increment = Inc } ->
             N+Inc;
+        % call:
         #get{requester = Req } ->
             Req ! N,
             N
