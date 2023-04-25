@@ -57,10 +57,14 @@ counter_get(Pid) ->
 % self(): Pid des laufenden Prozesses
 % 
 start_counter(N) ->
+    % don't die if a linked process dies, instead receive a message
     process_flag(trap_exit, true),
     Pid = spawn_link(process, counter_code, [N]),
     % spawn_link: spawn + link atomically
     % sorgt dafür, daß, wenn Pid stirbt, auch dieser Prozess stirbt
     % und umgekehrt
     % link(Pid),
+    receive
+        Msg -> io:format("received message: ~w~n", [Msg])
+    end,    
     Pid.
