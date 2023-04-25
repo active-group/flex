@@ -24,4 +24,5 @@ handle_cast(#inc_by{ increment = Inc }, N) ->
     {reply, integer(), state()}.
 handle_call(#get{requester = Req }, From, N) ->
     {reply, 
+     N, % reply
      }
