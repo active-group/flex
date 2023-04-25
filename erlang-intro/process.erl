@@ -57,6 +57,7 @@ counter_get(Pid) ->
 % self(): Pid des laufenden Prozesses
 % 
 start_counter(N) ->
+    process_flag(trap_exit, true),
     Pid = spawn(process, counter_code, [N]),
     % sorgt dafür, daß, wenn Pid stirbt, auch dieser Prozess stirbt
     % und umgekehrt
