@@ -25,4 +25,4 @@ handle_cast(#inc_by{ increment = Inc }, N) ->
 handle_call(#get{requester = Req }, From, N) ->
     {reply, 
      N, % reply
-     }
+     N}.
