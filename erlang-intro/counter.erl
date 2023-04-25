@@ -22,7 +22,7 @@ handle_cast(#inc_by{ increment = Inc }, N) ->
 
 -spec handle_call(message(), pid(), state()) -> 
     {reply, integer(), state()}.
-handle_call(#get{requester = _Req }, _From, N) ->
+handle_call(#get{requester = Req }, _From, N) ->
     {reply, 
      N, % reply
      N}.
