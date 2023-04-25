@@ -14,6 +14,7 @@
 
 % Zähler-Prozess
 counter_code(N) ->
+    io:format("counter: ~w~n", [N]),
     receive
 %        inc ->
 %            io:format("counter: ~w~n", [N]),
