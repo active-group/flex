@@ -60,7 +60,7 @@ start_counter(N) ->
     % don't die if a linked process dies, instead receive a message
     process_flag(trap_exit, true),
     Pid = spawn_link(process, counter_code, [N]),
-    register()
+    register(inc_service, Pid),
     % spawn_link: spawn + link atomically
     % sorgt dafür, daß, wenn Pid stirbt, auch dieser Prozess stirbt
     % und umgekehrt
