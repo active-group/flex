@@ -1,5 +1,6 @@
 -module(process).
--export([counter_code/1, counter_inc/1]).
+-export([counter_code/1,
+         counter_inc/1, counter_inc/2]).
 
 % Eine Nachricht an counter_code ist eins der folgenden:
 % - inc - ODER -
