@@ -22,7 +22,7 @@ counter_code(N) ->
             counter_code(N+Inc);
         #get{requester = Req } ->
             Req ! N,
-            counter_node(N)
+            counter_code(N)
     end.
 
 counter_inc(Pid) -> Pid ! inc.
