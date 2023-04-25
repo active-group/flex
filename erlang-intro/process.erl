@@ -1,5 +1,5 @@
 -module(process).
--export([counter_code/1])
+-export([counter_code/1]).
 
 % Zähler-Prozess
 counter_code(N) ->
