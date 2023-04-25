@@ -58,8 +58,9 @@ counter_get(Pid) ->
 % 
 start_counter(N) ->
     process_flag(trap_exit, true),
-    Pid = spawn(process, counter_code, [N]),
+    Pid = spawn_link(process, counter_code, [N]),
+    % spawn_link: spawn + link atomically
     % sorgt dafür, daß, wenn Pid stirbt, auch dieser Prozess stirbt
     % und umgekehrt
-    link(Pid),
+    % link(Pid),
     Pid.
