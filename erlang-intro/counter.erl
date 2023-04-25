@@ -30,3 +30,9 @@ handle_call(#get{requester = _Req }, _From, N) ->
     {reply, 
      N, % reply
      N}.
+
+counter_inc(Pid, Inc) ->
+    gen_server:cast(Pid, #inc_by{increment = Inc}).
+
+counter_get(Pid) ->
+    gen_server:call(Pid, #get{requester = dummy}).
