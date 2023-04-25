@@ -64,6 +64,7 @@ start_counter(N) ->
     % sorgt dafür, daß, wenn Pid stirbt, auch dieser Prozess stirbt
     % und umgekehrt
     % link(Pid),
+    io:format("pid: ~w~n", [Pid]),
     receive
         Msg -> io:format("received message: ~w~n", [Msg])
     end,    
