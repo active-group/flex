@@ -26,6 +26,18 @@ counter_code(N) ->
             counter_code(N)
     end.
 
+-spec counter_next(integer(), message()) -> integer().
+counter_next(N, Message) ->
+    case Message of
+        inc ->
+            N+1;
+        #inc_by{ increment = Inc } ->
+            N+Inc;
+        #get{requester = Req } ->
+            Req ! N,
+            N
+    end.
+
 counter_inc(Pid) -> Pid ! inc.
 
 counter_inc(Pid, Inc) ->
