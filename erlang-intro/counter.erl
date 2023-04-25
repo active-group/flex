@@ -11,8 +11,11 @@
 % State of our counter server
 -type state() :: integer().
 
+start(InitialN) ->
+    gen_server:start(counter, InitialN, []).
+
 -spec init(state()) -> {ok, state()}.
-init(InitialState) ->
+init(InitialState) -> % is just InitialN from start(...)
     {ok, InitialState}.
 
 -spec handle_cast(message(), state()) -> {noreply, state()}.
