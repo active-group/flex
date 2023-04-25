@@ -16,5 +16,5 @@ init(InitialState) ->
     {ok, InitialState}.
 
 -spec handle_cast(message(), state()) -> {noreply, state()}.
-handle_cast(inc, N) -> ... ;
-handle_cast()
+handle_cast(inc, N) -> {noreply, } ;
+handle_cast(#inc_by{ increment = Inc }, N) -> ... .
