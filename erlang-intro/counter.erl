@@ -19,3 +19,5 @@ init(InitialState) ->
 handle_cast(inc, N) -> {noreply, N+1};
 handle_cast(#inc_by{ increment = Inc }, N) ->
      {noreply, N+Inc}.
+
+-spec handle_call(message(), pid(), state()) -> {reply, }
