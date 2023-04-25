@@ -31,4 +31,9 @@ counter_inc(Pid, Inc) ->
     Pid ! #inc_by{increment = Inc}.
 
 counter_get(Pid) ->
-    Pid ! #get{requester = self() }.
+    Pid ! #get{requester = self() },
+    receive
+        N -> N
+    end.
+
+% self(): Pid des laufenden Prozesses
