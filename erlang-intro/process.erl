@@ -14,7 +14,10 @@ counter_code(N) ->
     receive
         inc ->
             io:format("counter: ~w~n", [N]),
-            counter_code(N+1)
+            counter_code(N+1);
+        #inc_by{ increment = Inc } ->
+            io:format("counter: ~w~n", [N]),
+            counter_code(N+Inc)
     end.
 
 counter_inc(Pid) -> Pid ! inc.
