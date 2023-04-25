@@ -7,6 +7,7 @@
 % - inc-by-Record
 
 -record(inc_by, {increment :: integer() }).
+-record(get, {requester :: pid()}).
 
 -type message() :: inc | #inc_by{}.
 
