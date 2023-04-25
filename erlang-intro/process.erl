@@ -15,15 +15,17 @@
 % Zähler-Prozess
 counter_code(N) ->
     receive
-        inc ->
-            io:format("counter: ~w~n", [N]),
-            counter_code(N+1);
-        #inc_by{ increment = Inc } ->
-            io:format("counter: ~w~n", [N]),
-            counter_code(N+Inc);
-        #get{requester = Req } ->
-            Req ! N,
-            counter_code(N)
+%        inc ->
+%            io:format("counter: ~w~n", [N]),
+%            counter_code(N+1);
+%        #inc_by{ increment = Inc } ->
+%            io:format("counter: ~w~n", [N]),
+%            counter_code(N+Inc);
+%        #get{requester = Req } ->
+%            Req ! N,
+%            counter_code(N)
+        Message ->
+            counter_code(counter_next(N, Message))
     end.
 
 -spec counter_next(integer(), message()) -> integer().
