@@ -1,7 +1,8 @@
 -module(process).
 -export([counter_code/1, counter_next/2,
          counter_inc/1, counter_inc/2,
-         counter_get/1]).
+         counter_get/1,
+         start_counter/1]).
 
 % Eine Nachricht an counter_code ist eins der folgenden:
 % - inc - ODER -
