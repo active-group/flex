@@ -12,7 +12,8 @@
 -type state() :: integer().
 
 start(InitialN) ->
-    gen_server:start(counter, InitialN, []).
+    gen_server:start(counter, InitialN, 
+       [{debug, [trace]}]).
 
 -spec init(state()) -> {ok, state()}.
 init(InitialState) -> % is just InitialN from start(...)
