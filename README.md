@@ -45,3 +45,33 @@ https://docs.docker.com/compose/install/
 ## Hintergrund
 
 - [FLEX-Curriculum](https://www.isaqb.org/certifications/cpsa-certifications/cpsa-advanced-level/flex/)
+
+## Sonstige Quellen
+
+Founding book on DDD:
+Eric Evans: Domain-Driven Design: Tackling Complexity in the Heart of
+Software, Addison-Wesley Professional, 2003.
+
+Why continuous deployment leads to higher quality:
+Forsgren. N, Humble. J, Kim. G: Accelerate, IT Revolutions, 2018.
+https://itrevolution.com/book/accelerate/
+
+Standard work on microservices:
+Newman, Sam: Building Microservices.  O'Reilly, 2015.
+https://samnewman.io/books/building_microservices/
+
+Standard work on continuous deployment:
+Nygard, Michael T. Release It: Design and Deploy Production-Ready Software, 2017.
+https://pragprog.com/book/mnee/release-it
+
+Standard work on event-driven systems:
+Stopford, Ben: Designing Event-Driven Systems, O’Reilly Media, 2018.
+https://www.confluent.io/designing-event-driven-systems/
+
+DDD and functional programming:
+Wlaschin, Scott: Domain Modeling Made Functional, The Pragmatic Programmers, 2018.
+https://pragprog.com/book/swdddf/domain-modeling-made-functional
+
+Standard work on microservices:
+Wolff, Eberhard: Microservices: Grundlagen flexibler Softwarearchitekturen. dpunkt. verlag, 2018.
+https://microservices-buch.de/
