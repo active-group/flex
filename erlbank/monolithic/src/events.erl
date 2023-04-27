@@ -1,5 +1,6 @@
 -module(events).
--export([init_events/0, put_event/1, get_all_events/0, get_events_from/1]).
+-export([init_events/0, put_event/1, get_all_events/0, get_events_from/1,
+         remember_account_event_number/1, last_used_account_event_number/0]).
 -include("events.hrl").
 
 % call after database: init_database/0
@@ -13,6 +14,12 @@ init_events() ->
 
 -spec unique_event_number() -> non_neg_integer().
 unique_event_number() -> dets:update_counter(table_id, event, 1).
+
+remember_account_event_number(Id) ->
+    dets:insert(table_id, account_event, Id).
+
+last_used_account_event_number() ->
+    dets:lookup(table_id, account_event).
 
 -spec put_event(term()) -> #event{}.
 put_event(Payload) ->
