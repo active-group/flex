@@ -173,3 +173,6 @@ run_over_animal(#parrot{} = Parrot) ->
 % - die leere Liste: []
 % - eine Cons-Liste aus erstem Element E und Rest-Liste R
 %   [ E | R ]
+
+% 1elementige Liste: 5 
+list1() = [5 | []].
