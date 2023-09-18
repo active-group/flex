@@ -9,7 +9,8 @@
          feed_dillo/2,
          parrot1/0, parrot2/0,
          run_over_animal/1,
-         list_sum/1]).
+         list_sum/1,
+         list_append/2]).
 
 % Satzzeichen:
 % . "fertig"
