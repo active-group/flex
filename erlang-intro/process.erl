@@ -25,7 +25,7 @@ counter_code(N) ->
 
 -type counter_state() :: number().
 
--spec process_counter_message(counter_state(), counter_message()) :: counter_state().
+-spec process_counter_message(counter_state(), counter_message()) -> counter_state().
 process_counter_message(N, inc) -> N + 1;
 process_counter_message(N, {inc, Inc}) -> N + Inc. 
 
