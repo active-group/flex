@@ -31,8 +31,10 @@ double(X) -> X * 2.
 % in Erlang abbilden durch Atome:
 % cat, dog, snake
 
+-type pet() :: dog | cat | snake.
+
 % Ist ein Haustier niedlich? 
--spec is_cute(dog | cat | snake) -> boolean().
+-spec is_cute(pet()) -> boolean().
 % is_cute(Pet) ->
 %    case Pet of
 %        dog -> true;
@@ -149,3 +151,7 @@ parrot2() -> #parrot { sentence = "Goodbye!", weight = 2}.
 run_over_parrot(#parrot { sentence = _Sentence, weight = Weight}) ->
   #parrot { sentence = "", weight = Weight}.
 
+% Tier (auf dem texanischen Highway) ist eins der folgenden:
+% - Gürteltier -ODER-
+% - Papagei
+-type animal() :: #dillo{} | #parrot{}.
