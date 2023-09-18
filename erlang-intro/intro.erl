@@ -158,3 +158,8 @@ run_over_parrot(#parrot { sentence = _Sentence, weight = Weight}) ->
 % jeder einzelne Fall eigene Datendefinition:
 % gemischte Daten
 -type animal() :: #dillo{} | #parrot{}.
+
+% Tier überfahren
+-spec run_over_animal(animal()) -> animal().
+run_over_animal(#dillo{} = Dillo) -> run_over_dillo(Dillo);
+run_over_animal(#parrot() = Parrot) -> run_over_parrot(Parrot).  
