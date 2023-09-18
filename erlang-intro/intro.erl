@@ -253,3 +253,4 @@ extract(P, [First|Rest]) ->
         true -> [First | extract(P, Rest)];
         false -> extract(P, Rest)
     end.
+
