@@ -213,7 +213,7 @@ is_even(N) -> N rem 2 == 0.
 
 % Funktion, welche aus einer Liste alle geraden Elemente extrahiert.
 -spec extract_evens(list(integer)) -> list(integer()).
-extract_evens([]) -> todo;
+extract_evens([]) -> [];
 extract_evens([First|Rest]) ->
     case is_even(First) of
         true ->  [First | extract_evens(Rest)];
