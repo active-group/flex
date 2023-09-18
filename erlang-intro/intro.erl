@@ -206,5 +206,16 @@ run_over_animals([]) -> [];
 run_over_animals([First|Rest]) ->
     [run_over_animal(First) | run_over_animals(Rest)].
 
-% Funktion, welche aus einer Liste alle geraden Elemente extrahiert.
+
 % mit Hilfsfunktion, die testet, ob eine Zahl gerade ist oder nicht.
+-spec is_even(integer()) -> boolean().
+is_even(N) -> N rem 2 == 0.
+
+% Funktion, welche aus einer Liste alle geraden Elemente extrahiert.
+-spec extract_evens(list(integer)) -> list(integer()).
+extract_evens([]) -> todo;
+extract_evens([First|Rest]) ->
+    case is_even(First) of
+        true ->  [First | extract_evens(Rest)];
+        false -> extract_evens(Rest)
+    end.
