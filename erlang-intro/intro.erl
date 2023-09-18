@@ -252,7 +252,8 @@ extract_odds([First|Rest]) ->
 % - umbenennen
 % - ersetzen die Unterschiede durch (abstrakte) Namen
 % - die Namen zu Parametern machen
--spec extract(fun((A) -> boolean()), list(A)) -> list(A). extract(_P, []) -> [];
+-spec extract(fun((A) -> boolean()), list(A)) -> list(A). 
+extract(_P, []) -> [];
 extract(P, [First|Rest]) ->
     case P(First) of
         true -> [First | extract(P, Rest)];
@@ -278,3 +279,8 @@ rev([First|Rest], Acc) ->
 f(X, Y) ->
     Z = X + Y,
     Z * 2.
+
+% Acc ist die Summe der bisher gesehenen Elemente
+list_sum([], Acc) -> Acc;
+list_sum([First | Rest], Acc) ->
+    list_sum(Rest, First + Acc).
