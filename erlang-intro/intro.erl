@@ -175,4 +175,4 @@ run_over_animal(#parrot{} = Parrot) ->
 %   [ E | R ]
 
 % 1elementige Liste: 5 
-list1() = [5 | []].
+list1() -> [5 | []].
