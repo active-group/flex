@@ -284,3 +284,8 @@ f(X, Y) ->
 list_sum([], Acc) -> Acc;
 list_sum([First | Rest], Acc) ->
     list_sum(Rest, First + Acc).
+
+
+list_append2([], List2, _Acc) -> List2;
+list_append2([First|Rest], List2, Acc) ->
+    list_append2(Rest, List2, [First | Acc]).
