@@ -14,13 +14,14 @@ process_code() ->
 counter_code(N) ->
     io:format("counter: ~w~n", [N]),
     receive
-        inc -> 
-            counter_code(N+1);
-        {inc, Inc} ->
-            counter_code(N+Inc);
         {get, ClientPid} ->
             ClientPid ! N,
             counter_code(N)
+        Msg -> counter_code(process_counter_message(N, Msg))
+%        inc -> 
+%            counter_code(N+1);
+%        {inc, Inc} ->
+%            counter_code(N+Inc);
     end.
 
 -type counter_state() :: number().
