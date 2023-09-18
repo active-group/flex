@@ -1,6 +1,6 @@
 -module(process).
 -export([process_code/0, 
-         counter_code/1, counter/1, counter_inc/1, counter_get/1]).
+         counter_code/1, counter/1, counter_inc/1, counter_inc/2, counter_get/1]).
 
 process_code() ->
     receive % Syntax ist wie case
