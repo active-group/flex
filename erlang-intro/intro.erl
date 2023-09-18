@@ -274,7 +274,7 @@ rev([First|Rest], Acc) ->
     % endrekursiver Aufruf -> verbraucht keinen Platz auf dem Stack
     rev(Rest, [First | Acc]).
 
-rev_test() -> [3,2,1] = rev([1,2,3], []).
+rev_test() -> [3,3,1] = rev([1,2,3], []).
 
 % return f(x)
 % 
