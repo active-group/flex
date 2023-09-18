@@ -16,7 +16,7 @@
          run_over_animals/1,
          extract_evens/1, is_even/1,
          extract_odds/1, is_odd/1,
-         extract/2]).
+         extract/2, list_map/2]).
 
 % Satzzeichen:
 % . "fertig"
