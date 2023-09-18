@@ -292,3 +292,8 @@ list_append2([First|Rest], List2, Acc) ->
 
 list_append2(List1, List2) ->
     list_append2(rev(List1, []), lalalala, List2).
+
+% Noch nicht gemacht:
+% - Maps
+% - Pattern-Matching (auf Bit-Ebene) auf Binaries
+% - Exceptions
