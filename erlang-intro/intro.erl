@@ -219,3 +219,15 @@ extract_evens([First|Rest]) ->
         true ->  [First | extract_evens(Rest)];
         false -> extract_evens(Rest)
     end.
+
+% mit Hilfsfunktion, die testet, ob eine Zahl gerade ist oder nicht.
+-spec is_odd(integer()) -> boolean().
+is_odd(N) -> N rem 2 == 1.
+
+-spec extract_odds(list(integer())) -> list(integer()).
+extract_odds([]) -> todo;
+extract_odds([First|Rest]) ->
+    case is_odd(First) of
+        true -> [First | extract_odds(Rest)];
+        false -> extract_odds(Rest)
+    end.
