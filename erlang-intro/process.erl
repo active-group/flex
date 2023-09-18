@@ -32,7 +32,7 @@ process_counter_message(N, {inc, Inc}) -> N + Inc.
 
 counter(N) ->
     Pid = spawn(process, counter_code, [N]),
-    link(Pid),
+    link(Pid), % "Wenn Du stirbst, sterbe ich auch. (Und umgekehrt.)"
     Pid.
 
 counter_inc(Pid) ->
