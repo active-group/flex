@@ -241,6 +241,7 @@ extract_odds([First|Rest]) ->
 % - umbenennen
 % - ersetzen die Unterschiede durch (abstrakte) Namen
 % - die Namen zu Parametern machen
+% -spec extract(..., list(A))
 extract(_P, []) -> [];
 extract(P, [First|Rest]) ->
     case P(First) of
