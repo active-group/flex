@@ -235,6 +235,12 @@ extract_odds([First|Rest]) ->
 % Abstraktion:
 % Ausgangssituation: 2 Stück Code, ähnlich bis auf Unterschiede4
 % - kopieren
+% - umbenennen
 % - ersetzen die Unterschiede durch (abstrakte) Namen
 % - die Namen zu Parametern machen
-% 
+extract([]) -> [];
+extract([First|Rest]) ->
+    case P(First) of
+        true -> [First | extract(Rest)];
+        false -> extract(Rest)
+    end.
