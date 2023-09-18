@@ -272,3 +272,10 @@ rev([First|Rest], Acc) ->
     % kein Kontext: tail call
     % endrekursiver Aufruf -> verbraucht keinen Platz auf dem Stack
     rev(Rest, [First | Acc]).
+
+% return f(x)
+% 
+
+f(X, Y) ->
+    Z = X + Y,
+    Z * 2.
