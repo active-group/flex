@@ -259,3 +259,7 @@ extract(P, [First|Rest]) ->
         false -> extract(P, Rest)
     end.
 
+-spec rev(list(A)) -> list(A).
+rev([]) -> [];
+rev([First|Rest]) ->
+    list_append(rev(Rest), [First]).
