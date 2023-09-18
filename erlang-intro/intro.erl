@@ -12,6 +12,7 @@
          list_sum/1,
          list_append/2,
          highway/0,
+         animal_is_alive/1,
          run_over_animals/1,
          extract_evens/1, is_even/1,
          extract_odds/1, is_odd/1,
@@ -167,6 +168,10 @@ run_over_parrot(#parrot { sentence = _Sentence, weight = Weight}) ->
 % jeder einzelne Fall eigene Datendefinition:
 % gemischte Daten
 -type animal() :: #dillo{} | #parrot{}.
+
+animal_is_alive(#dillo{liveness = alive}) -> true;
+animal_is_alive(#parrot{}) -> true;
+animal_is_alive(_) -> false.
 
 % Tier überfahren
 -spec run_over_animal(animal()) -> animal().
