@@ -18,6 +18,7 @@
          extract_odds/1, is_odd/1,
          extract/2, list_map/2,
          rev/1, rev/2, list_append2/3, list_append2/2]).
+-include_lib("eunit/include/eunit.hrl").
 
 % Satzzeichen:
 % . "fertig"
@@ -297,3 +298,4 @@ list_append2(List1, List2) ->
 % - Maps
 % - Pattern-Matching (auf Bit-Ebene) auf Binaries
 % - Exceptions
+% - "maybe"
