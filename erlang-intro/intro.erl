@@ -6,7 +6,9 @@
          t1/0, minutes_since_midnight/1,
          dillo1/0, dillo2/0,
          run_over_dillo/1,
-         feed_dillo/2]).
+         feed_dillo/2,
+         parrot1/0, parrot2/0,
+         run_over_animal/1]).
 
 % Satzzeichen:
 % . "fertig"
@@ -161,5 +163,7 @@ run_over_parrot(#parrot { sentence = _Sentence, weight = Weight}) ->
 
 % Tier überfahren
 -spec run_over_animal(animal()) -> animal().
-run_over_animal(#dillo{} = Dillo) -> run_over_dillo(Dillo);
-run_over_animal(#parrot{} = Parrot) -> run_over_parrot(Parrot).  
+run_over_animal(#dillo{} = Dillo) -> 
+    run_over_dillo(Dillo);
+run_over_animal(#parrot{} = Parrot) ->
+    run_over_parrot(Parrot).  
