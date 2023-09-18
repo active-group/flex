@@ -1,5 +1,5 @@
 -module(process).
--export([process_code/0]).
+-export([process_code/0, counter_code/1]).
 
 process_code() ->
     receive % Syntax ist wie case
