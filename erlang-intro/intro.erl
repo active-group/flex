@@ -225,9 +225,16 @@ extract_evens([First|Rest]) ->
 is_odd(N) -> N rem 2 == 1.
 
 -spec extract_odds(list(integer())) -> list(integer()).
-extract_odds([]) -> todo;
+extract_odds([]) -> []];
 extract_odds([First|Rest]) ->
     case is_odd(First) of
         true -> [First | extract_odds(Rest)];
         false -> extract_odds(Rest)
     end.
+
+% Abstraktion:
+% Ausgangssituation: 2 Stück Code, ähnlich bis auf Unterschiede4
+% - kopieren
+% - ersetzen die Unterschiede durch (abstrakte) Namen
+% - die Namen zu Parametern machen
+% 
