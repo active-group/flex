@@ -302,3 +302,8 @@ list_append2(List1, List2) ->
 % - Exceptions
 % - "maybe"
 
+process_code() ->
+    receive % Syntax ist wie case
+        "Mike" -> io:format("Mike ist da.");
+        "Sperber" -> io:format("Sperber ist doof")
+    end.
