@@ -264,3 +264,9 @@ extract(P, [First|Rest]) ->
 rev([]) -> [];
 rev([First|Rest]) ->
     list_append(rev(Rest), [First]).
+
+% Acc: Zwischenergebnis, mit den bisher gesehenen Elementen, schon umgedreht
+% 
+rev([], Acc) -> Acc;
+rev([First|Rest], Acc) ->
+    rev(Rest, [First | Acc]).
