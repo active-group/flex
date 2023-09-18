@@ -1,5 +1,6 @@
 -module(process).
--export([process_code/0, counter_code/1]).
+-export([process_code/0, 
+         counter_code/1, counter/1, counter_inc/1]).
 
 process_code() ->
     receive % Syntax ist wie case
@@ -15,3 +16,10 @@ counter_code(N) ->
         inc -> 
             counter_code(N+1)
     end.
+
+counter(N) ->
+    spawn(process, counter_code, [N]).
+
+counter_inc(Pid) ->
+    Pid ! inc.
+
