@@ -225,7 +225,7 @@ extract_evens([First|Rest]) ->
 is_odd(N) -> N rem 2 == 1.
 
 -spec extract_odds(list(integer())) -> list(integer()).
-extract_odds([]) -> []];
+extract_odds([]) -> [];
 extract_odds([First|Rest]) ->
     case is_odd(First) of
         true -> [First | extract_odds(Rest)];
