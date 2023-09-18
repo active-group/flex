@@ -31,7 +31,9 @@ process_counter_message(N, inc) -> N + 1;
 process_counter_message(N, {inc, Inc}) -> N + Inc. 
 
 counter(N) ->
-    spawn(process, counter_code, [N]).
+    Pid = spawn(process, counter_code, [N]),
+    link(Pid),
+    Pid.
 
 counter_inc(Pid) ->
     Pid ! inc.
