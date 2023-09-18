@@ -277,5 +277,5 @@ rev([First|Rest], Acc) ->
 % 
 
 f(X, Y) ->
-    Z = X + Y,
+    Z = X + Y
     Z * 2.
