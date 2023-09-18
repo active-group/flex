@@ -269,4 +269,6 @@ rev([First|Rest]) ->
 % 
 rev([], Acc) -> Acc;
 rev([First|Rest], Acc) ->
+    % kein Kontext: tail call
+    % endrekursiver Aufruf
     rev(Rest, [First | Acc]).
