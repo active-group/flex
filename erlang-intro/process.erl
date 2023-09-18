@@ -14,7 +14,10 @@ counter_code(N) ->
     io:format("counter: ~w~n", [N]),
     receive
         inc -> 
-            counter_code(N+1)
+            counter_code(N+1);
+        {get, Pid} ->
+            Pid ! N,
+            counter_code(N)
     end.
 
 counter(N) ->
