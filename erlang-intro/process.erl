@@ -16,7 +16,7 @@ counter_code(N) ->
     receive
         {get, ClientPid} ->
             ClientPid ! N,
-            counter_code(N)
+            counter_code(N);
         Msg -> counter_code(process_counter_message(N, Msg))
 %        inc -> 
 %            counter_code(N+1);
