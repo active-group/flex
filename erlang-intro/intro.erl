@@ -12,7 +12,10 @@
          list_sum/1,
          list_append/2,
          highway/0,
-         run_over_animals/1]).
+         run_over_animals/1,
+         extract_evens/1,
+         extract_odds/1,
+         extract/2]).
 
 % Satzzeichen:
 % . "fertig"
