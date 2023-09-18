@@ -10,6 +10,7 @@ process_code() ->
         "Sperber" -> io:format("Sperber ist doof.~n")
     end.
 
+-type counter_message() :: inc | {inc, number()} | {get, pid()}.
 counter_code(N) ->
     io:format("counter: ~w~n", [N]),
     receive
