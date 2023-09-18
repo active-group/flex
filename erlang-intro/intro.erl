@@ -238,9 +238,9 @@ extract_odds([First|Rest]) ->
 % - umbenennen
 % - ersetzen die Unterschiede durch (abstrakte) Namen
 % - die Namen zu Parametern machen
-extract([]) -> [];
-extract([First|Rest]) ->
+extract(P, []) -> [];
+extract(P, [First|Rest]) ->
     case P(First) of
-        true -> [First | extract(Rest)];
-        false -> extract(Rest)
+        true -> [First | extract(P, Rest)];
+        false -> extract(P, Rest)
     end.
