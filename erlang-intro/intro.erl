@@ -10,7 +10,9 @@
          parrot1/0, parrot2/0,
          run_over_animal/1,
          list_sum/1,
-         list_append/2]).
+         list_append/2,
+         highway/0,
+         run_over_animals/2]).
 
 % Satzzeichen:
 % . "fertig"
