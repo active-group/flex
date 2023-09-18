@@ -195,3 +195,8 @@ list_sum([ First | Rest ]) ->
 list_append([], List2) -> List2;
 list_append([ First | Rest], List2) ->
     [First | list_append(Rest, List2)].
+
+highway() -> [dillo1(), dillo2(), parrot1(), parrot2()].
+
+% Alle Tiere überfahren
+-spec run_over_animals(list(animal())) -> list(animal()).
