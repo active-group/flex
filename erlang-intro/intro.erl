@@ -12,7 +12,7 @@
          list_sum/1,
          list_append/2,
          highway/0,
-         run_over_animals/2]).
+         run_over_animals/1]).
 
 % Satzzeichen:
 % . "fertig"
