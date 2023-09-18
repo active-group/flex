@@ -301,3 +301,4 @@ list_append2(List1, List2) ->
 % - Pattern-Matching (auf Bit-Ebene) auf Binaries
 % - Exceptions
 % - "maybe"
+
