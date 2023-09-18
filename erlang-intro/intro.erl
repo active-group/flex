@@ -154,4 +154,7 @@ run_over_parrot(#parrot { sentence = _Sentence, weight = Weight}) ->
 % Tier (auf dem texanischen Highway) ist eins der folgenden:
 % - Gürteltier -ODER-
 % - Papagei
+% Fallunterscheidung
+% jeder einzelne Fall eigene Datendefinition:
+% gemischte Daten
 -type animal() :: #dillo{} | #parrot{}.
