@@ -32,8 +32,8 @@ process_counter_message(N, {inc, Inc}) -> N + Inc.
 
 counter(N) ->
     process_flag(trap_exit, true), % exits gelinkter Prozesse werden in Messages umgewandelt
-    Pid = spawn(process, counter_code, [N]),
-    link(Pid), % "Wenn Du stirbst, sterbe ich auch. (Und umgekehrt.)"
+    Pid = spawn_link(process, counter_code, [N]),
+    % link(Pid), % "Wenn Du stirbst, sterbe ich auch. (Und umgekehrt.)"
     Pid.
 
 counter_inc(Pid) ->
