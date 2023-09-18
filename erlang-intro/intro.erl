@@ -167,3 +167,8 @@ run_over_animal(#dillo{} = Dillo) ->
     run_over_dillo(Dillo);
 run_over_animal(#parrot{} = Parrot) ->
     run_over_parrot(Parrot).  
+
+
+% Liste ist eins der folgenden:
+% - die leere Liste
+% - eine Cons-Liste aus erstem Element und Rest-Liste
