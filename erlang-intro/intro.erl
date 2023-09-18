@@ -214,6 +214,7 @@ run_over_animals([]) -> [];
 run_over_animals([First|Rest]) ->
     [run_over_animal(First) | run_over_animals(Rest)].
 
+-spec list_map(fun((A) -> B), list(A)) -> list(B).
 list_map(_F, []) -> [];
 list_map(F, [First|Rest]) ->
     [F(First) | list_map(F, Rest)].
