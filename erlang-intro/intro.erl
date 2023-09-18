@@ -172,6 +172,7 @@ run_over_animal(#parrot{} = Parrot) ->
 % Liste ist eins der folgenden:
 % - die leere Liste: []
 % - eine Cons-Liste aus erstem Element E und Rest-Liste R
+%                                                 ^^^^^ Selbstbezug
 %   [ E | R ]
 
 % 1elementige Liste: 5 
@@ -181,3 +182,9 @@ list2() -> [5 | [ 8 | []]].
 list3() -> [5, 8, 3].
 % 4elementige Liste 2 5 8 3
 list4() -> [2 | list3() ].
+
+% Elemente einer Liste aufsummieren
+-spec list_sum(list(number())) -> number().
+list_sum([]) -> 0;
+list_sum([ First | Rest ]) ->
+    First + list_sum(Rest).
