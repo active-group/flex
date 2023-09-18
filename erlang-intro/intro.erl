@@ -270,5 +270,5 @@ rev([First|Rest]) ->
 rev([], Acc) -> Acc;
 rev([First|Rest], Acc) ->
     % kein Kontext: tail call
-    % endrekursiver Aufruf
+    % endrekursiver Aufruf -> verbraucht keinen Platz auf dem Stack
     rev(Rest, [First | Acc]).
