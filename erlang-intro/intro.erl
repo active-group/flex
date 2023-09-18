@@ -178,4 +178,6 @@ run_over_animal(#parrot{} = Parrot) ->
 list1() -> [5 | []].
 % 2elementige Liste: 5 8
 list2() -> [5 | [ 8 | []]].
-
+list3() -> [5, 8, 3].
+% 4elementige Liste 2 5 8 3
+list4() -> [2 | list3() ].
