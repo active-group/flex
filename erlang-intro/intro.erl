@@ -192,6 +192,6 @@ list_sum([ First | Rest ]) ->
     First + list_sum(Rest).
 
 -spec list_append(list(A), list(A)) -> list(A).
-list_append([], list2) -> list2;
-list_append([ First | Rest], list2) ->
-    [First | list_append(Rest, list2)].
+list_append([], List2) -> List2;
+list_append([ First | Rest], List2) ->
+    [First | list_append(Rest, List2)].
