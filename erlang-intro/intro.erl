@@ -305,6 +305,6 @@ list_append2(List1, List2) ->
 
 process_code() ->
     receive % Syntax ist wie case
-        "Mike" -> io:format("Mike ist da.");
-        "Sperber" -> io:format("Sperber ist doof")
+        "Mike" -> io:format("Mike ist da.~n");
+        "Sperber" -> io:format("Sperber ist doof.~n")
     end.
