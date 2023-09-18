@@ -15,8 +15,8 @@ counter_code(N) ->
     receive
         inc -> 
             counter_code(N+1);
-        {get, Pid} ->
-            Pid ! N,
+        {get, ClientPid} ->
+            ClientPid ! N,
             counter_code(N)
     end.
 
@@ -26,3 +26,6 @@ counter(N) ->
 counter_inc(Pid) ->
     Pid ! inc.
 
+counter_get(ServerPid) ->
+    ServerPid ! {get, self()},
+    receive N -> N end. 
