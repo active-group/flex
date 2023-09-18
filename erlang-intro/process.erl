@@ -1,4 +1,5 @@
 -module(process).
+-export([process_code/0])
 
 process_code() ->
     receive % Syntax ist wie case
