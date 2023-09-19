@@ -5,7 +5,8 @@
 -behavior(gen_server).
 
 -type state() :: number().
--type message() :: inc | {inc, number()} | {get, pid()}.
+-type cast_message() :: inc | {inc, number()}.
+-type call_message() :: {get, pid()}.
 
 start(N) ->
     gen_server:start(counter, 
@@ -23,6 +24,7 @@ counter_inc(Pid) ->
 counter_inc(Pid, Inc) ->
     gen_server:cast(Pid, {inc, Inc}).
 
+-spec handle_cast(cast_message(), state()) -> {noreply, state()}.
 handle_cast(inc, State) ->
     {noreply, State + 1};
 handle_cast({inc, Inc}, State) ->
