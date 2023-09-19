@@ -34,7 +34,7 @@ process_counter_message(N, {inc, Inc}) -> N + Inc.
 % handle_cast({inc, Inc}, State) ->
 %    {noreply, State + Inc}.
 handle_cast(Message, State) ->
-    {noreply, process_counter_message(Message, State)}.
+    {noreply, process_counter_message(State, Message)}.
 
 -spec handle_call(call_message(), pid(), state()) -> {reply, number(), state()}.
 handle_call(get, _From, State) ->
