@@ -1,6 +1,6 @@
 -module(counter).
 -export([init/1, handle_call/3, handle_cast/2,
-         counter_get/1, counter_inc/1, counter_inc/2]).
+         counter_get/1, counter_inc/1, counter_inc/2, start/1]).
 
 -behavior(gen_server).
 
