@@ -14,7 +14,7 @@ counter_get(Pid) ->
     gen_server:call(Pid, {get, self()}).
 
 handle_cast(inc, State) ->
-    {noreply, State + 1}.
+    {noreply, State + 1};
 handle_cast({inc, Inc}, State) ->
     {noreply, State + Inc}.
 
