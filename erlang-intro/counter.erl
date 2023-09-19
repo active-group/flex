@@ -1,4 +1,5 @@
 -module(counter).
+-export([init/1]).
 
 -behavior(gen_server).
 
