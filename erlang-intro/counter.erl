@@ -13,7 +13,7 @@ init(N) -> {ok, N}.
 counter_get(Pid) ->
     gen_server:call(Pid, {get, self()}).
 
-handle_call({get, Pid}, From, State) ->
+handle_call({get, _Pid}, _From, State) ->
     {reply, 
      State, % Antwort
      State}. % neue Zustand
