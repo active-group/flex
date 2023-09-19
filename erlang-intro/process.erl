@@ -34,6 +34,7 @@ process_counter_message(N, {inc, Inc}) -> N + Inc.
 counter(N) ->
     process_flag(trap_exit, true), % exits gelinkter Prozesse werden in Messages umgewandelt
     Pid = spawn_link(process, counter_code, [N]),
+    % siehe auch: monitor
     register(counter_service, Pid),
     receive
          {'EXIT', _Pid, _Reason} ->
