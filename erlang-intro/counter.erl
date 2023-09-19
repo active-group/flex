@@ -13,7 +13,7 @@ start(N) ->
                     N, % -> init
                     [{debug, [trace]}]).
 
-% läuft im Server-Prozeß
+% läuft im Server-Prozeß, cf. self()
 -spec init(number()) -> {ok, state()}.
 init(N) -> {ok, N}.
 
