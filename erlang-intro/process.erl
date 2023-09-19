@@ -51,6 +51,6 @@ counter_inc(Pid, Inc) ->
 counter_get(ServerPid) ->
     ServerPid ! {get, self()},
     receive 
-        N -> N;
+        N -> N
      after 5000 -> timeout % ms
      end. 
