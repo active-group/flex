@@ -10,7 +10,7 @@
 start(N) ->
     gen_server:start(counter, 
                     N, % -> init
-                    [])
+                    []).
 
 -spec init(number()) -> {ok, state()}.
 init(N) -> {ok, N}.
