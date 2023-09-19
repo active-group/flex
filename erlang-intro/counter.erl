@@ -8,6 +8,7 @@
 -type cast_message() :: inc | {inc, number()}.
 -type call_message() :: get.
 
+-spec start(number()) -> {ok, pid()}.
 start(N) ->
     gen_server:start(counter, 
                     N, % -> init
