@@ -30,7 +30,7 @@ handle_cast(inc, State) ->
 handle_cast({inc, Inc}, State) ->
     {noreply, State + Inc}.
 
--spec handle_call(call_message, pid(), state()) -> {reply, number(), state()}.
+-spec handle_call(call_message(), pid(), state()) -> {reply, number(), state()}.
 handle_call(get, _From, State) ->
     {reply, 
      State, % Antwort
