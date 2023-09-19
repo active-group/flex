@@ -13,6 +13,7 @@ start(N) ->
                     N, % -> init
                     [{debug, [trace]}]).
 
+% läuft im Server-Prozeß
 -spec init(number()) -> {ok, state()}.
 init(N) -> {ok, N}.
 
