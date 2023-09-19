@@ -12,3 +12,8 @@ init(N) -> {ok, N}.
 
 counter_get(Pid) ->
     gen_server:call(Pid, {get, self()}).
+
+handle_call({get, Pid}, From, State) ->
+    {reply, 
+     State, % Antwort
+     State}. % neue Zustand
