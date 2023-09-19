@@ -1,11 +1,16 @@
 -module(counter).
 -export([init/1, handle_call/3, handle_cast/2,
-         counter_get/1]).
+         counter_get/1, counter_inc/1, counter_inc/2]).
 
 -behavior(gen_server).
 
 -type state() :: number().
 -type message() :: inc | {inc, number()} | {get, pid()}.
+
+start(N) ->
+    gen_server:start(counter, 
+                    N, % -> init
+                    [])
 
 -spec init(number()) -> {ok, state()}.
 init(N) -> {ok, N}.
