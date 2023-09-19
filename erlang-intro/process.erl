@@ -30,6 +30,7 @@ counter_code(N) ->
 process_counter_message(N, inc) -> N + 1;
 process_counter_message(N, {inc, Inc}) -> N + Inc. 
 
+% Supervisor
 counter(N) ->
     process_flag(trap_exit, true), % exits gelinkter Prozesse werden in Messages umgewandelt
     Pid = spawn_link(process, counter_code, [N]),
