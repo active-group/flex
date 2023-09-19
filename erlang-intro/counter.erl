@@ -24,11 +24,17 @@ counter_inc(Pid) ->
 counter_inc(Pid, Inc) ->
     gen_server:cast(Pid, {inc, Inc}).
 
+-spec process_counter_message(state(), cast_message()) -> state().
+process_counter_message(N, inc) -> N + 1;
+process_counter_message(N, {inc, Inc}) -> N + Inc. 
+
 -spec handle_cast(cast_message(), state()) -> {noreply, state()}.
-handle_cast(inc, State) ->
-    {noreply, State + 1};
-handle_cast({inc, Inc}, State) ->
-    {noreply, State + Inc}.
+% handle_cast(inc, State) ->
+%    {noreply, State + 1};
+% handle_cast({inc, Inc}, State) ->
+%    {noreply, State + Inc}.
+handle_cast(Message, State) ->
+    {noreply, process_counter_message(Message, State)}.
 
 -spec handle_call(call_message(), pid(), state()) -> {reply, number(), state()}.
 handle_call(get, _From, State) ->
