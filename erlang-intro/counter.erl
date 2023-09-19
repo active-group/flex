@@ -4,7 +4,10 @@
 -behavior(gen_server).
 
 -type state() :: number().
+-type message() :: inc | {inc, number()} | {get, pid()}.
 
 -spec init(number()) -> {ok, state()}.
 init(N) -> {ok, N}.
 
+counter_get(Pid) ->
+    gen_server:call(Pid, {get, self()}).
