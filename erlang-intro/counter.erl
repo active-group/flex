@@ -8,6 +8,14 @@
 -type cast_message() :: inc | {inc, number()}.
 -type call_message() :: get.
 
+% Multi-Node:
+% erl -sname <sname>
+% Prompt "(<node>)1>"
+% net_adm:ping(<node>). 
+% => pong
+% Name für Prozeß auf anderem Knoten:
+% {<process name>, <node>}
+
 -spec start(number()) -> {ok, pid()}.
 start(N) ->
     gen_server:start(counter, 
