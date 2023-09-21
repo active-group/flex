@@ -27,3 +27,6 @@ flex-ag
 erlbank/*/*.dets
 xirbank/*/*.dets
 zertifikat
+/erlbank/nginx/access.log
+/erlbank/nginx/error.log
+/erlbank/nginx/nginx.pid
