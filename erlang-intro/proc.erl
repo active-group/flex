@@ -3,11 +3,11 @@
 
 format_server() ->
     receive
-        Message -> io:format(Message),
-                   format_server()
+        Message -> io:format(Message)
         after 3000 ->
             io:format("timeout")
-    end.
+    end,
+    format_server().
 
 start_format_server() ->
     spawn(fun format_server/0).
