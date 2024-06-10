@@ -149,5 +149,5 @@ run_over_dillo(D) ->
 % 
 feed_dillo(#dillo {liveness = alive, weight = W}, FoodWeight) ->
     #dillo { liveness = alive, weight = W + FoodWeight};
-feed_dillo(#dillo { liveness = dead, weight = _W} = Dillo, _FoodWeight) ->
+feed_dillo(#dillo { liveness = dead } = Dillo, _FoodWeight) ->
     Dillo.
