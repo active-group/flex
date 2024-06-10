@@ -89,3 +89,5 @@ distance(Position1, Position2) ->
     DX = X1 - X2,
     DY = Y1 - Y2,
     math:sqrt(DX*DX + DY*DY).
+
+
