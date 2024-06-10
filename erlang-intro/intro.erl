@@ -100,4 +100,9 @@ safe_divide(A, B) ->
     end.
 
 % Steigung einer Geraden berechnen
--spec slope(position(), position()) -> number().
+-spec slope(position(), position()) -> number() | vertical.
+slope({X1, Y1}, {X2, Y2}) ->
+    case safe_divide(X2-X1, Y2-Y1) of
+        divide_by_zero -> vertical;
+        {ok, Slope} -> Slope
+    end.
