@@ -137,3 +137,12 @@ run_over_dillo(D) ->
 
 % Gürteltier füttern, tote Gürteltiere nehmen nicht zu
 % variable Menge
+
+-spec feed_dillo(#dillo{}, weight()) -> #dillo{}.
+feed_dillo(#dillo { liveness = L, weight = W}, FoodWeight) ->
+    #dillo { liveness = L, 
+             weight = case L of
+                        alive -> W + FoodWeight;
+                        dead -> W
+                      end
+            }.
