@@ -227,3 +227,4 @@ extract_cute_pets([ First | Rest ]) ->
         true -> [ First | extract_cute_pets(Rest)];
         false -> extract_cute_pets(Rest)
     end.
+
