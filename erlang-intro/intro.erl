@@ -3,6 +3,7 @@
          is_cute/1,
          water_state/1]).
 
+
 % Satzzeichen:
 % . "fertig"
 % ; "oder"
@@ -71,7 +72,19 @@ water_state(Temperature) when Temperature < 100 ->
     liquid;
 water_state(_Temperature) -> gas.
 
+% zusammengesetzte Daten:
 % Position:
 % - X -UND-
 % - Y
 pos1() -> {15, 7}. % 2-Tupel
+
+-type position() = {number(), number()}.
+
+% Abstand zwischen 2 Positionen
+-spec distance(position()) -> number().
+distance(Position1, Position2) ->
+    {X1, Y1} = Position1,
+    {X2, Y2} = Position2,
+    DX = X1 - X2,
+    DY = Y1 - Y2,
+    math:sqrt(DX*DX + DY*DY).
