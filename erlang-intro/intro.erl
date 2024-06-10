@@ -218,3 +218,11 @@ foo(Pet) ->
         true -> cute;
         false -> not_cute
     end.
+
+-spec extract_cute_pets(list(pet())) -> list(pet()).
+extract_cute_pets([]) -> todo;
+extract_cute_pets([ First | Rest ]) ->
+    case is_cute(First) of
+        true -> [ First | extract_cute_pets(Rest)] ;
+        false -> extract_cute_pets(Rest)
+    end. % ... extract_cute_pets(Rest) .
