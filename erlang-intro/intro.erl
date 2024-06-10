@@ -44,4 +44,4 @@ is_cute(Pet) ->
         dog -> true;
         cat -> true;
         snake -> false
-    end
+    end.
