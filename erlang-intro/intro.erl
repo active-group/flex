@@ -246,7 +246,7 @@ extract_cute_pets([ First | Rest ]) ->
 extract_evens([]) -> [];
 extract_evens([First | Rest]) ->
     case is_even(First) of
-      true -> todo;
+      true -> [First | extract_evens(Rest)];
       false -> extract_evens(Rest)
     end.
 
