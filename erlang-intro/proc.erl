@@ -11,3 +11,9 @@ format_server() ->
 
 start_format_server() ->
     spawn(fun format_server/0).
+
+inc_server(N) ->
+    io:format("N = ~w~n", [N]),
+    receive
+        Inc -> inc_server(N+Inc)
+    end.
