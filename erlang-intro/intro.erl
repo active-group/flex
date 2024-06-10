@@ -210,3 +210,7 @@ run_over_animals([ First | Rest ]) ->
 % Binary:
 % <<"Mike">>
 % Array-Repräsentation mit UTF-8
+
+% Alle niedlichen Tiere aus einer Liste von Tieren extrahieren
+% 
+foo(Pet) when is_cute(Pet) -> cute.
