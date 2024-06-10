@@ -25,7 +25,7 @@ inc_server(N) ->
 
 % RPC
 inc_server_get(ServerPid) ->
-    ServerPid ! {get, self()},
+    ServerPid ! {ge, self()},
     receive
         N -> N
     end.
