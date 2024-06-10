@@ -157,7 +157,7 @@ feed_dillo(#dillo { liveness = dead } = Dillo, _FoodWeight) ->
 % Ein Papagei hat:
 % - Satz -UND-
 % - Gewicht
--record(parrot, { sentence :: string(), weight :; weight() }).
+-record(parrot, { sentence :: string(), weight :: weight() }).
 
 parrot1() -> #parrot{sentence="Hello", weight=1}.
 
