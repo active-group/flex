@@ -77,7 +77,7 @@ water_state(_Temperature) -> gas.
 % Position:
 % - X -UND-
 % - Y
-pos1() -> {15, 7}. % 2-Tupel
+% pos1() -> {15, 7}. % 2-Tupel
 
 -type position() :: {number(), number()}.
 
