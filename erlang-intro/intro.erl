@@ -212,7 +212,7 @@ run_over_animals([ First | Rest ]) ->
 -spec list_double(list(number())) -> list(number()).
 list_double([]) -> [];
 list_double([First|Rest]) ->
-    [ First * 2 | list_double(Rest) ].
+    [ double(First) | list_double(Rest) ].
 
 % Binary:
 % <<"Mike">>
