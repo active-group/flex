@@ -258,7 +258,7 @@ is_even(N) -> N rem 2 == 0.
 
 extract_xxx([]) -> [];
 extract_xxx([First | Rest]) ->
-    case is_even(First) of
+    case F(First) of
       true -> [First | extract_xxx(Rest)];
       false -> extract_xxx(Rest)
     end.
