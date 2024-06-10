@@ -12,7 +12,9 @@
          run_over_animal/1,
          run_over_animals/1,
          highway/0,
-         extract_cute_pets/1]).
+         extract_cute_pets/1,
+         list_double/1,
+         list_map/2]).
 
 
 % Satzzeichen:
