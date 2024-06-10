@@ -279,4 +279,4 @@ append_element([First | Rest], Element) ->
 % 
 rev([], Acc) -> Acc;
 rev([First | Rest], Acc) ->
-    rev(Rest, [First | Acc]).
+    rev(Rest, [First | Acc]). % kein Kontext: tail call
