@@ -214,7 +214,7 @@ list_double([]) -> [];
 list_double([First|Rest]) ->
     [ double(First) | list_double(Rest) ].
 
-list_map(F, []) -> [];
+list_map(_F, []) -> [];
 list_map(F, [First|Rest]) ->
     [ F(First) | list_map(F, Rest) ].
 
