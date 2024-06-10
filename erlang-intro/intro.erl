@@ -220,7 +220,7 @@ foo(Pet) ->
     end.
 
 -spec extract_cute_pets(list(pet())) -> list(pet()).
-extract_cute_pets([]) -> todo;
+extract_cute_pets([]) -> [];
 extract_cute_pets([ First | Rest ]) ->
     case is_cute(First) of
         true -> [ First | extract_cute_pets(Rest)];
