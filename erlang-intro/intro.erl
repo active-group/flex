@@ -38,7 +38,7 @@ double(X, Y) -> (X + Y) * 2.
 is_cute(dog) -> true;
 is_cute(cat) -> true;
 is_cute(snake) -> false;
-is_cute(_Pet) -> no_pet.
+is_cute(_) -> no_pet.
 
 % is_cute(Pet) ->
 %    case Pet of
@@ -46,3 +46,11 @@ is_cute(_Pet) -> no_pet.
 %        cat -> true;
 %        snake -> false
 %    end.
+% 
+
+% Aggregatzustand von Wasser:
+% - fest
+% - flüssig
+% - gas
+-type state() :: solid | liquid | gas.
+
