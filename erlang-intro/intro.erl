@@ -213,4 +213,8 @@ run_over_animals([ First | Rest ]) ->
 
 % Alle niedlichen Tiere aus einer Liste von Tieren extrahieren
 % 
-foo(Pet) when is_cute(Pet) -> cute.
+foo(Pet) ->
+    case is_cute(Pet) of
+        true -> cute;
+        false -> not_cute;
+    end.
