@@ -9,7 +9,9 @@
          feed_dillo/2,
          list_sum/1,
          run_over_parrot/1,
-         run_over_animal/1]).
+         run_over_animal/1,
+         run_over_animals/1,
+         highway/0]).
 
 
 % Satzzeichen:
