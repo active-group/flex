@@ -250,5 +250,7 @@ extract_evens([First | Rest]) ->
       false -> extract_evens(Rest)
     end.
 
+% ... über extract_cute_pets und extract_events abstrahieren
+
 -spec is_even(integer()) -> boolean().
 is_even(N) -> N rem 2 == 0.
