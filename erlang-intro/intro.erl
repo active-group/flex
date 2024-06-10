@@ -3,7 +3,7 @@
          is_cute/1,
          water_state/1,
          distance/2,
-         safe_divide/2]).
+         safe_divide/2, slope/2]).
 
 
 % Satzzeichen:
