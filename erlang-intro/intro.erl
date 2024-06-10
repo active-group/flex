@@ -78,7 +78,7 @@ water_state(_Temperature) -> gas.
 % - Y
 pos1() -> {15, 7}. % 2-Tupel
 
--type position() = {number(), number()}.
+-type position() :: {number(), number()}.
 
 % Abstand zwischen 2 Positionen
 -spec distance(position(), position()) -> number().
