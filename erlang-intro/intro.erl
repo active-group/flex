@@ -8,7 +8,8 @@
          run_over_dillo/1,
          feed_dillo/2,
          list_sum/1,
-         run_over_parrot/1]).
+         run_over_parrot/1,
+         run_over_animal/1]).
 
 
 % Satzzeichen:
