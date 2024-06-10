@@ -216,5 +216,5 @@ run_over_animals([ First | Rest ]) ->
 foo(Pet) ->
     case is_cute(Pet) of
         true -> cute;
-        false -> not_cute;
+        false -> not_cute
     end.
