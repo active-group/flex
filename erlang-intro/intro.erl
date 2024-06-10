@@ -33,6 +33,7 @@ double(X, Y) -> (X + Y) * 2.
 
 % Ist ein Haustier niedlich?
 
+-spec is_cute(pet()) -> boolean().
 % Eine Gleichung pro Fall:
 is_cute(dog) -> true;
 is_cute(cat) -> true;
