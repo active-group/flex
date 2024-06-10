@@ -98,3 +98,6 @@ safe_divide(A, B) ->
         B == 0 -> divide_by_zero;
         true -> {ok, A/B}
     end.
+
+% Steigung einer Geraden berechnen
+-spec slope(position(), position()) -> number().
