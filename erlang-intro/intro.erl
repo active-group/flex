@@ -168,6 +168,15 @@ parrot2() -> #parrot{sentence="Goodbye!", weight=2}.
 run_over_parrot(Parrot) ->
     Parrot#parrot{ sentence = ""}.
 
+% Ein Tier ist eins der folgenden:
+% - Gürteltier -ODER-
+% - Papagei
+-type animal() :: #dillo{} | #parrot{}.
+
+-spec run_over_animal(animal()) -> animal().
+run_over_animal(#dillo{}) -> todo;
+run_over_animal(#parrot{}) -> todo.
+
 % Eine Liste ist eins der folgenden:
 % - die leere Liste [] -ODER-
 % - eine Cons-Liste aus erstem Element -UND- Rest-Liste
