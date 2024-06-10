@@ -51,7 +51,7 @@ double(X, Y) -> (X + Y) * 2.
 is_cute(dog) -> true;
 is_cute(cat) -> true;
 is_cute(snake) -> false;
-is_cute(_) -> no_pet.
+% is_cute(_) -> no_pet.
 
 % is_cute(Pet) ->
 %    case Pet of
