@@ -84,7 +84,7 @@ pos1() -> {15, 7}. % 2-Tupel
 % Abstand zwischen 2 Positionen
 -spec distance(position(), position()) -> number().
 distance(Position1, Position2) ->
-    {X1, Y1} = Position1,
+    {X1, Y1} = Position1, % pattern matching
     {X2, Y2} = Position2,
     DX = X1 - X2,
     DY = Y1 - Y2,
