@@ -6,7 +6,8 @@
          safe_divide/2, slope/2,
          dillo1/0, dillo2/0,
          run_over_dillo/1,
-         feed_dillo/2]).
+         feed_dillo/2,
+         list_sum/1]).
 
 
 % Satzzeichen:
@@ -154,11 +155,20 @@ feed_dillo(#dillo { liveness = dead } = Dillo, _FoodWeight) ->
     Dillo.
 
 % Eine Liste ist eins der folgenden:
-% - die leere Liste []
-% - eine Cons-Liste aus erstem Element und Rest-Liste
-%   [ First | Rest ]
+% - die leere Liste [] -ODER-
+% - eine Cons-Liste aus erstem Element -UND- Rest-Liste
+%   [ First | Rest ]+
+%                                                 ^^^^^ Selbstbezug
 
 list0() -> []. % leere Liste
 list1() -> [ 5 | [] ]. % 1elementige Liste 5
 list2() -> [ 7 | list1() ]. % 2elementige Liste 7 5
 list3() -> [musa, christoph, mike]. % 3elementige Liste
+
+list4() -> [2, 5, 4, 9].
+
+% Liste aufsummieren
+-spec list_sum(list(number())) -> number().
+list_sum([]) -> 0;
+list_sum([ First | Rest ]) ->
+    First + list_sum(Rest).
