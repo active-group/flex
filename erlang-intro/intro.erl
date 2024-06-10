@@ -11,3 +11,5 @@
 % Funktionsnamen: Kleinbuchstaben
 % 
 double(X) -> X * 2.
+
+double(X, Y) -> (X + Y) * 2.
