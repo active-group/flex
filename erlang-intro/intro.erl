@@ -29,6 +29,7 @@ double(X, Y) -> (X + Y) * 2.
 % - Hund - dog -ODER-
 % - Katze - cat -ODER-
 % - Schlange - snake
+-type pet() :: dog | cat | snake.
 
 % Ist ein Haustier niedlich?
 
