@@ -154,6 +154,13 @@ feed_dillo(#dillo {liveness = alive, weight = W}, FoodWeight) ->
 feed_dillo(#dillo { liveness = dead } = Dillo, _FoodWeight) ->
     Dillo.
 
+% Ein Papagei hat:
+% - Satz -UND-
+% - Gewicht
+-record(parrot, { sentence : string(), weight : weight() }).
+
+parrot1() -> #parrot{sentence="Hello", weight=1}.
+
 % Eine Liste ist eins der folgenden:
 % - die leere Liste [] -ODER-
 % - eine Cons-Liste aus erstem Element -UND- Rest-Liste
