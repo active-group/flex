@@ -20,3 +20,17 @@ double(X, Y) -> (X + Y) * 2.
 
 % Datei compilieren und laden:
 % c(intro).
+ 
+% Atome (Kleinbuchstaben): mike, ok
+
+% Fallunterscheidung:
+% Haustier:
+% - Hund - dog -ODER-
+% - Katze - cat -ODER-
+% - Schlange - snake
+
+% Ist ein Haustier niedlich?
+
+is_cute(dog) -> true;
+is_cute(cat) -> true;
+is_cute(snake) -> false.
