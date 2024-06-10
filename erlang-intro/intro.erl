@@ -160,6 +160,12 @@ feed_dillo(#dillo { liveness = dead } = Dillo, _FoodWeight) ->
 -record(parrot, { sentence :: string(), weight :: weight() }).
 
 parrot1() -> #parrot{sentence="Hello", weight=1}.
+parrot2() -> #parrot{sentence="Goodbye!", weight=2}.
+
+% Papagei überfahren
+-spec run_over_parrot(#parrot{}) -> #parrot{}.
+run_over_parrot(Parrot) ->
+    Parrot#parrot{ sentence = ""}.
 
 % Eine Liste ist eins der folgenden:
 % - die leere Liste [] -ODER-
