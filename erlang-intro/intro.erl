@@ -11,6 +11,8 @@
 % Funktionsnamen: Kleinbuchstaben
 % double/1  1 Parameter / Stelligkeit 1
 
+% Typespec:
+-spec double(number()) -> number().
 double(X) -> X * 2.
 
 double(X, Y) -> (X + Y) * 2.
