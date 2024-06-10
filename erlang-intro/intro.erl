@@ -207,3 +207,6 @@ run_over_animals([]) -> [];
 run_over_animals([ First | Rest ]) ->
     [ run_over_animal(First) | run_over_animals(Rest) ].
 
+% Binary:
+% <<"Mike">>
+% Array-Repräsentation mit UTF-8
