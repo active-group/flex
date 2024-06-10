@@ -223,6 +223,6 @@ foo(Pet) ->
 extract_cute_pets([]) -> todo;
 extract_cute_pets([ First | Rest ]) ->
     case is_cute(First) of
-        true -> [ First | extract_cute_pets(Rest)] ;
+        true -> [ First | extract_cute_pets(Rest)];
         false -> extract_cute_pets(Rest)
     end. % ... extract_cute_pets(Rest) .
