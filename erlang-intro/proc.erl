@@ -16,6 +16,12 @@ start_format_server() ->
 inc_server(N) ->
     io:format("N = ~w~n", [N]),
     receive
-        {get, Pid} -> Pid ! N;
+        {get, ClientPid} -> ClientPid ! N;
         Inc -> inc_server(N+Inc)
+    end.
+
+inc_server_get(ServerPid) ->
+    ServerPid ! {get, self()},
+    receive
+        N -> N
     end.
