@@ -37,7 +37,7 @@ double(X, Y) -> (X + Y) * 2.
 % Eine Gleichung pro Fall:
 is_cute(dog) -> true;
 is_cute(cat) -> true;
-is_cute(snake) -> false.
+is_cute(snake) -> false;
 is_cute(Pet) -> no_pet.
 
 % is_cute(Pet) ->
