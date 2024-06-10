@@ -5,7 +5,8 @@
          distance/2,
          safe_divide/2, slope/2,
          dillo1/0, dillo2/0,
-         run_over_dillo/1]).
+         run_over_dillo/1,
+         feed_dillo/2]).
 
 
 % Satzzeichen:
