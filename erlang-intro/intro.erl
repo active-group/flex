@@ -246,4 +246,4 @@ extract_evens([]) -> todo;
 extract_evens([First | Rest]) ->
     todo.
 
-is_even(N) = N rem 2 == 0.
+is_even(N) -> N rem 2 == 0.
