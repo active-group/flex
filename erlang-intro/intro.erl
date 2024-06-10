@@ -35,13 +35,13 @@ double(X, Y) -> (X + Y) * 2.
 
 -spec is_cute(pet()) -> boolean().
 % Eine Gleichung pro Fall:
-% is_cute(dog) -> true;
-% is_cute(cat) -> true;
-% is_cute(snake) -> false.
+is_cute(dog) -> true;
+is_cute(cat) -> true;
+is_cute(snake) -> false.
 
-is_cute(Pet) ->
-    case Pet of
-        dog -> true;
-        cat -> true;
-        snake -> false
-    end.
+% is_cute(Pet) ->
+%    case Pet of
+%        dog -> true;
+%        cat -> true;
+%        snake -> false
+%    end.
