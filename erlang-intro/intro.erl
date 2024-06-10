@@ -208,6 +208,12 @@ run_over_animals([]) -> [];
 run_over_animals([ First | Rest ]) ->
     [ run_over_animal(First) | run_over_animals(Rest) ].
 
+% Alle Zahlen in einer Liste verdoppeln
+-spec list_double(list(number())) -> list(number()).
+list_double([]) -> [];
+list_double([First|Rest]) ->
+    [ First * 2 | list_double(Rest) ].
+
 % Binary:
 % <<"Mike">>
 % Array-Repräsentation mit UTF-8
