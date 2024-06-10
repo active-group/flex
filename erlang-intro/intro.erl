@@ -1,4 +1,5 @@
 -module(intro).
+-export([double/1]).
 
 % Satzzeichen:
 % . "fertig"
