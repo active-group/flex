@@ -131,5 +131,6 @@ dillo2() -> #dillo{ liveness = dead, weight = 5}.
 % run_over_dillo(D) ->
 %   D#dillo { liveness = dead }. % Kopie von D, bis auf liveness = dead
 
+-spec run_over_dillo(#dillo{}) -> #dillo{}.
 run_over_dillo(D) ->
     #dillo { liveness = dead, weight = D#dillo.weight }.
