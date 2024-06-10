@@ -245,7 +245,10 @@ extract_cute_pets([ First | Rest ]) ->
 -spec extract_evens(list(integer())) -> list(integer()).
 extract_evens([]) -> [];
 extract_evens([First | Rest]) ->
-    is_even(First) ... extract_evens(Rest).
+    case is_even(First) of
+      true -> todo;
+      false -> extract_evens(Rest)
+    end.
 
 -spec is_even(integer()) -> boolean().
 is_even(N) -> N rem 2 == 0.
