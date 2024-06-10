@@ -106,3 +106,14 @@ slope({X1, Y1}, {X2, Y2}) ->
         divide_by_zero -> vertical;
         {ok, Slope} -> {ok, Slope}
     end.
+
+% Zusammengesetzte Daten:
+% Ein Gürteltier hat die folgenden Eigenschaften:
+% - (lebendig -ODER- tot)  -UND-
+% - Gewicht
+
+-type liveness() :: dead | alive.
+-type weight() :: number().
+
+-record(dillo, { liveness :: liveness(), 
+                  weight :: weight() } ).
