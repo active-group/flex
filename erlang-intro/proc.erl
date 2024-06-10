@@ -1,5 +1,6 @@
 -module(proc).
--export([format_server/0, start_format_server/0]).
+-export([format_server/0, start_format_server/0,
+         inc_server/1]).
 
 format_server() ->
     receive
