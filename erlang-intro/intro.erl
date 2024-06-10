@@ -69,4 +69,4 @@ water_state(Temperature) when Temperature < 0 ->
     solid;
 water_state(Temperature) when Temperature < 100 ->
     liquid;
-water_state(Temperature) -> solid.
+water_state(_Temperature) -> solid.
