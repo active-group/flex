@@ -241,3 +241,9 @@ extract_cute_pets([ First | Rest ]) ->
         false -> extract_cute_pets(Rest)
     end.
 
+-spec extract_evens(list(integer())) -> list(integer()).
+extract_evens([]) -> todo;
+extract_events([First | Rest]) ->
+    todo;
+
+is_even(N) = N rem 2 == 0.
