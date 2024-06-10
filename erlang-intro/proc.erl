@@ -34,3 +34,9 @@ inc_server_get(ServerPid) ->
     receive
         N -> N
     end.
+
+% Frequency-Server
+% verwaltet eine Liste von freien Funkfrequenzen
+% Operationen:
+% - gib mir ne Frequenz
+% - ich geb Dir ne Frequenz zurück
