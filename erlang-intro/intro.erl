@@ -174,8 +174,8 @@ run_over_parrot(Parrot) ->
 -type animal() :: #dillo{} | #parrot{}.
 
 -spec run_over_animal(animal()) -> animal().
-run_over_animal(#dillo{}) -> todo;
-run_over_animal(#parrot{}) -> todo.
+run_over_animal(#dillo{} = Dillo) -> run_over_dillo(Dillo);
+run_over_animal(#parrot{} = Parrot) -> run_over_parrot(Parrot).
 
 % Eine Liste ist eins der folgenden:
 % - die leere Liste [] -ODER-
