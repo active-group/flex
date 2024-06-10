@@ -14,7 +14,8 @@
          highway/0,
          extract_cute_pets/1,
          list_double/1,
-         list_map/2]).
+         list_map/2,
+         rev/1]).
 
 
 % Satzzeichen:
