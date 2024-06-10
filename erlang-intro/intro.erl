@@ -241,9 +241,11 @@ extract_cute_pets([ First | Rest ]) ->
         false -> extract_cute_pets(Rest)
     end.
 
+% Gerade Zahlen aus einer Liste extrahieren
 -spec extract_evens(list(integer())) -> list(integer()).
-extract_evens([]) -> todo;
+extract_evens([]) -> [];
 extract_evens([First | Rest]) ->
-    todo.
+    is_even(First) ... extract_evens(Rest).
 
+-spec is_even(integer()) -> boolean().
 is_even(N) -> N rem 2 == 0.
