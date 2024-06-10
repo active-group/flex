@@ -2,7 +2,8 @@
 -export([double/1, double/2,
          is_cute/1,
          water_state/1,
-         distance/2]).
+         distance/2,
+         safe_divide/2]).
 
 
 % Satzzeichen:
@@ -96,4 +97,4 @@ safe_divide(A, B) ->
     if
         B == 0 -> divide_by_zero;
         true -> {ok, A/B}
-    end
+    end.
