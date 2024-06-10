@@ -90,4 +90,10 @@ distance(Position1, Position2) ->
     DY = Y1 - Y2,
     math:sqrt(DX*DX + DY*DY).
 
-
+% Dividieren, aber sicher
+-spec safe_divide(number(), number()) -> {ok, number()} | divide_by_zero.
+safe_divide(A, B) ->
+    if
+        B == 0 -> divide_by_zero;
+        true -> {ok, A/B}
+    end
