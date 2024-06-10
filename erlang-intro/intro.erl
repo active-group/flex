@@ -55,7 +55,9 @@ is_cute(_) -> no_pet.
 % - gas
 -type state() :: solid | liquid | gas.
 
--spec water_state(number()) -> state().
+-type temperature() :: number().
+
+-spec water_state(temperature()) -> state().
 water_state(Temperature) ->
     if
         Temperature < 0 -> solid;
