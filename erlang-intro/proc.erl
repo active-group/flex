@@ -15,7 +15,7 @@ start_format_server() ->
     spawn(fun format_server/0).
 
 -record(inc, {increment :: number()}).
--record(get, { client_pid :: pid() }).
+-record(get, { client_pid :: pid() }). % RPC
 
 -type inc_server_message() :: #inc{} | #get{}.
 
