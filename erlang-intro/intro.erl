@@ -263,3 +263,13 @@ extract_xxx(F, [First | Rest]) ->
       true -> [First | extract_xxx(F, Rest)];
       false -> extract_xxx(F, Rest)
     end.
+
+-spec rev(list(A)) -> list(A).
+rev([]) -> [];
+rev([First|Rest]) ->
+    append_element(rev(Rest), First).
+
+-spec append_element(list(A), A) -> list(A).
+append_element([], Element) -> [Element];
+append_element([First | Rest], Element) -> 
+    [First | append_element(Rest, Element)].
