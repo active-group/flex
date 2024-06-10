@@ -136,3 +136,4 @@ run_over_dillo(D) ->
     #dillo { liveness = dead, weight = D#dillo.weight }.
 
 % Gürteltier füttern, tote Gürteltiere nehmen nicht zu
+% variable Menge
