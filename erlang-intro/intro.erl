@@ -159,4 +159,6 @@ feed_dillo(#dillo { liveness = dead } = Dillo, _FoodWeight) ->
 %   [ First | Rest ]
 
 list0() -> []. % leere Liste
-list1() -> [ 5 | [] ].
+list1() -> [ 5 | [] ]. % 1elementige Liste 5
+list2() -> [ 7 | list1() ]. % 2elementige Liste 7 5
+list3() -> [musa, christoph, mike]. % 3elementige Liste
