@@ -5,7 +5,7 @@ format_server() ->
     receive
         Message -> io:format(Message),
                    format_server()
-        after 10000 ->
+        after 3000 ->
             io:format("timeout")
     end.
 
