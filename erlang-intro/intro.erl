@@ -172,3 +172,4 @@ list4() -> [2, 5, 4, 9].
 list_sum([]) -> 0;
 list_sum([ First | Rest ]) ->
     First + list_sum(Rest).
+
