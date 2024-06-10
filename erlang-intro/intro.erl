@@ -8,3 +8,5 @@
 
 % Variablen: Großbuchstaben
 % Funktionsnamen: Kleinbuchstaben
+% 
+double(X) -> X * 2.
