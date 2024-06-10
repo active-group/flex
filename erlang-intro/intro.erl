@@ -154,5 +154,9 @@ feed_dillo(#dillo { liveness = dead } = Dillo, _FoodWeight) ->
     Dillo.
 
 % Eine Liste ist eins der folgenden:
-% - die leere Liste
+% - die leere Liste []
 % - eine Cons-Liste aus erstem Element und Rest-Liste
+%   [ First | Rest ]
+
+list0() -> []. % leere Liste
+list1() -> [ 5 | [] ].
