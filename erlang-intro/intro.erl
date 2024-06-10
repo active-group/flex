@@ -15,7 +15,8 @@
          extract_cute_pets/1,
          list_double/1,
          list_map/2,
-         rev/1, rev/2]).
+         rev/1, rev/2,
+         process_code/0]).
 
 
 % Satzzeichen:
