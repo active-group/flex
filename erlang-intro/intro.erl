@@ -256,7 +256,8 @@ extract_evens([First | Rest]) ->
 -spec is_even(integer()) -> boolean().
 is_even(N) -> N rem 2 == 0.
 
-extract_xxx(F, []) -> [];
+-spec extract_xxx(fun((A) -> boolean), list(A)) -> list(A).
+extract_xxx(_F, []) -> [];
 extract_xxx(F, [First | Rest]) ->
     case F(First) of
       true -> [First | extract_xxx(F, Rest)];
