@@ -11,7 +11,8 @@
          run_over_parrot/1,
          run_over_animal/1,
          run_over_animals/1,
-         highway/0]).
+         highway/0,
+         extract_cute_pets/1]).
 
 
 % Satzzeichen:
@@ -225,4 +226,4 @@ extract_cute_pets([ First | Rest ]) ->
     case is_cute(First) of
         true -> [ First | extract_cute_pets(Rest)];
         false -> extract_cute_pets(Rest)
-    endö
+    end.
