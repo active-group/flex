@@ -7,7 +7,8 @@
          dillo1/0, dillo2/0,
          run_over_dillo/1,
          feed_dillo/2,
-         list_sum/1]).
+         list_sum/1,
+         run_over_parrot/1]).
 
 
 % Satzzeichen:
