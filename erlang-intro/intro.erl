@@ -70,3 +70,8 @@ water_state(Temperature) when Temperature < 0 ->
 water_state(Temperature) when Temperature < 100 ->
     liquid;
 water_state(_Temperature) -> gas.
+
+% Position:
+% - X -UND-
+% - Y
+pos1() -> {15, 7}.
