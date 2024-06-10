@@ -1,5 +1,6 @@
 -module(intro).
--export([double/1, double/2]).
+-export([double/1, double/2,
+         is_cute/1]).
 
 % Satzzeichen:
 % . "fertig"
@@ -31,6 +32,7 @@ double(X, Y) -> (X + Y) * 2.
 
 % Ist ein Haustier niedlich?
 
+% Eine Gleichung pro Fall:
 is_cute(dog) -> true;
 is_cute(cat) -> true;
 is_cute(snake) -> false.
