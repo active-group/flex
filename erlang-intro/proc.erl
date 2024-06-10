@@ -17,18 +17,20 @@ start_format_server() ->
 -record(inc, {increment :: number()}).
 -record(get, { client_pid :: pid() }).
 
+-type inc_server_message() :: #inc{} | #get{}.
+
 inc_server(N) ->
     io:format("N = ~w~n", [N]),
     receive
-        {get, ClientPid} -> 
+        #get{ pid = ClientPid} -> 
             ClientPid ! N,
             inc_server(N);
-        Inc -> inc_server(N+Inc)
+        #inc{ increment = Inc } -> inc_server(N+Inc)
     end.
 
 % RPC
 inc_server_get(ServerPid) ->
-    ServerPid ! {get, self()},
+    ServerPid ! #get { client_pid = self },
     receive
         N -> N
     end.
