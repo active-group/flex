@@ -274,3 +274,9 @@ rev([First|Rest]) ->
 append_element([], Element) -> [Element];
 append_element([First | Rest], Element) -> 
     [First | append_element(Rest, Element)].
+
+% Acc: Zwischenergebnis
+% 
+rev([], Acc) -> Acc;
+rev([First | Rest], Acc) ->
+    rev(Rest, [First | Acc]).
