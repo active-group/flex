@@ -135,3 +135,4 @@ dillo2() -> #dillo{ liveness = dead, weight = 5}.
 run_over_dillo(D) ->
     #dillo { liveness = dead, weight = D#dillo.weight }.
 
+% Gürteltier füttern
