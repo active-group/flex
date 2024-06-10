@@ -139,10 +139,15 @@ run_over_dillo(D) ->
 % variable Menge
 
 -spec feed_dillo(#dillo{}, weight()) -> #dillo{}.
-feed_dillo(#dillo { liveness = L, weight = W}, FoodWeight) ->
-    #dillo { liveness = L, 
-             weight = case L of
-                        alive -> W + FoodWeight;
-                        dead -> W
-                      end
-            }.
+% feed_dillo(#dillo { liveness = L, weight = W}, FoodWeight) ->
+%     #dillo { liveness = L, 
+%              weight = case L of
+%                         alive -> W + FoodWeight;
+%                         dead -> W
+%                       end
+%             }.
+% 
+feed_dillo(#dillo {liveness = alive, weight = W}, FoodWeight) ->
+    #dillo { liveness = alive, weight = W + FoodWeight};
+feed_dillo(#dillo { liveness = dead, weight = W}, FoodWeight) ->
+    #dillo { liveness = dead, weight = W}.
