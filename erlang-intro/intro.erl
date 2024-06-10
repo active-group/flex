@@ -280,3 +280,9 @@ append_element([First | Rest], Element) ->
 rev([], Acc) -> Acc;
 rev([First | Rest], Acc) ->
     rev(Rest, [First | Acc]). % kein Kontext: tail call / endrekursiv
+
+process_code() ->
+    receive % Syntax wie case
+        "Mike" -> io:format("Mike ist da!~n");
+        "Sperber" -> io:format("Sperber ist doof!~n")
+    end.
