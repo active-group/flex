@@ -81,7 +81,7 @@ pos1() -> {15, 7}. % 2-Tupel
 -type position() = {number(), number()}.
 
 % Abstand zwischen 2 Positionen
--spec distance(position()) -> number().
+-spec distance(position(), position()) -> number().
 distance(Position1, Position2) ->
     {X1, Y1} = Position1,
     {X2, Y2} = Position2,
