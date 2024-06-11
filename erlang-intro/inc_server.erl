@@ -2,7 +2,7 @@
 -behaviour(gen_server).
 -export([init/1, handle_call/3, handle_cast/2,
          inc_server_get/1, inc_server_inc/2,
-         inc_server_start/1]).
+         inc_server_start/1, inc_server_start_link/1]).
 
 % gen_server: Prozeß, der Zustand verwaltet und Messages entgegennimmt.
 
