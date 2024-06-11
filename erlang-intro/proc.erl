@@ -87,3 +87,11 @@ frequency_server(Frequencies) ->
         #return_frequency{frequency = Frequency} ->
             frequency_server([Frequency | Frequencies])
     end.
+
+-spec get_frequency(pid()) -> no_frequency | {ok, frequency()}.
+get_frequency(ServerPid) ->
+    ServerPid ! #get_frequency{client_pid = self() },
+    receive
+        no_frequency_left -> no_frequency;
+        Frequency -> {ok, Frequency}
+    end.
