@@ -27,3 +27,8 @@ handle_call(#get{}, _From, N) ->
  {reply, 
   {ok, N}, % Antwort
   N}. % neuer Zustand
+
+-spec handle_cast(#inc{}, inc_server_state()) ->
+    {noreply, inc_server_state()}.
+handle_cast(#inc{increment = Inc}, N) ->
+    {noreply, N+Inc}.
