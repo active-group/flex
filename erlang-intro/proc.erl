@@ -123,5 +123,6 @@ die_process() ->
 
 start_die_process() ->
     Pid = spawn(?MODULE, die_process, []),
-    link(Pid),
+    link(Pid), % "wenn Du stirbst, sterbe ich auch und umgekehrt"
+    process_flag(trap_exit, true), % der Tod anderer Prozesse ist eine Message
     Pid.
