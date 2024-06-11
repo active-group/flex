@@ -36,3 +36,6 @@ handle_cast(#inc{increment = Inc}, N) ->
 -spec inc_server_get(pid()) -> {ok, inc_server_state()}.
 inc_server_get(Pid) ->
     gen_server:call(Pid, #get{}).
+
+inc_server_inc(Pid, Inc) ->
+    gen_server:cast(Pid, #inc{increment=Inc}).
