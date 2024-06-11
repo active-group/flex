@@ -2,7 +2,7 @@
 -export([format_server/0, start_format_server/0,
          inc_server/1,
          inc_server_get/1,
-         start_frequency_server/1,
+         start_frequency_server/1, frequency_server/1,
          get_frequency/1,
          return_frequency/2]).
 
