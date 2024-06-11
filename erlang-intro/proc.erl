@@ -48,3 +48,18 @@ inc_server_get(ServerPid) ->
 -record(get_frequency, { client_pid :: pid() }).
 -record(return_frequency, { frequency :: frequency() }).
 
+-type frequency_message() :: #get_frequency{} | #return_frequency{}.
+
+% Funktion, die nimmt Zustand als Argument
+% ... receive mit einem Zweig pro Message
+
+-spec frequency_server(frequency_state()) -> none().
+
+frequency_server([]) ->
+    receive
+        #get_frequency{ client_pid = ClientPid} -> todo;
+        #return_frequency { frequency = Frequency } -> 
+            todo
+    end;
+frequency_server([First | Rest]) ->
+    todo.
