@@ -38,9 +38,13 @@ inc_server_get(ServerPid) ->
 % Frequency-Server
 % verwaltet eine Liste von freien Funkfrequenzen
 % Zustand ^^^ -> Parameter
-% Operationen -> Message
-% - gib mir ne Frequenz
-% - ich geb Dir ne Frequenz zurück
+% Operationen -> Message (mit Antwort? / RPC?)
+% - gib mir ne Frequenz <- RPC
+% - ich geb Dir ne Frequenz zurück -> "fire-and-forget"
 
 -type frequency() :: number().
 -type frequency_state() :: list(frequency()).
+
+-record(get_frequency, { client_pid :: pid() }).
+-record(return_frequency, { frequency :: frequency() }).
+
