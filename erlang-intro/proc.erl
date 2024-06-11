@@ -91,12 +91,12 @@ frequency_server(Frequencies) ->
             frequency_server([Frequency | Frequencies])
     end.
 
--spec start_frequency_server(list(frequency())) -> ok.
+-spec start_frequency_server(list(frequency())) -> {ok, pid()}.
 start_frequency_server(Frequencies) ->
     % spawn(fun () -> frequency_server(Frequencies) end),
     % spawn(proc, frequency_server, [Frequencies]),
-    spawn(?MODULE, frequency_server, [Frequencies]),
-    ok.
+    Pid = spawn(?MODULE, frequency_server, [Frequencies]),
+    {ok, Pid}.
 
 -spec get_frequency(pid()) -> no_frequency | {ok, frequency()}.
 get_frequency(ServerPid) ->
