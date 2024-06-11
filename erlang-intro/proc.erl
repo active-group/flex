@@ -56,19 +56,33 @@ inc_server_get(ServerPid) ->
 
 -spec frequency_server(frequency_state()) -> none().
 
-frequency_server([]) ->
+% frequency_server([] = List) ->
+%     receive
+%         #get_frequency{ client_pid = ClientPid} ->
+%             ClientPid ! no_frequency_left,
+%             frequency_server([]);
+%         #return_frequency { frequency = Frequency } -> 
+%             frequency_server([Frequency | List])
+%     end;
+% frequency_server([First | Rest] = List) ->
+%     receive
+%         #get_frequency{ client_pid = ClientPid} ->
+%             ClientPid ! First,
+%             frequency_server(Rest);
+%         #return_frequency { frequency = Frequency } -> 
+%             frequency_server([Frequency | List])
+%     end.
+
+frequency_server(Frequencies) ->
     receive
-        #get_frequency{ client_pid = ClientPid} ->
-            ClientPid ! no_frequency_left,
-            frequency_server([]);
-        #return_frequency { frequency = Frequency } -> 
-            frequency_server([Frequency])
-    end;
-frequency_server([First | Rest] = List) ->
-    receive
-        #get_frequency{ client_pid = ClientPid} ->
-            ClientPid ! First,
-            frequency_server(Rest);
-        #return_frequency { frequency = Frequency } -> 
-            frequency_server([Frequency | List])
+        #get_frequency{client_pid = ClientPid} ->
+            case Frequencies of
+                [] ->
+                    ClientPid ! no_frequency_left;
+                [First | Rest] ->
+                    ClientPid ! First;
+                    frequency_server(Rest)
+            end
+        #return_frequency{frequency = Frequency} ->
+            frequency_server([Frequency | Frequencies])
     end.
