@@ -110,3 +110,5 @@ get_frequency(ServerPid) ->
 return_frequency(ServerPid, Frequency) ->
     ServerPid ! #return_frequency{frequency = Frequency},
     ok.
+
+% register(Atom, Pid) - registriert Namen für Prozeß
