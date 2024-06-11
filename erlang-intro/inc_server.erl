@@ -21,5 +21,5 @@ init(InitialN) -> % Anfangswert des Zählers
 % cast: "fire-and-forget"
 % 
 
--spec handle_call(#get{}, pid(), inc_server_state()).
+-spec handle_call(#get{}, pid(), inc_server_state()) -> todo.
 handle_call(Request, From, State) -> todo.
