@@ -112,4 +112,4 @@ return_frequency(ServerPid, Frequency) ->
     ok.
 
 % register(Atom, Pid) - registriert Namen für Prozeß
-% net_adm:ping(Node) - fügt Knoten dem Cluster hinzu
+% net_adm:ping(Node) - fügt Knoten dem Cluster hinzu -> pong
