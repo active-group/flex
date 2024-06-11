@@ -23,7 +23,7 @@ init(InitialN) -> % Anfangswert des Zählers
 
 -spec handle_call(#get{}, pid(), inc_server_state()) -> 
          {reply, {ok, inc_server_state()}, inc_server_state()}.
-handle_call(#get{ client_pid = ClientPid}, From, N) ->
+handle_call(#get{ client_pid = ClientPid}, _From, N) ->
  {reply, 
   {ok, N}, % Antwort
   N}. % neuer Zustand
