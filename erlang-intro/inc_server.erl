@@ -51,5 +51,6 @@ inc_server_start(InitialN) ->
 % - call- und cast-Nachrichten überlegen
 % - init/1 implementieren
 % - handle_call/3 und handle_cast/2 implementieren
+% - Callbacks (init/1, handle_call/3, handle_cast/2) exportieren
 % - Convenience-Funktionen für jede Nachricht
-%   sowie für start, start_link
+%   sowie für start, start_link -> alles exportieren
