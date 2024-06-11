@@ -5,7 +5,7 @@
          start_frequency_server/1, frequency_server/1,
          get_frequency/1,
          return_frequency/2,
-         die_process/0]).
+         die_process/0, start_die_process/0]).
 
 format_server() ->
     receive
