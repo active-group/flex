@@ -95,3 +95,7 @@ get_frequency(ServerPid) ->
         no_frequency_left -> no_frequency;
         Frequency -> {ok, Frequency}
     end.
+
+-spec return_frequency(pid(), frequency()) -> ok.
+return_frequency(ServerPid, Frequency) ->
+    ServerPid ! #return_frequency{frequency = Frequency}.
