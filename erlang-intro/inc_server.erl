@@ -40,3 +40,8 @@ inc_server_get(Pid) ->
 
 inc_server_inc(Pid, Inc) ->
     gen_server:cast(Pid, #inc{increment=Inc}).
+
+inc_server_start(InitialN) ->
+    gen_server:start(?MODULE, 
+                     InitialN,  % geht an init
+                     []).
