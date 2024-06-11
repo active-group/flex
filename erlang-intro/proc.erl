@@ -80,7 +80,7 @@ frequency_server(Frequencies) ->
                 [] ->
                     ClientPid ! no_frequency_left;
                 [First | Rest] ->
-                    ClientPid ! First;
+                    ClientPid ! First,
                     frequency_server(Rest)
             end
         #return_frequency{frequency = Frequency} ->
