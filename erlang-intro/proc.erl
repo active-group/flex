@@ -88,6 +88,11 @@ frequency_server(Frequencies) ->
             frequency_server([Frequency | Frequencies])
     end.
 
+-spec start_frequency_server(list(frequency())) -> ok.
+start_frequency_server(Frequencies) ->
+    spawn(fun () -> frequency_server(Frequencies)),
+    ok.
+
 -spec get_frequency(pid()) -> no_frequency | {ok, frequency()}.
 get_frequency(ServerPid) ->
     ServerPid ! #get_frequency{client_pid = self() },
@@ -98,4 +103,5 @@ get_frequency(ServerPid) ->
 
 -spec return_frequency(pid(), frequency()) -> ok.
 return_frequency(ServerPid, Frequency) ->
-    ServerPid ! #return_frequency{frequency = Frequency}.
+    ServerPid ! #return_frequency{frequency = Frequency},
+    ok.
