@@ -32,3 +32,7 @@ handle_call(#get{}, _From, N) ->
     {noreply, inc_server_state()}.
 handle_cast(#inc{increment = Inc}, N) ->
     {noreply, N+Inc}.
+
+-spec inc_server_get(pid()) -> {ok, inc_server_state()}.
+inc_server_get(Pid) ->
+    gen_server:call(Pid, #get{}).
