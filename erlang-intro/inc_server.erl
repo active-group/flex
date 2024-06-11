@@ -47,6 +47,11 @@ inc_server_start(InitialN) ->
                      InitialN,  % geht an init
                      []).
 
+inc_server_start_link(InitialN) ->
+    gen_server:start_link(?MODULE, 
+                          InitialN,  % geht an init
+                          []).
+
 % Pattern:
 % - Zustand überlegen
 % - call- und cast-Nachrichten überlegen
