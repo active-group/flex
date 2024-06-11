@@ -1,6 +1,6 @@
 -module(inc_server).
 -behaviour(gen_server).
--export([init/1, handle_call/3]).
+-export([init/1, handle_call/3, handle_cast/2]).
 
 % gen_server: Prozeß, der Zustand verwaltet und Messages entgegennimmt.
 
