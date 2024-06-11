@@ -45,7 +45,7 @@ inc_server_inc(Pid, Inc) ->
 inc_server_start(InitialN) ->
     gen_server:start(?MODULE, 
                      InitialN,  % geht an init
-                     []).
+                     [{debug, [trace]}]).
 
 inc_server_start_link(InitialN) ->
     gen_server:start_link(?MODULE, 
