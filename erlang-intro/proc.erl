@@ -78,7 +78,8 @@ frequency_server(Frequencies) ->
         #get_frequency{client_pid = ClientPid} ->
             case Frequencies of
                 [] ->
-                    ClientPid ! no_frequency_left;
+                    ClientPid ! no_frequency_left,
+                    frequency_server([]);
                 [First | Rest] ->
                     ClientPid ! First,
                     frequency_server(Rest)
