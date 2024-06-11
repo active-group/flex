@@ -113,3 +113,9 @@ return_frequency(ServerPid, Frequency) ->
 
 % register(Atom, Pid) - registriert Namen für Prozeß
 % net_adm:ping(Node) - fügt Knoten dem Cluster hinzu -> pong
+
+die_process() ->
+    receive
+        Msg -> io:format("~w~n", [10/Msg]),
+        die_process()
+    end.
