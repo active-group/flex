@@ -1,6 +1,7 @@
 -module(inc_server).
 -behaviour(gen_server).
--export([init/1, handle_call/3, handle_cast/2]).
+-export([init/1, handle_call/3, handle_cast/2,
+         inc_server_get/1, inc_server_inc/2]).
 
 % gen_server: Prozeß, der Zustand verwaltet und Messages entgegennimmt.
 
@@ -35,7 +36,7 @@ handle_cast(#inc{increment = Inc}, N) ->
 
 -spec inc_server_get(pid()) -> {ok, inc_server_state()}.
 inc_server_get(Pid) ->
-    gen_server:call(Pid, #get{}).
+    gen_server:call(Pid, #get{}). % nicht mehr ! direkt benutzen
 
 inc_server_inc(Pid, Inc) ->
     gen_server:cast(Pid, #inc{increment=Inc}).
