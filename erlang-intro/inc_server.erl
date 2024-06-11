@@ -8,7 +8,7 @@
 % Zustand: Zähler
 
 -record(inc, {increment :: number()}). % fire-and-forget
--record(get, { client_pid :: pid() }). % RPC
+-record(get, {}). % RPC
 
 -type inc_server_message() :: #inc{} | #get{}.
 
@@ -23,7 +23,7 @@ init(InitialN) -> % Anfangswert des Zählers
 
 -spec handle_call(#get{}, pid(), inc_server_state()) -> 
          {reply, {ok, inc_server_state()}, inc_server_state()}.
-handle_call(#get{ client_pid = ClientPid}, _From, N) ->
+handle_call(#get{}, _From, N) ->
  {reply, 
   {ok, N}, % Antwort
   N}. % neuer Zustand
