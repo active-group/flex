@@ -52,14 +52,21 @@ inc_server_get(ServerPid) ->
 
 % Funktion, die nimmt Zustand als Argument
 % ... receive mit einem Zweig pro Message
+% dran denken: muß explizit die Funktion aufrufen, damit's weitergeht
 
 -spec frequency_server(frequency_state()) -> none().
 
 frequency_server([]) ->
     receive
+        #get_frequency{ client_pid = ClientPid} ->
+            ClientPid ! no_frequency_left,
+            frequency_server([]);
+        #return_frequency { frequency = Frequency } -> 
+            frequency_server([Frequency])
+    end;
+frequency_server([First | Rest]) ->
+    receive
         #get_frequency{ client_pid = ClientPid} -> todo;
         #return_frequency { frequency = Frequency } -> 
             todo
-    end;
-frequency_server([First | Rest]) ->
-    todo.
+    end.
