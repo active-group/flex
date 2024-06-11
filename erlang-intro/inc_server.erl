@@ -12,7 +12,7 @@
 -record(inc, {increment :: number()}). % fire-and-forget
 -record(get, {}). % RPC
 
--type inc_server_message() :: #inc{} | #get{}.
+% -type inc_server_message() :: #inc{} | #get{}.
 
 -type inc_server_state() :: number().
 
