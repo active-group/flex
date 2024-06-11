@@ -21,5 +21,9 @@ init(InitialN) -> % Anfangswert des Zählers
 % cast: "fire-and-forget"
 % 
 
--spec handle_call(#get{}, pid(), inc_server_state()) -> todo.
-handle_call(Request, From, State) -> todo.
+-spec handle_call(#get{}, pid(), inc_server_state()) -> 
+         {reply, {ok, inc_server_state()}, inc_server_state()}.
+handle_call(#get{ client_pid = ClientPid}, From, N) ->
+ {reply, 
+  {ok, N}, % Antwort
+  N}. % neuer Zustand
