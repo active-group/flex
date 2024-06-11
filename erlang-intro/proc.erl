@@ -66,7 +66,9 @@ frequency_server([]) ->
     end;
 frequency_server([First | Rest]) ->
     receive
-        #get_frequency{ client_pid = ClientPid} -> todo;
+        #get_frequency{ client_pid = ClientPid} ->
+            ClientPid ! First,
+            frequency_server(Rest);
         #return_frequency { frequency = Frequency } -> 
             todo
     end.
