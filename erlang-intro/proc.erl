@@ -120,3 +120,8 @@ die_process() ->
         Msg -> io:format("~w~n", [10/Msg]),
         die_process()
     end.
+
+start_die_process() ->
+    Pid = spawn(?MODULE, die_process, []),
+    link(Pid),
+    Pid.
