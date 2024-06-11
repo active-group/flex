@@ -90,7 +90,7 @@ frequency_server(Frequencies) ->
 
 -spec start_frequency_server(list(frequency())) -> ok.
 start_frequency_server(Frequencies) ->
-    spawn(fun () -> frequency_server(Frequencies)),
+    spawn(fun () -> frequency_server(Frequencies) end),
     ok.
 
 -spec get_frequency(pid()) -> no_frequency | {ok, frequency()}.
