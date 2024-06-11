@@ -126,3 +126,14 @@ start_die_process() ->
     link(Pid), % "wenn Du stirbst, sterbe ich auch und umgekehrt"
     process_flag(trap_exit, true), % der Tod anderer Prozesse ist eine Message
     Pid.
+
+% Cluster:
+% erl -sname mike
+% erl -sname oliver
+% 
+% 1. auf mike:
+% {ok, Pid} = proc:start_frequency_server([1,2,3]).
+% register(frequency_service, Pid).
+% 2. auf oliver:
+% ping(mike@<hostname>). % sollte pong liefern
+% proc:get_frequency({frequency_service, mike@<hostname>}).
