@@ -45,3 +45,11 @@ inc_server_start(InitialN) ->
     gen_server:start(?MODULE, 
                      InitialN,  % geht an init
                      []).
+
+% Pattern:
+% - Zustand überlegen
+% - call- und cast-Nachrichten überlegen
+% - init/1 implementieren
+% - handle_call/3 und handle_cast/2 implementieren
+% - Convenience-Funktionen für jede Nachricht
+%   sowie für start, start_link
