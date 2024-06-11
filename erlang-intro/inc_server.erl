@@ -1,1 +1,2 @@
 -module(inc_server).
+-behaviour(gen_server).
