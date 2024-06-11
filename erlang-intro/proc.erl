@@ -37,6 +37,10 @@ inc_server_get(ServerPid) ->
 
 % Frequency-Server
 % verwaltet eine Liste von freien Funkfrequenzen
-% Operationen:
+% Zustand ^^^ -> Parameter
+% Operationen -> Message
 % - gib mir ne Frequenz
 % - ich geb Dir ne Frequenz zurück
+
+-type frequency() :: number().
+-type frequency_state() :: list(frequency()).
