@@ -2,7 +2,7 @@
 -export([init_events/0, put_event/1, get_all_events/0, get_events_from/1]).
 -include("events.hrl").
 
-% call after database: init_database/0
+% call after database:init_database/0
 
 init_events() ->
     dets:close(event),
