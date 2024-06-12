@@ -1,0 +1,9 @@
+[submodule "erlbank/accounts"]
+	path = erlbank/accounts
+	url = git@github.com:active-group/flex-accounts
+[submodule "erlbank/transfers"]
+	path = erlbank/transfers
+	url = git@github.com:active-group/flex-transfers
+[submodule "erlbank/statements"]
+	path = erlbank/statements
+	url = git@github.com:active-group/flex-statements
