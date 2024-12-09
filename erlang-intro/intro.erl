@@ -93,5 +93,8 @@ dillo2() -> #dillo { liveness = dead, weight = 8 }.
 
 % Gürteltier überfahren
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
-run_over_dillo(#dillo { liveness = L, weight = W} ) ->
-    #dillo { liveness = dead, weight = W}.
+% run_over_dillo(#dillo { weight = W} ) ->
+%    #dillo { liveness = dead, weight = W}.
+run_over_dillo(Dillo) ->
+    % Dillo kopiert bis auf liveness
+    Dillo#dillo { liveness = dead }.
