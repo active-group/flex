@@ -4,7 +4,8 @@
          distance/2,
          slope/2,
          dillo1/0, dillo2/0,
-         run_over_dillo/1]).
+         run_over_dillo/1,
+         feed_dillo/2]).
 
 % . "fertig"
 % , "und"
@@ -118,5 +119,5 @@ feed_dillo(#dillo { liveness = alive, weight = Weight}, Amount) ->
     #dillo { liveness = alive,
             weight = Weight + Amount };
 feed_dillo(Dillo = #dillo { liveness = dead}, _) ->
-    Dillo. x
+    Dillo.
 
