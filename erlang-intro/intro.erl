@@ -257,4 +257,4 @@ rev([ First | Rest], Acc) ->
     rev(Rest, [First | Acc ]). % kein Kontext, tail call, endrekursiv
 
 rev_test() ->
-    [3,2,1] = rev([1,2,3]).
+    [3,1] = rev([1,2,3]).
