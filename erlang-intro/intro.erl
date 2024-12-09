@@ -6,7 +6,8 @@
          dillo1/0, dillo2/0,
          run_over_dillo/1,
          feed_dillo/2,
-         parrot1/0, parrot2/0]).
+         parrot1/0, parrot2/0,
+         run_over_parrot/1]).
 
 % . "fertig"
 % , "und"
