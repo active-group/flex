@@ -1,7 +1,8 @@
 -module(intro).
 -export([double/1,
          is_cute/1,
-         distance/2]).
+         distance/2,
+         slope/2]).
 
 % . "fertig"
 % , "und"
