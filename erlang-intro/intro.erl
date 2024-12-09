@@ -9,3 +9,6 @@
 % Variablen groß
 
 double(X) -> X * 2.
+
+% Datei in Eshell compilieren und laden:
+% c(intro).
