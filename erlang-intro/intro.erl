@@ -107,9 +107,9 @@ run_over_dillo(Dillo) ->
 % - tote Gürteltiere nicht
 
 -spec feed_dillo(#dillo{}, weight()) -> #dillo{}.
-feed_dillo(#dillo { liveness = Liveness, weight = Weight}, Amount) ->
-    if
-        Liveness == alive -> #dillo { liveness = alive,
+feed_dillo(Dillo = #dillo { liveness = Liveness, weight = Weight}, Amount) ->
+    case Liveness of
+        alive -> #dillo { liveness = alive,
             weight = Weight + Amount};
-        true -> todo
+        dead -> Dillo
     end.
