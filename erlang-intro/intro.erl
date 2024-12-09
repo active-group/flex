@@ -9,7 +9,9 @@
          parrot1/0, parrot2/0,
          run_over_parrot/1,
          run_over_animal/1,
-         is_in/2]).
+         is_in/2,
+         list1/0, list2/0, list3/0, list4/0,
+         list_sum/1]).
 
 % . "fertig"
 % , "und"
@@ -179,3 +181,23 @@ is_in(#square { ll_corner = {XC, YC}, side_length = SideLength}, {XP, YP}) ->
     YP =< YC + SideLength;
 is_in(#overlay { shape1 = Shape1, shape2 = Shape2 }, Point) ->
     is_in(Shape1, Point) orelse is_in(Shape2, Point).
+
+% Eine Liste ist eins der folgenden:
+% - die leere Liste [] -ODER-
+% - eine Cons-Liste aus erstem Element und Rest-Liste
+%                                               ^^^^^ Selbstbezug
+%   [ First | Rest ]
+
+% 1elementige Liste: 5
+list1() -> [ 5 | []].
+% 2elementige Liste: 5 8
+list2() -> [5 | [8 | []]].
+% 3elementige Liste: 3 5 8
+list3() -> [3, 5, 8].
+% 4elementige Liste: 6 3 5 8
+list4() -> [6 | list3()].
+
+-spec list_sum(list(number())) -> number().
+list_sum([]) -> 0;
+list_sum([First | Rest]) ->
+    First + list_sum(Rest).
