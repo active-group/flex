@@ -3,7 +3,8 @@
          is_cute/1,
          distance/2,
          slope/2,
-         dillo1/0, dillo2/0]).
+         dillo1/0, dillo2/0,
+         run_over_dillo/1]).
 
 % . "fertig"
 % , "und"
@@ -89,3 +90,8 @@ slope({X1, Y1}, {X2, Y2}) ->
 dillo1() -> #dillo { liveness = alive, weight = 10 }.
 % totes Gürteltier, 8kg
 dillo2() -> #dillo { liveness = dead, weight = 8 }.
+
+% Gürteltier überfahren
+-spec run_over_dillo(#dillo{}) -> #dillo{}.
+run_over_dillo(#dillo { liveness = L, weight = W} ) ->
+    #dillo { liveness = dead, weight = W}.
