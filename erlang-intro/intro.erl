@@ -48,5 +48,12 @@ is_cute(Pet) ->
 
 % Abstand zwischen zwei Koordinaten
 -spec distance(coordinates(), coordinates()) -> number().
-distance({X1, Y1}, {X2, Y2}) ->
-    math:sqrt((X1-X2)*(X1-X2) + (Y1-Y2)*(Y1-Y2)).
+% distance({X1, Y1}, {X2, Y2}) ->
+%     math:sqrt((X1-X2)*(X1-X2) + (Y1-Y2)*(Y1-Y2)).
+
+distance(C1, C2) ->
+    {X1, Y1} = C1,
+    {X2, Y2} = C2,
+    DX = X1 - X2,
+    DY = Y1 - Y2,
+    math:sqrt(DX * DX + DY * DY).
