@@ -17,7 +17,8 @@
          run_over_animals/1,
          list_map/2,
          run_over_animals2/1,
-         inc_list/1]).
+         inc_list/1,
+         rev/1]).
 
 % . "fertig"
 % , "und"
@@ -233,3 +234,13 @@ run_over_animals2(Animals) ->
 
 inc_list(List) ->
     list_map(fun (N) -> N + 1 end, List).
+
+-spec rev(list(A)) -> list(A).
+rev([]) -> [];
+rev([ First | Rest]) ->
+    append_element(rev(Rest), First).
+
+-spec append_element(list(A), A) -> list(A).
+append_element([], Element) -> [Element];
+append_element([ First | Rest], Element) ->
+    [ First | append_element(Rest, Element)].
