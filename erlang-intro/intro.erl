@@ -60,7 +60,7 @@ distance(C1, C2) ->
     math:sqrt(DX * DX + DY * DY).
 
 % Steigung einer Geraden
--spec slope(coordinates(), coordinates()) -> number().
+-spec slope(coordinates(), coordinates()) -> number() | vertical.
 slope({X1, Y1}, {X2, Y2}) ->
     % Verzweigung
     if
