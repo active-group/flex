@@ -224,7 +224,7 @@ run_over_animals([ First | Rest ]) ->
 % <<"Mike">>
 
 -spec list_map(fun((A) -> B), list(A)) -> list(B).
-list_map(F, []) -> [];
+list_map(_F, []) -> [];
 list_map(F, [ First | Rest]) ->
     [F(First) | list_map(F, Rest)].
 
