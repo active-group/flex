@@ -139,3 +139,11 @@ parrot2() -> #parrot { sentence = "Auf Wiedersehen!", weight = 2}.
 -spec run_over_parrot(#parrot{}) -> #parrot{}.
 run_over_parrot(#parrot { weight = Weight }) ->
     #parrot { sentence = "", weight = Weight }.
+
+-type animal() :: #dillo{} | #parrot{}.
+
+% Tier überfahren
+-spec run_over_animal(animal()) -> animal().
+run_over_animal(Dillo = #dillo{}) -> run_over_dillo(Dillo);
+run_over_animal(Parrot = #parrot{}) ->
+    run_over_parrot(Parrot).
