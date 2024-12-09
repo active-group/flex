@@ -83,3 +83,8 @@ slope({X1, Y1}, {X2, Y2}) ->
 
 -record(dillo, { liveness :: liveness(),
                  weight :: weight() }).
+
+% lebendiges Gürteltier, 10kg
+dillo1() -> #dillo { liveness = alive, weight = 10 }.
+% totes Gürteltier, 8kg
+dillo2() -> #dillo { liveness = dead, weight = 8 }.
