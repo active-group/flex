@@ -1,0 +1,22 @@
+[
+ %% We need UTC for logging.
+ {sasl, [{utc_log, true}]},
+
+ %% logstasher configuration
+ {kernel,
+  [
+   {logger_level, info},
+   {logger,
+    [
+     {handler, default, logger_std_h, #{level => info}},
+     {handler, logstasher, logstasher_h, #{level => info}}
+    ]}
+  ]},
+
+ {logstasher,
+  [
+   {transport, udp},     % tcp | udp | console
+   {host, "${LOGSTASH_HOST}"},  % inet:hostname()
+   {port, 9125}          % inet:port_number()
+  ]}
+].
