@@ -67,3 +67,19 @@ slope({X1, Y1}, {X2, Y2}) ->
         X2 - X1 == 0 -> vertical;
         true -> {ok, (Y2 - Y1) / (X2 / X1)}
     end.
+
+% Tiere auf dem texanischen Highway
+
+% Gürteltier hat folgende Eigenschaften
+% - (lebendig oder tot) -UND-
+% - Gewicht
+% zusammengesetzte Daten
+
+% Die "Lebendigkeit" ist eins der folgenden:
+% - lebendig ODER
+% - tot
+-type liveness() :: alive | dead.
+-type weight() :: number().
+
+-record(dillo, { liveness :: liveness(),
+                 weight :: weight() }).
