@@ -12,7 +12,9 @@
          is_in/2,
          list1/0, list2/0, list3/0, list4/0,
          list_sum/1,
-         list_product/1]).
+         list_product/1,
+         highway/0,
+         run_over_animals/1]).
 
 % . "fertig"
 % , "und"
