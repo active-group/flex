@@ -5,7 +5,7 @@
          slope/2,
          dillo1/0, dillo2/0,
          run_over_dillo/1,
-         feed_dillo/2
+         feed_dillo/2,
          parrot1/0, parrot2/0]).
 
 % . "fertig"
