@@ -36,5 +36,5 @@ is_cute(Pet) ->
         dog -> true;
         cat -> true;
         snake -> false;
-        _ -> no_pet
+        _ -> no_pet % paßt nicht zum spec
     end.
