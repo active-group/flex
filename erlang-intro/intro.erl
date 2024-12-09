@@ -62,4 +62,4 @@ distance(C1, C2) ->
 % Steigung einer Geraden
 -spec slope(coordinates(), coordinates()) -> number().
 slope({X1, Y1}, {X2, Y2}) ->
-    (Y2 - Y1) / (X2 - X2). 
+    (Y2 - Y1) / (X2 - X1). 
