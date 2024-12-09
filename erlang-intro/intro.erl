@@ -72,6 +72,8 @@ slope({X1, Y1}, {X2, Y2}) ->
     end.
 
 % Tiere auf dem texanischen Highway
+% - Gürteltier ODER
+% - Papagei
 
 % Gürteltier hat folgende Eigenschaften
 % - (lebendig oder tot) -UND-
@@ -120,4 +122,14 @@ feed_dillo(#dillo { liveness = alive, weight = Weight}, Amount) ->
             weight = Weight + Amount };
 feed_dillo(Dillo = #dillo { liveness = dead}, _) ->
     Dillo.
+
+% Ein Papagei hat folgende Eigenschafte:
+% - Satz -UND-
+% - Gewicht
+-record(parrot, { sentence :: string(), weight :: weight() }).
+
+% Begrüßungspapagei, 1kg
+parrot1() -> #parrot { sentence = "Willkommen!", weight = 1}.
+% Verabschiedungspapagei, 2kg
+parrot2() -> #parrot { sentence = "Auf Wiedersehen!", weight = 2}.
 
