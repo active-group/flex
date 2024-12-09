@@ -148,3 +148,8 @@ run_over_parrot(#parrot { weight = Weight }) ->
 run_over_animal(Dillo = #dillo{}) -> run_over_dillo(Dillo);
 run_over_animal(Parrot = #parrot{}) ->
     run_over_parrot(Parrot).
+
+% Eine geometrische Figur ist eins der folgenden:
+% - ein Kreis -ODER-
+% - ein Quadrat -ODER-
+% - eine Überlagerung zweier geometrischer Figuren
