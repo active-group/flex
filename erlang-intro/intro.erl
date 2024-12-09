@@ -216,3 +216,6 @@ highway() -> [dillo1(), dillo2(), parrot1(), parrot2() ].
 run_over_animals([]) -> [];
 run_over_animals([ First | Rest ]) ->
     [run_over_animal(First) | run_over_animals(Rest)].
+
+% Binary:
+% <<"Mike">>
