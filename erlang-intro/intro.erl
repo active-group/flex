@@ -18,7 +18,7 @@
          list_map/2,
          run_over_animals2/1,
          inc_list/1,
-         rev/1]).
+         rev/1, rev/2]).
 
 % . "fertig"
 % , "und"
@@ -235,6 +235,10 @@ run_over_animals2(Animals) ->
 inc_list(List) ->
     list_map(fun (N) -> N + 1 end, List).
 
+% Liste der Länge n
+% Laufzeit 1 + 2 + 3 + 4 + 5 + ... + (n-1) + n
+% (n+1)*n/2 = O(n^2)
+
 -spec rev(list(A)) -> list(A).
 rev([]) -> [];
 rev([ First | Rest]) ->
@@ -244,3 +248,9 @@ rev([ First | Rest]) ->
 append_element([], Element) -> [Element];
 append_element([ First | Rest], Element) ->
     [ First | append_element(Rest, Element)].
+
+-spec rev(list(A), list(A)) -> list(A).
+% "Akkumulator"
+rev([], Acc) -> Acc;
+rev([ First | Rest], Acc) ->
+    rev(Rest, [First | Acc ]).
