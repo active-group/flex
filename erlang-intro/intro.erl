@@ -57,3 +57,8 @@ distance(C1, C2) ->
     DX = X1 - X2,
     DY = Y1 - Y2,
     math:sqrt(DX * DX + DY * DY).
+
+% Steigung einer Geraden
+-spec slope(coordinates(), coordinates()) -> number().
+slope({X1, Y1}, {X2, Y2}) ->
+    (Y2 - Y1) / (X2 - X2). 
