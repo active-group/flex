@@ -7,6 +7,9 @@ number_start(InitialN) ->
 
 number_loop(N) ->
     receive
+        {query, SenderPid} ->
+            SenderPid ! N,
+            number_loop(N);
         Inc -> 
             io:format("old N: ~w~n", [N]),
             number_loop(N + Inc)
