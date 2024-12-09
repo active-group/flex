@@ -224,3 +224,9 @@ run_over_animals([ First | Rest ]) ->
 list_map(F, []) -> [];
 list_map(F, [ First | Rest]) ->
     [F(First) | list_map(F, Rest)].
+
+run_over_animals2(Animals) ->
+    list_map(fun run_over_animal/1, Animals).
+
+inc_list(List) ->
+    list_map(fun (N) -> N + 1 end, List).
