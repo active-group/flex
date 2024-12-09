@@ -14,7 +14,10 @@
          list_sum/1,
          list_product/1,
          highway/0,
-         run_over_animals/1]).
+         run_over_animals/1,
+         list_map/2,
+         run_over_animals2/1,
+         inc_list/1]).
 
 % . "fertig"
 % , "und"
