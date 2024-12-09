@@ -36,5 +36,5 @@ is_cute(Pet) ->
         dog -> true;
         cat -> true;
         snake -> false;
-        UnknownPet -> no_pet
+        _UnknownPet -> no_pet
     end.
