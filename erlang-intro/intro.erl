@@ -18,7 +18,8 @@
          list_map/2,
          run_over_animals2/1,
          inc_list/1,
-         rev/1, rev/2]).
+         rev/1, rev/2,
+         process_code/0]).
 -include_lib("eunit/include/eunit.hrl").
 
 % . "fertig"
@@ -257,4 +258,12 @@ rev([ First | Rest], Acc) ->
     rev(Rest, [First | Acc ]). % kein Kontext, tail call, endrekursiv
 
 rev_test() ->
-    [3,1] = rev([1,2,3]).
+    [3,2,1] = rev([1,2,3]).
+
+% Prozesse = virtueller Thread
+
+process_code() ->
+    receive % wie case
+        "Mike" -> io:format("Mike ist da~n");
+        "Sperber" -> io:format("Sperber ist doof")
+    end.
