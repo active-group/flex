@@ -262,6 +262,9 @@ rev_test() ->
 
 % Prozesse = virtueller Thread
 
+% spawn(fun intro:process_code/0)
+% liefert Pid.
+
 process_code() ->
     receive % wie case
         "Mike" -> io:format("Mike ist da~n");
