@@ -38,3 +38,12 @@ is_cute(Pet) ->
         snake -> false;
         _ -> no_pet % paßt nicht zum spec
     end.
+
+% Eine 2D-Koordinate besteht aus:
+% - X
+% - Y
+% {X, Y}   Tupel
+-type coordinates() :: {number(), number()}.
+
+% Abstand zwischen zwei Koordinaten
+-spec distance(coordinates(), coordinations()) -> number().
