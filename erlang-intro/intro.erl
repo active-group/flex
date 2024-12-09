@@ -267,8 +267,12 @@ rev_test() ->
 
 % f(Pid) in der Eshell "vergißt" die Bindung.
 
+% Pid ! "Mike"
+% schickt dem Prozess eine Nachricht.
+
 process_code() ->
     receive % wie case
         "Mike" -> io:format("Mike ist da~n");
-        "Sperber" -> io:format("Sperber ist doof")
+        "Sperber" -> io:format("Sperber ist doof~n")
+        after 10000 -> io:format("Timeout!~n") % ms
     end.
