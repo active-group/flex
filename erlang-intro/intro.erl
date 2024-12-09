@@ -153,3 +153,8 @@ run_over_animal(Parrot = #parrot{}) ->
 % - ein Kreis -ODER-
 % - ein Quadrat -ODER-
 % - eine Überlagerung zweier geometrischer Figuren
+
+% 1. Repräsentation für geometrische Figuren
+% 2. Funktion, die feststellt, ob ein Punkt
+%    innerhalb oder außerhalb einer geometrischen Figur 
+%    liegt.
