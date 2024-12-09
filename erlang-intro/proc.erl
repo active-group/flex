@@ -1,5 +1,6 @@
 -module(proc).
--export([number_start/1]).
+-export([number_start/1,
+         number_query/1]).
 % Service, der eine Zahl verwaltet
 
 number_start(InitialN) ->
