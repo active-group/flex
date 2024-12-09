@@ -46,4 +46,6 @@ is_cute(Pet) ->
 -type coordinates() :: {number(), number()}.
 
 % Abstand zwischen zwei Koordinaten
--spec distance(coordinates(), coordinations()) -> number().
+-spec distance(coordinates(), coordinates()) -> number().
+distance({X1, Y1}, {X2, Y2}) ->
+    math:sqrt((X1-X2)*(X1-X2) + (Y1-Y2)*(Y1-Y2)).
