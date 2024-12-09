@@ -28,6 +28,13 @@ double(X) -> X * 2.
 
 -spec is_cute(pet()) -> boolean().
 % eine Klausel/Gleichung pro Fall
-is_cute(Dog) -> true;
-is_cute(cat) -> true;
-is_cute(snake) -> false.
+% is_cute(dog) -> true;
+% is_cute(cat) -> true;
+% is_cute(snake) -> false.
+is_cute(Pet) ->
+    case Pet of
+        dog -> true;
+        cat -> true;
+        snake -> false;
+        UnknownPet -> no_pet
+    end.
