@@ -5,6 +5,13 @@
 number_start(InitialN) ->
     spawn(fun () -> number_loop(InitialN) end).
 
+number_query(Pid) ->
+    Pid ! {query, self()},
+    receive
+        N -> {ok, N}
+    end.
+
+
 number_loop(N) ->
     receive
         {query, SenderPid} ->
