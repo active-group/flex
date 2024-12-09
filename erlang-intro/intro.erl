@@ -19,6 +19,7 @@
          run_over_animals2/1,
          inc_list/1,
          rev/1, rev/2]).
+-include_lib("eunit/include/eunit.hrl").
 
 % . "fertig"
 % , "und"
@@ -254,3 +255,6 @@ append_element([ First | Rest], Element) ->
 rev([], Acc) -> Acc;
 rev([ First | Rest], Acc) ->
     rev(Rest, [First | Acc ]). % kein Kontext, tail call, endrekursiv
+
+rev_test() ->
+    [3,2,1] = rev([1,2,3]).
