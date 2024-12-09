@@ -265,6 +265,8 @@ rev_test() ->
 % spawn(fun intro:process_code/0)
 % liefert Pid.
 
+% f(Pid) in der Eshell "vergißt" die Bindung.
+
 process_code() ->
     receive % wie case
         "Mike" -> io:format("Mike ist da~n");
