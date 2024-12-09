@@ -95,9 +95,11 @@ dillo2() -> #dillo { liveness = dead, weight = 8 }.
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
 % run_over_dillo(#dillo { weight = W} ) ->
 %    #dillo { liveness = dead, weight = W}.
+% run_over_dillo(Dillo) ->
+%     % Dillo kopiert bis auf liveness
+%    Dillo#dillo { liveness = dead }.
 run_over_dillo(Dillo) ->
-    % Dillo kopiert bis auf liveness
-    Dillo#dillo { liveness = dead }.
+    #dillo { liveness = dead, weight = Dillo#dillo.weight }.
 
 % Gürteltier füttern:
 % - variable Futtermenge
