@@ -2,7 +2,8 @@
 -export([double/1,
          is_cute/1,
          distance/2,
-         slope/2]).
+         slope/2,
+         dillo1/0, dillo2/0]).
 
 % . "fertig"
 % , "und"
