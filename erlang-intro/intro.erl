@@ -98,3 +98,8 @@ dillo2() -> #dillo { liveness = dead, weight = 8 }.
 run_over_dillo(Dillo) ->
     % Dillo kopiert bis auf liveness
     Dillo#dillo { liveness = dead }.
+
+% Gürteltier füttern:
+% - variable Futtermenge
+% - lebendige Gürteltiere nehmen
+% - tote Gürteltiere nicht
