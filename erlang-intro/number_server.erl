@@ -13,6 +13,7 @@ start(InitialN) ->
     gen_server:start(number_server, InitialN, []).
 
 init(InitialN) ->
+    % in dem neuen Prozeß, self()
     {ok, InitialN}.
 
 % cast: asynchrone Nachricht an den Server
