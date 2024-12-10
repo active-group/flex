@@ -146,7 +146,7 @@ feed_dillo(Dillo = #dillo { liveness = dead}, _) ->
 % Begrüßungspapagei, 1kg
 parrot1() -> #parrot { sentence = "Willkommen!", weight = 1}.
 % Verabschiedungspapagei, 2kg
-parrot2() -> #parrot { sentence = "Auf Wiedersehen!", weight = 2}.
+parrot2() -> #parrot { }.
 
 % Papagei überfahren
 -spec run_over_parrot(#parrot{}) -> #parrot{}.
