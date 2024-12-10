@@ -10,7 +10,8 @@
          query/1]).
 
 start(InitialN) ->
-    gen_server:start(number_server, InitialN, []).
+    gen_server:start(number_server, InitialN, 
+        [{debug, [trace]}]).
 
 init(InitialN) ->
     % in dem neuen Prozeß, self()
