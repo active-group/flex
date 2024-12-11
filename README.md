@@ -71,3 +71,7 @@ https://pragprog.com/book/swdddf/domain-modeling-made-functional
 Standard work on microservices:
 Wolff, Eberhard: Microservices: Grundlagen flexibler Softwarearchitekturen. dpunkt. verlag, 2018.
 https://microservices-buch.de/
+
+RPC in large mikroservice organisations:
+Marius Eriksen: Your Server as a Function, 2013.
+https://monkey.org/~marius/funsrv.pdf
