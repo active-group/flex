@@ -6,6 +6,7 @@
          put_account/1, get_account/1, get_all_accounts/0,
          put_person/1, get_person/1, get_all_persons/0, 
          put_transfer/1, get_transfer/1, get_all_transfers/0, get_all_transfers/1, 
+         get_transfers_from/1,
          unique_account_number/0,unique_transfer_id/0, unique_person_id/0,
          atomically/1]).
 
@@ -108,6 +109,16 @@ get_all_transfers(AccountNumber) ->
                                 {'==', {element, 4, '$1'}, AccountNumber}}],
                             ['$_']}]),
     lists:map(fun deserialize_transfer/1, Res).
+
+-spec get_transfers_from(unique_id()) -> list(#transfer{}).
+get_transfers_from(TransferNumber) ->
+    Res = dets:select(transfer,
+                           [{'$1',
+                            [{'>=', {element, 1, '$1'}, TransferNumber}],
+                            ['$_']}]),
+    
+    lists:map(fun deserialize_transfer/1,
+        lists:keysort(1, Res)).
 
 -spec unique_account_number() -> unique_id().
 unique_account_number() -> dets:update_counter(table_id, account, 1).
