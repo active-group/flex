@@ -1,5 +1,5 @@
 -module(proc).
--export([number_server/1]).
+-export([number_server/1, number_inc/2]).
 
 number_server(InitialN) ->
     spawn(fun () -> number_loop(InitialN) end).
