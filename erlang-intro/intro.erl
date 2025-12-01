@@ -245,4 +245,4 @@ append_element([First|Rest], E) ->
 -spec rev2(list(A), list(A)) -> list(A).
 rev2([], Acc) -> Acc;
 rev2([First | Rest], Acc) ->
-       rev2(Rest, [First | Acccc]).
+       rev2(Rest, [First | Acc]).
