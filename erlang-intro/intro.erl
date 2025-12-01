@@ -1,6 +1,6 @@
 -module(intro).
 -export([double/1, is_cute/1,
-         distance/2]).
+         distance/2, coord1/0]).
 
 % /1, /2: Stelligkeit der Funktion
 
@@ -53,5 +53,9 @@ coord1() -> {5, 7}.
 
 % Abstand zwischen zwei Koordination
 -spec distance(coord(), coord()) -> number().
-distance({X1, Y1}, {X2, Y2}) -> % Pattern-Matching 
-   math:sqrt((X1-X2) * (X1-X2) + (Y1-Y2) * (Y1-Y2)).
+%distance({X1, Y1}, {X2, Y2}) -> % Pattern-Matching 
+%   math:sqrt((X1-X2) * (X1-X2) + (Y1-Y2) * (Y1-Y2)).
+distance ({X1, Y1}, {X2, Y2}) ->
+    DX = X1 - X2, % lokale Variable
+    DY = Y1 - Y2,
+    math:sqrt(DX*DX + DY*DY).
