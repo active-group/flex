@@ -4,7 +4,8 @@
          dillo1/0, dillo2/0,
          run_over_dillo/1,
          parrot1/0, parrot2/0,
-         run_over_parrot/1]).
+         run_over_parrot/1,
+         run_over_animal/1]).
 
 % /1, /2: Stelligkeit der Funktion
 
