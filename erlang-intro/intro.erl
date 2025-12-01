@@ -10,7 +10,8 @@
          safe_divide/2,
          list_sum/1,
          highway/0,
-         run_over_animals/1]).
+         run_over_animals/1,
+         is_even/1]).
 
 % /1, /2: Stelligkeit der Funktion
 
