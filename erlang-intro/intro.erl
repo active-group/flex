@@ -195,3 +195,5 @@ run_over_animals([First | Rest]) ->
 
 -spec is_even(number()) -> boolean().
 is_even(X) -> X rem 2 == 0.
+
+% Alle geraden Zahlen aus einer Liste extrahieren
