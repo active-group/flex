@@ -228,3 +228,14 @@ extract_xxx(P, [ First | Rest ]) ->
 -spec dillo_is_alive(#dillo{}) -> boolean().
 dillo_is_alive(#dillo { liveness = alive}) -> true;
 dillo_is_alive(#dillo { liveness = dead}) -> false.
+
+% Liste umdrehen
+-spec rev(list(A)) -> list(A).
+rev([]) -> [];
+rev([ First | Rest]) ->
+    append_element(rev(Rest), First).
+
+-spec append_element(list(A), A) -> list(A).
+append_element([], E) -> [E];
+append_element([First|Rest], E) ->
+    [First | append_element(Rest, E)].
