@@ -28,7 +28,7 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 is_cute(Pet) ->
     % Verzweigung: 1 Zwei pro Fall
     case Pet of
-        dog -> true;
+        dog -> true;  % ; "oder"  (vs. , "und"), muß dazwischen
         cat -> true;
         snake -> false
     end.
