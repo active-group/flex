@@ -9,7 +9,8 @@
          is_in/2,
          safe_divide/2,
          list_sum/1,
-         highway/0]).
+         highway/0,
+         run_over_animals/1]).
 
 % /1, /2: Stelligkeit der Funktion
 
