@@ -19,5 +19,6 @@ number_loop(N) ->
     receive
         Inc -> 
             io:format("N: ~p, Inc: ~p\n", [N, Inc]),
-            number_loop(N + Inc)
+            number_loop(N + Inc);
+        query -> todo
     end.
