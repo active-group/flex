@@ -268,7 +268,7 @@ list_sort([Pivot|Rest]) ->
     list_sort(Left) ++ [Pivot] ++ list_sort(Right).
 
 process_code() ->
-    receive % wie case
+    receive % empfängt eine Nachricht, wie case
         "Mike" -> io:format("Mike is here!\n");
         "Sperber" -> io:format("Dr. Sperber is in the house!\n")
     end.
