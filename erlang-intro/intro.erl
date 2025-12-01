@@ -106,5 +106,5 @@ parrot2() -> #parrot { sentence = "Goodbye!", weight = 2}.
 
 % Papagei überfahren
 -spec run_over_parrot(#parrot{}) -> #parrot{}.
-run_over_parrot(#parrot { sentence = Sentence, weight = Weight}) ->
+run_over_parrot(#parrot { sentence = _Sentence, weight = Weight}) ->
     #parrot { sentence = "", weight = Weight}.
