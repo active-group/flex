@@ -87,3 +87,9 @@ run_over_dillo(#dillo { weight = W}) ->
 % Gürteltier füttern
 % - Futtermenge spezifizierbar
 % - tote Gürteltiere nehmen nicht zu
+feed_dillo(#dillo { liveness = alive, weight = Weight}, Amount) ->
+    #dillo { liveness = alive,
+            weight = Weight + Amount };
+%feed_dillo(#dillo { liveness = dead, weight = Weight }, _Amount) ->
+%           #dillo { liveness = dead, weight = Weight }.
+feed_dillo(Dillo, _) -> Dillo.
