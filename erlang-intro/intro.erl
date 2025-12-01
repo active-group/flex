@@ -245,4 +245,5 @@ append_element([First|Rest], E) ->
 -spec rev2(list(A), list(A)) -> list(A).
 rev2([], Acc) -> Acc;
 rev2([First | Rest], Acc) ->
-       rev2(Rest, [First | Acc]). % tail call, kein Kontext, "endrekursiv"
+    io:format("First: ~p, Rest: ~p, Acc: ~p\n", [First, Rest, Acc]),
+    rev2(Rest, [First | Acc]). % tail call, kein Kontext, "endrekursiv"
