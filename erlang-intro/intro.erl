@@ -213,9 +213,10 @@ extract_odds([ First | Rest ]) ->
 % - umbenennen
 % - Unterschiede durch abstrakte Variablen ersetzen
 % - Variablen als Funktionsparameter führen
+% Rekursive Aufrufe nicht vergessen! 
 extract_xxx(P, []) -> [];
 extract_xxx(P, [ First | Rest ]) ->
     case P(First) of
-        true -> [First | extract_xxx(Rest)];
-        false -> extract_xxx(Rest)
+        true -> [First | extract_xxx(P, Rest)];
+        false -> extract_xxx(P, Rest)
     end.
