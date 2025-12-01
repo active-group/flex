@@ -98,3 +98,6 @@ feed_dillo(Dillo = #dillo { liveness = dead }, _Amount) ->
 % - Satz    -UND-
 % - Gewicht
 -record(parrot, { sentence :: string(), weight :: weight() }).
+
+parrot1() -> #parrot { sentence = "Welcome!", weight = 1}.
+parrot2() -> #parrot { sentence = "Goodbye!", weight = 2}.
