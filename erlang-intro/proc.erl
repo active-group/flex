@@ -10,6 +10,8 @@ number_server(InitialN) ->
 number_inc(Pid, Inc) ->
     Pid ! Inc.
 
+% Zahl mit Faktor multiplizieren
+
 % Prozeß, der eine Zahl (Zustand) verwaltet
 % Operationen:
 % - hochzählen
