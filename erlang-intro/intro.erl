@@ -150,6 +150,7 @@ is_in(#overlay { shape1 = Shape1, shape2 = Shape2 }, Point) ->
     is_in(Shape1, Point) orelse is_in(Shape2, Point).
 
 
+-spec safe_divide(number(), number()) -> {ok, number()} | {error, divide_by_zero}.
 safe_divide(X, Y) ->
     if
         Y == 0 -> {error, divide_by_zero};
