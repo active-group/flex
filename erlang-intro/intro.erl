@@ -157,3 +157,26 @@ safe_divide(X, Y) ->
         Y == 0 -> {error, divide_by_zero};
         true -> {ok, X / Y}
     end.
+
+% Eine Liste ist eins der folgenden:
+% - die leere Liste   -ODER-
+% - eine Cons-Liste aus erstem Element und Rest-Liste
+%                                               ^^^^^
+
+% Erlang:
+% - leere Liste []
+% - Cons-Liste  [ First | Rest ]
+
+% 1elementige Liste: 5
+list1() -> [ 5 | []].
+% 2elementige Liste: 8 5
+list2() -> [8 | [5 | []]].
+list2a() -> [8, 5].
+list3() -> [7, 8, 5].
+list4() -> [ 4 | list3() ]. 
+
+% Elemente einer Liste summieren
+-spec list_sum(list(number())) -> number().
+list_sum([]) -> 0;
+list_sum([ First | Rest]) ->
+    First + list_sum(Rest).
