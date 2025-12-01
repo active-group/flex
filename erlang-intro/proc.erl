@@ -62,4 +62,5 @@ start_die_process() ->
     %           ^^^^ Modulname
     %                 ^^^ Funktionsname
     %                               ^^^ Argumente
+    link(Pid), % "wenn Du stirbst, sterbe ich auch und umgekehrt"
     Pid.
