@@ -196,4 +196,14 @@ run_over_animals([First | Rest]) ->
 -spec is_even(number()) -> boolean().
 is_even(X) -> X rem 2 == 0.
 
-% Alle geraden Zahlen aus einer Liste extrahieren
+-spec is_odd(number()) -> boolean().
+is_odd(X) -> X rem 2 == 1.
+
+% Alle ungeraden Zahlen aus einer Liste extrahieren
+-spec extract_odds(list(number())) -> list(number()).
+extract_odds([]) -> todo;
+extract_odds([ First | Rest ]) ->
+    case is_odd(First) of
+        true -> [First | extract_odds(Rest)];
+        false -> extract_odds(Rest)
+    end.
