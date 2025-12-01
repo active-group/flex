@@ -8,7 +8,8 @@
          run_over_animal/1,
          is_in/2,
          safe_divide/2,
-         list_sum/1]).
+         list_sum/1,
+         highway/0]).
 
 % /1, /2: Stelligkeit der Funktion
 
@@ -181,3 +182,6 @@ list4() -> [ 4 | list3() ].
 list_sum([]) -> 0;
 list_sum([ First | Rest]) ->
     First + list_sum(Rest).
+
+highway() -> [dillo1(), dillo2(), parrot1(), parrot2()].
+
