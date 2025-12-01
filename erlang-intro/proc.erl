@@ -49,3 +49,9 @@ number_loop(N) ->
 %            io:format("N: ~p, Inc: ~p\n", [N, Inc]),
 %            number_loop(N + Inc)
     end.
+
+die_process() ->
+    receive
+        Msg -> io:format("Message: ~p\n", [1/Msg]),
+        die_process()
+    end.
