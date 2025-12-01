@@ -36,3 +36,8 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 is_cute(dog) -> true;
 is_cute(cat) -> true;
 is_cute(snake) -> false.
+
+% Eine 2D-Koordinate besteht aus / hat folgende Eigenschaften:
+% - X  -UND-
+% - Y
+% zusammengesetzte Daten
