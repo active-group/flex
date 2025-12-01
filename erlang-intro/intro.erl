@@ -79,5 +79,11 @@ dillo1() -> #dillo { liveness = alive, weight = 10 }.
 dillo2() -> #dillo { liveness = dead, weight = 8}.
 
 -spec run_over_dillo(#dillo{}) -> #dillo{}.
-run_over_dillo(#dillo { liveness = L, weight = W}) ->
+% _: don't care
+% run_over_dillo(#dillo { liveness = _L, weight = W}) ->
+run_over_dillo(#dillo { weight = W}) ->
     #dillo { liveness = dead, weight = W }.
+
+% Gürteltier füttern
+% - Futtermenge spezifizierbar
+% - tote Gürteltiere nehmen nicht zu
