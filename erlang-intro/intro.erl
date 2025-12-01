@@ -6,7 +6,8 @@
          parrot1/0, parrot2/0,
          run_over_parrot/1,
          run_over_animal/1,
-         is_in/2]).
+         is_in/2,
+         safe_divide/2]).
 
 % /1, /2: Stelligkeit der Funktion
 
