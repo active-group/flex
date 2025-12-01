@@ -186,7 +186,7 @@ list4() -> [ 4 | list3() ].
 -spec list_sum(list(number())) -> number().
 list_sum([]) -> 0;
 list_sum([ First | Rest]) ->
-    First + list_sum(Rest).
+    First + list_sum(Rest). % First + ... : Kontext des rek. Aufrufs
 
 highway() -> [dillo1(), dillo2(), parrot1(), parrot2()].
 
