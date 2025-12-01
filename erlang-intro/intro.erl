@@ -15,7 +15,8 @@
          extract_odds/1, extract_xxx/2,
          dillo_is_alive/1,
          rev/1, rev2/2,
-         list_sort/1]).
+         list_sort/1,
+         process_code/0]).
 
 % /1, /2: Stelligkeit der Funktion
 
