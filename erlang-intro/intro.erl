@@ -216,7 +216,8 @@ extract_odds([ First | Rest ]) ->
 % - Unterschiede durch abstrakte Variablen ersetzen
 % - Variablen als Funktionsparameter führen
 % Rekursive Aufrufe nicht vergessen! 
--spec extract_xxx(fun((number()) -> boolean()), list(number())) -> list(number()).
+% A: "Generic-Parameter"
+-spec extract_xxx(fun((A) -> boolean()), list(A)) -> list(A).
 extract_xxx(_P, []) -> [];
 extract_xxx(P, [ First | Rest ]) ->
     case P(First) of
