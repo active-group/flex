@@ -124,3 +124,7 @@ run_over_animal(Parrot = #parrot{}) -> run_over_parrot(Parrot).
 % - Kreis -ODER-
 % - Quadrat -ODER-
 % - eine Überlagerung zweier geometrischer Formen
+
+% - dafür Typdefinition(en)
+% - Funktion, die für einen Punkt herausbekommt, ob er innerhalb oder außerhalb
+%   einer geometrischen Form ist.
