@@ -247,3 +247,7 @@ rev2([], Acc) -> Acc;
 rev2([First | Rest], Acc) ->
     io:format("First: ~p, Rest: ~p, Acc: ~p\n", [First, Rest, Acc]),
     rev2(Rest, [First | Acc]). % tail call, kein Kontext, "endrekursiv"
+
+% List comprehensions
+
+% extract_xxx: eingebaut als lists:filter, außerdem lists:map
