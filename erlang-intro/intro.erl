@@ -1,5 +1,5 @@
 -module(intro).
--export([double/1]).
+-export([double/1, is_cute/1]).
 
 % Zahl verdoppeln
 -spec double(number()) -> number().
