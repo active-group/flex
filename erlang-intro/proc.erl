@@ -4,6 +4,11 @@
 number_server(InitialN) ->
     spawn(fun () -> number_loop(InitialN) end).
 
+% Zahl erhöhen
+-spec number_inc(pid(), number()) -> any().
+number_inc(Pid, Inc) ->
+    Pid ! Inc.
+
 % Prozeß, der eine Zahl (Zustand) verwaltet
 % Operationen:
 % - hochzählen
