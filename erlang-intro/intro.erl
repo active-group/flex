@@ -2,7 +2,8 @@
 -export([double/1, is_cute/1,
          distance/2, coord1/0,
          dillo1/0, dillo2/0,
-         run_over_dillo/1]).
+         run_over_dillo/1,
+         parrot1/0, parrot2/0]).
 
 % /1, /2: Stelligkeit der Funktion
 
@@ -101,3 +102,4 @@ feed_dillo(Dillo = #dillo { liveness = dead }, _Amount) ->
 
 parrot1() -> #parrot { sentence = "Welcome!", weight = 1}.
 parrot2() -> #parrot { sentence = "Goodbye!", weight = 2}.
+
