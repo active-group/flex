@@ -240,3 +240,9 @@ rev([ First | Rest]) ->
 append_element([], E) -> [E];
 append_element([First|Rest], E) ->
     [First | append_element(Rest, E)].
+
+% zweites Argument: Akkumulator, alle gesehenen Elemente in umg. Reihenfolge
+-spec rev2(list(A), list(A)) -> list(A).
+rev2([], acc) -> acc;
+rev2([First | Rest], acc) ->
+       rev2(Rest, [First | acc]).
