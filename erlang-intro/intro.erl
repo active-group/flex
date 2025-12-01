@@ -11,3 +11,10 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 % intro:double(12).
 
 % . beendet Dinge.
+
+% Haustier:
+% - Hund
+% - Katze
+% - Schlange
+
+% Ist Haustier niedlich?
