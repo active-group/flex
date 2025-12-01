@@ -193,5 +193,5 @@ run_over_animals([]) -> [];
 run_over_animals([First | Rest]) ->
     [ run_over_animal(First) | run_over_animals(Rest)].
 
--spec is_even(number()) -> number().
+-spec is_even(number()) -> boolean().
 is_even(X) -> X rem 2 == 0.
