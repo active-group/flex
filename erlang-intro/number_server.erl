@@ -21,7 +21,7 @@ handle_cast(#increment { inc = Inc}, N) ->
 handle_cast(#multiply { factor = Factor}, N) ->
     {noreply, N * Factor}.
 
-handle_call(#query { pid = SenderPid}, From, N) ->
+handle_call(#query { pid = _SenderPid}, _From, N) ->
     {reply,
      N, % Antwort
      N}. % neuer Zustand
