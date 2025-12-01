@@ -18,6 +18,8 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 % - Schlange
 % => Fallunterscheidung
 
-% Atom: fängt mit Kleinbuchstaben
+% Atom: fängt mit Kleinbuchstaben an
+
+% -> dog, cat, snake repräsentieren Haustiere
 
 % Ist Haustier niedlich?
