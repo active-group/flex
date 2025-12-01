@@ -5,7 +5,8 @@
          run_over_dillo/1, feed_dillo/2,
          parrot1/0, parrot2/0,
          run_over_parrot/1,
-         run_over_animal/1]).
+         run_over_animal/1,
+         is_in/2]).
 
 % /1, /2: Stelligkeit der Funktion
 
@@ -128,3 +129,23 @@ run_over_animal(Parrot = #parrot{}) -> run_over_parrot(Parrot).
 % - dafür Typdefinition(en)
 % - Funktion, die für einen Punkt herausbekommt, ob er innerhalb oder außerhalb
 %   einer geometrischen Form ist.
+
+-record(circle, { center :: coord(),
+                  radius :: number() }).
+-record(square, { ll_corner :: coord(),
+                  side_length :: number}).
+-record(overlay, { shape1 :: shape(), shape2 :: shape()}).
+
+-type shape() :: #circle{} | #square{} | #overlay{}.
+
+-spec is_in(shape(), coord()) -> boolean().
+is_in(#circle { center = Center, radius = Radius}, Point) ->
+    distance(Center, Point) =< Radius;
+is_in(#square { ll_corner = {XC, YC}, side_length = SideLength}, {XP, YP}) ->
+    XP >= XC andalso 
+    XP =< XC + SideLength andalso
+    YP >= YC andalso
+    YP =< YC + SideLength;
+is_in(#overlay { shape1 = Shape1, shape2 = Shape2 }, Point) ->
+    is_in(Shape1, Point) orelse is_in(Shape2, Point).
+
