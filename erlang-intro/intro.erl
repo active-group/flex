@@ -93,3 +93,8 @@ feed_dillo(#dillo { liveness = alive, weight = Weight}, Amount) ->
 feed_dillo(Dillo = #dillo { liveness = dead }, _Amount) ->
            Dillo.
 % feed_dillo(Dillo, _) -> Dillo.
+
+% Papagei hat folgende Eigenschaften:
+% - Satz    -UND-
+% - Gewicht
+-record(parrot, { sentence :: string(), weight :: weight() }).
