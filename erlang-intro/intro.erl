@@ -2,7 +2,7 @@
 -export([double/1, is_cute/1,
          distance/2, coord1/0,
          dillo1/0, dillo2/0,
-         run_over_dillo/1,
+         run_over_dillo/1, feed_dillo/2,
          parrot1/0, parrot2/0,
          run_over_parrot/1,
          run_over_animal/1]).
