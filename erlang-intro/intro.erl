@@ -13,7 +13,8 @@
          run_over_animals/1,
          is_even/1, is_odd/1,
          extract_odds/1, extract_xxx/2,
-         dillo_is_alive/1]).
+         dillo_is_alive/1,
+         rev/1]).
 
 % /1, /2: Stelligkeit der Funktion
 
