@@ -3,7 +3,8 @@
          distance/2, coord1/0,
          dillo1/0, dillo2/0,
          run_over_dillo/1,
-         parrot1/0, parrot2/0]).
+         parrot1/0, parrot2/0,
+         run_over_parrot/1]).
 
 % /1, /2: Stelligkeit der Funktion
 
