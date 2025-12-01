@@ -30,5 +30,5 @@ is_cute(Pet) ->
     case Pet of
         dog -> true;  % ; "oder"  (vs. , "und"), muß dazwischen
         cat -> true;
-        snake -> false
+        snake -> false % hier kein ;
     end.
