@@ -12,9 +12,10 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 
 % . beendet Dinge.
 
-% Haustier:
-% - Hund
-% - Katze
+% Haustier ist eins der folgenden:
+% - Hund   -ODER-
+% - Katze  -ODER-
 % - Schlange
+% => Fallunterscheidung
 
 % Ist Haustier niedlich?
