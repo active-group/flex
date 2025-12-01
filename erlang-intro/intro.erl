@@ -1,5 +1,8 @@
 -module(intro).
--export([double/1, is_cute/1]).
+-export([double/1, is_cute/1,
+         distance/2]).
+
+% /1, /2: Stelligkeit der Funktion
 
 % Zahl verdoppeln
 -spec double(number()) -> number().
