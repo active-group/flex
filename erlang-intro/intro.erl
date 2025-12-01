@@ -41,3 +41,4 @@ is_cute(snake) -> false.
 % - X  -UND-
 % - Y
 % zusammengesetzte Daten
+-type coord() :: {number(), number()}.
