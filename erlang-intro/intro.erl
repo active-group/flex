@@ -18,4 +18,6 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 % - Schlange
 % => Fallunterscheidung
 
+% Atom: fängt mit Kleinbuchstaben
+
 % Ist Haustier niedlich?
