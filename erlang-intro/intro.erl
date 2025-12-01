@@ -41,4 +41,14 @@ is_cute(snake) -> false.
 % - X  -UND-
 % - Y
 % zusammengesetzte Daten
+
+% Tupel aus zwei Zahlen:
 -type coord() :: {number(), number()}.
+
+% Koordinate X=5, Y=7
+coord1() -> {5, 7}.
+
+% Abstand zwischen zwei Koordination
+-spec distance(coord(), coord()) -> number().
+distance({X1, Y1}, {X2, Y2}) -> % Pattern-Matching 
+   math:sqrt((X1-X2) * (X1-X2) + (Y1-Y2) * (Y1-Y2)).
