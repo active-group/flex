@@ -1,7 +1,7 @@
 -module(proc).
 -export([number_server/1, number_inc/2, number_multiply/2,
          number_query/1,
-         start_die_process/0]).
+         start_die_process/0, die_process/0]).
 
 number_server(InitialN) ->
     spawn(fun () -> number_loop(InitialN) end).
