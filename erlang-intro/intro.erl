@@ -260,4 +260,4 @@ list_sort([X]) -> [X];
 list_sort([Pivot|Rest]) ->
     Left = [ X || X <- Rest, X < Pivot],
     Right = [ X || X <- Rest, X >= Pivot],
-    Left ++ [Pivot] ++ Right.
+    list_sort(Left) ++ [Pivot] ++ list_sort(Right).
