@@ -63,4 +63,5 @@ start_die_process() ->
     %                 ^^^ Funktionsname
     %                               ^^^ Argumente
     link(Pid), % "wenn Du stirbst, sterbe ich auch und umgekehrt"
+    process_flag(trap_exit, true), % Wenn jemand anders stirbt, nicht sterben, stattdessen Message
     Pid.
