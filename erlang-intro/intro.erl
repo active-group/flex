@@ -119,3 +119,8 @@ run_over_parrot(#parrot { sentence = _Sentence, weight = Weight}) ->
 -spec run_over_animal(animal()) -> animal().
 run_over_animal(Dillo = #dillo{}) -> run_over_dillo(Dillo);
 run_over_animal(Parrot = #parrot{}) -> run_over_parrot(Parrot).
+
+% Eine geometrische Form ("Shape") ist eine der folgenden:
+% - Kreis -ODER-
+% - Quadrat -ODER-
+% - eine Überlagerung zweier geometrischer Formen
