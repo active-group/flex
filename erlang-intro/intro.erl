@@ -149,3 +149,9 @@ is_in(#square { ll_corner = {XC, YC}, side_length = SideLength}, {XP, YP}) ->
 is_in(#overlay { shape1 = Shape1, shape2 = Shape2 }, Point) ->
     is_in(Shape1, Point) orelse is_in(Shape2, Point).
 
+
+safe_divide(X, Y) ->
+    if
+        Y == 0 -> {error, divide_by_zero};
+        true -> {ok, X / Y}
+    end.
