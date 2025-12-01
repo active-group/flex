@@ -197,6 +197,10 @@ run_over_animals([]) -> [];
 run_over_animals([First | Rest]) ->
     [ run_over_animal(First) | run_over_animals(Rest)].
 
+run_over_animals2(Animals) ->
+%    lists:map(fun run_over_animal/1, Animals).
+    lists:map(fun (Animal) -> run_over_animal(Animal) end, Animals).
+
 -spec is_even(number()) -> boolean().
 is_even(X) -> X rem 2 == 0.
 
@@ -261,3 +265,9 @@ list_sort([Pivot|Rest]) ->
     Left = [ X || X <- Rest, X < Pivot],
     Right = [ X || X <- Rest, X >= Pivot],
     list_sort(Left) ++ [Pivot] ++ list_sort(Right).
+
+process_code() ->
+    receive % wie case
+        "Mike" -> io:format("Mike is here!\n");
+        "Sperber" -> io:format("Dr. Sperber is in the house!\n")
+    end.
