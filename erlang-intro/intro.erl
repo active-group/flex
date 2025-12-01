@@ -201,9 +201,21 @@ is_odd(X) -> X rem 2 == 1.
 
 % Alle ungeraden Zahlen aus einer Liste extrahieren
 -spec extract_odds(list(number())) -> list(number()).
-extract_odds([]) -> todo;
+extract_odds([]) -> [];
 extract_odds([ First | Rest ]) ->
     case is_odd(First) of
         true -> [First | extract_odds(Rest)];
         false -> extract_odds(Rest)
+    end.
+
+% Abstraktion:
+% - kopieren
+% - umbenennen
+% - Unterschiede durch abstrakte Variablen ersetzen
+% - Variablen als Funktionsparameter führen
+extract_xxx([]) -> [];
+extract_xxx([ First | Rest ]) ->
+    case P(First) of
+        true -> [First | extract_xxx(Rest)];
+        false -> extract_xxx(Rest)
     end.
