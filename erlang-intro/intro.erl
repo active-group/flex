@@ -21,5 +21,14 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 % Atom: fängt mit Kleinbuchstaben an
 
 % -> dog, cat, snake repräsentieren Haustiere
+-type pet() :: dog | cat | snake.
 
 % Ist Haustier niedlich?
+-spec is_cute(pet()) -> boolean().
+is_cute(Pet) ->
+    % Verzweigung: 1 Zwei pro Fall
+    case Pet of
+        dog -> true;
+        cat -> true;
+        snake -> false
+    end.
