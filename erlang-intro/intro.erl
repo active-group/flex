@@ -14,7 +14,8 @@
          is_even/1, is_odd/1,
          extract_odds/1, extract_xxx/2,
          dillo_is_alive/1,
-         rev/1, rev2/2]).
+         rev/1, rev2/2,
+         list_sort/1]).
 
 % /1, /2: Stelligkeit der Funktion
 
@@ -251,3 +252,12 @@ rev2([First | Rest], Acc) ->
 % List comprehensions
 
 % extract_xxx: eingebaut als lists:filter, außerdem lists:map
+% syntaktischer Zucker
+% Quicksort
+-spec list_sort(list(A)) -> list(A).
+list_sort([]) -> [];
+list_sort([X]) -> [X];
+list_sort([Pivot|Rest]) ->
+    Left = [ X || X <- Rest, X < Pivot],
+    Right = [ X || X <- Rest, X >= Pivot],
+    Left ++ [Pivot] ++ Right.
