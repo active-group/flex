@@ -1,6 +1,7 @@
 -module(intro).
 -export([double/1, is_cute/1,
-         distance/2, coord1/0]).
+         distance/2, coord1/0,
+         dillo1/0, dillo2/0]).
 
 % /1, /2: Stelligkeit der Funktion
 
