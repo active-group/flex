@@ -55,3 +55,10 @@ die_process() ->
         Msg -> io:format("Message: ~p\n", [1/Msg]),
         die_process()
     end.
+
+start_die_process() ->
+    Pid = spawn(proc, die_process, []),
+    %           ^^^^ Modulname
+    %                 ^^^ Funktionsname
+    %                               ^^^ Argumente
+    Pid.
