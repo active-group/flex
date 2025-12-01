@@ -14,7 +14,7 @@
          is_even/1, is_odd/1,
          extract_odds/1, extract_xxx/2,
          dillo_is_alive/1,
-         rev/1]).
+         rev/1, rev2/2]).
 
 % /1, /2: Stelligkeit der Funktion
 
@@ -245,4 +245,4 @@ append_element([First|Rest], E) ->
 -spec rev2(list(A), list(A)) -> list(A).
 rev2([], Acc) -> Acc;
 rev2([First | Rest], Acc) ->
-       rev2(Rest, [First | Acc]).
+       rev2(Rest, [First | Acccc]).
