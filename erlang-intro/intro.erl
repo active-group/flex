@@ -11,7 +11,8 @@
          list_sum/1,
          highway/0,
          run_over_animals/1,
-         is_even/1]).
+         is_even/1, is_odd/1,
+         extract_odds/1, extract_xxx/2]).
 
 % /1, /2: Stelligkeit der Funktion
 
