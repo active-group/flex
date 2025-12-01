@@ -59,3 +59,17 @@ distance ({X1, Y1}, {X2, Y2}) ->
     DX = X1 - X2, % lokale Variable
     DY = Y1 - Y2,
     math:sqrt(DX*DX + DY*DY).
+
+% Tiere auf dem texanischen Highway
+
+% Gürteltier hat folgende Eigenschaften:
+% - (lebendig -oder- tot)    -UND-
+% - Gewicht
+-type liveness() :: alive | dead.
+-type weight() :: number().  % in kg
+
+-record(dillo, { liveness :: liveness(),
+                 weight :: weight() }).
+
+% lebendiges Gürteltier, 10kg
+dillo1() -> #dillo { liveness = alive, weight = 10}.
