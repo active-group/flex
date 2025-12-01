@@ -25,10 +25,14 @@ double(X) -> X * 2.  % Groß-/Kleinschreibung wichtig
 
 % Ist Haustier niedlich?
 -spec is_cute(pet()) -> boolean().
-is_cute(Pet) ->
-    % Verzweigung: 1 Zwei pro Fall
-    case Pet of
-        dog -> true;  % ; "oder"  (vs. , "und"), muß dazwischen
-        cat -> true;
-        snake -> false % hier kein ;
-    end.
+%is_cute(Pet) ->
+%    % Verzweigung: 1 Zweig pro Fall
+%    case Pet of
+%        dog -> true;  % ; "oder"  (vs. , "und"), muß dazwischen
+%        cat -> true;
+%        snake -> false % hier kein ;
+%    end.
+% alternativ 1 Klausel pro Fall:
+is_cute(dog) -> true;
+is_cute(cat) -> true;
+is_cute(snake) -> false.
