@@ -1,5 +1,5 @@
 -module(number_server).
--export([init/1]).
+-export([init/1, handle_cast/2]).
 
 % Server mit Zustand
 -behavior(gen_server).
@@ -15,3 +15,8 @@
 -record(increment, { inc :: number() }).
 
 init(InitialN) -> {ok, InitialN}.
+
+handle_cast(#increment { inc = Inc}, N) -> 
+    {noreply, N + Inc};
+handle_cast(#multiply { factor = Factor}, N) ->
+    {noreply, N * Factor}.
