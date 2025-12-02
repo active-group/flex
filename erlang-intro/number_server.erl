@@ -49,7 +49,7 @@ number_query(Pid) ->
     gen_server:call(Pid, #query{}).
 
 -spec handle_call(call_message(), pid(), state()) -> {reply, any(), state()}.
-handle_call(#query { pid = _SenderPid}, _From, N) ->
+handle_call(#query {}, _From, N) ->
     {reply,
      {ok, N}, % Antwort
      N}. % neuer Zustand
