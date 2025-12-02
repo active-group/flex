@@ -34,9 +34,9 @@ number_inc(Pid, Inc) ->
 number_multiply(Pid, Factor) ->
     gen_server:cast(Pid, #multiply { factor = Factor }).
 
--spec handle_cast()
+-spec handle_cast(cast_message(), state()) -> {noreply, state()}.
 handle_cast(#increment { inc = Inc}, N) -> 
-    {noreply, N + Inc};
+    {noreply, N + Inc}; % wenn das hier komplizierter wird -> separate Funktion
 handle_cast(#multiply { factor = Factor}, N) ->
     {noreply, N * Factor}.
 
