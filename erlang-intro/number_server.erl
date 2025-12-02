@@ -20,7 +20,7 @@
 
 
 start() ->
-    gen_server:start(number_server, 7, []). % Module, Args, Options
+    gen_server:start(number_server, 7, [{debug, [trace]}]). % Module, Args, Options
 
 % bekommt das, was an gen_server:start übergeben wird
 
