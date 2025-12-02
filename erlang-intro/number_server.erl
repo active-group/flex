@@ -15,7 +15,8 @@
 -type cast_message() :: #increment{} | #multiply{}.
 
 % will Antwort: "call"
--record(query, { pid :: pid() }).
+% -record(query, { pid :: pid() }).
+-record(query, {}).
 -type call_message() :: #query{}.
 
 
