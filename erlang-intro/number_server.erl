@@ -1,6 +1,7 @@
 -module(number_server).
 -export([init/1, handle_cast/2, handle_call/3,
-         start/0, number_inc/2, number_multiply/2]).
+         start/0, number_inc/2, number_multiply/2,
+         number_query/1]).
 
 % Server mit Zustand
 -behavior(gen_server).
