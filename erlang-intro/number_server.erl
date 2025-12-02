@@ -8,13 +8,15 @@
 -type state() :: number().
 
 % Messages:
-% will Antwort: "call"
--record(query, { pid :: pid() }).
-
 % will keine Antwort: "cast"
 -record(multiply, { factor :: number() }).
 -record(increment, { inc :: number() }).
 -type cast_message() :: #increment{} | #multiply{}.
+
+% will Antwort: "call"
+-record(query, { pid :: pid() }).
+-type call_message() :: #query{}.
+
 
 start() ->
     gen_server:start(number_server, 7, []). % Module, Args, Options
@@ -40,7 +42,12 @@ handle_cast(#increment { inc = Inc}, N) ->
 handle_cast(#multiply { factor = Factor}, N) ->
     {noreply, N * Factor}.
 
+-spec number_query(pid()) -> {ok, number()}.
+number_query(Pid) ->
+    gen_server:call(Pid, #query{}).
+
+-spec handle_call(call_message(), pid(), state()) -> {reply, any(), state()}.
 handle_call(#query { pid = _SenderPid}, _From, N) ->
     {reply,
-     N, % Antwort
+     {ok, N}, % Antwort
      N}. % neuer Zustand
