@@ -78,7 +78,7 @@ put_person(#person{id = Id, given_name = GivenName, surname = Surname}) ->
 deserialize_person({Id, GivenName, Surname}) ->
     #person{id = Id, given_name = GivenName, surname = Surname}.
 
--spec get_person(unique_id()) -> {ok, #person{} | {error, any()}}.
+-spec get_person(unique_id()) -> {ok, #person{}} | {error, any()}.
 get_person(Id) ->
     read_one(person, Id, fun deserialize_person/1).
 
