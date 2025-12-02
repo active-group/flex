@@ -14,6 +14,7 @@
 % will keine Antwort: "cast"
 -record(multiply, { factor :: number() }).
 -record(increment, { inc :: number() }).
+-type cast_message() :: #increment{} | #multiply{}.
 
 start() ->
     gen_server:start(number_server, 7, []). % Module, Args, Options
@@ -33,6 +34,7 @@ number_inc(Pid, Inc) ->
 number_multiply(Pid, Factor) ->
     gen_server:cast(Pid, #multiply { factor = Factor }).
 
+-spec handle_cast()
 handle_cast(#increment { inc = Inc}, N) -> 
     {noreply, N + Inc};
 handle_cast(#multiply { factor = Factor}, N) ->
