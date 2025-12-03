@@ -74,6 +74,7 @@ transfer(SenderAccountNumber, ReceiverAccountNumber, Amount) ->
                                             from_account_number = SenderAccountNumber,
                                             to_account_number = ReceiverAccountNumber,
                                             amount = Amount},
+                        % "functional update", Kopie bis auf ...
                         NewAccountSender = AccountSender#account{amount = (AccountSenderAmount - Amount)},
                         NewAccountReceiver = AccountReceiver#account{amount = (AccountReceiverAmount + Amount)},
                         database:put_transfer(Transfer),
