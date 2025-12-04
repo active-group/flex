@@ -75,3 +75,21 @@ https://microservices-buch.de/
 RPC in large mikroservice organisations:
 Marius Eriksen: Your Server as a Function, 2013.
 https://monkey.org/~marius/funsrv.pdf
+
+## Links aus der Schulung
+
+- [gen_server](https://www.erlang.org/doc/apps/stdlib/gen_server.html)
+- [David Parnas: On the criteria to be used in decomposing systems into modules](https://dl.acm.org/doi/10.1145/361598.361623)
+- [Accelerate](https://wikitia.com/wiki/Accelerate)
+- [Domain Storytelling](https://domainstorytelling.org/), [Egon](https://egon.io/)
+- [Self-Contained Systems](https://scs-architecture.org/)
+- [Nix](https://nixos.org/)
+- [OpenTelemetry](https://opentelemetry.io/)
+- [Auth*n](https://netflixtechblog.com/edge-authentication-and-token-agnostic-identity-propagation-514e47e0b602)
+- [Netflix sudden load spikes](https://pages.awscloud.com/rs/112-TZM-766/images/APP308-English.pdf)
+
+
+ 
+ 
+
+
